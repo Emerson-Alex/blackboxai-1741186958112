@@ -1,0 +1,232 @@
+{
+    "Achievements": {
+        "Timeline": [
+            {
+                "Name": "Timeline Walker",
+                "AchievementID": "ACH_TimelineWalker",
+                "Description": "Switch between timelines 100 times",
+                "Category": "Timeline",
+                "Difficulty": "Easy",
+                "Requirements": {
+                    "TimelineSwitches": 100
+                },
+                "Rewards": {
+                    "Title": "the Timeline Walker",
+                    "TimelineEssence": 1000,
+                    "TimelineXP": 500
+                }
+            },
+            {
+                "Name": "Master of Two Worlds",
+                "AchievementID": "ACH_TwoWorldsMaster",
+                "Description": "Reach maximum mastery in both timelines",
+                "Category": "Timeline",
+                "Difficulty": "Legendary",
+                "Requirements": {
+                    "LightMastery": 100,
+                    "DarkMastery": 100
+                },
+                "Rewards": {
+                    "Title": "the Timeline Master",
+                    "TimelineEssence": 10000,
+                    "UniqueMount": "Chronosteed",
+                    "UniquePet": "Timeline Fox"
+                }
+            }
+        ],
+        "Combat": [
+            {
+                "Name": "Combo Master",
+                "AchievementID": "ACH_ComboMaster",
+                "Description": "Execute 100 perfect ability combos",
+                "Category": "Combat",
+                "Difficulty": "Medium",
+                "Requirements": {
+                    "PerfectCombos": 100
+                },
+                "Rewards": {
+                    "Title": "the Combo Master",
+                    "TimelineEssence": 2000,
+                    "UniqueAbility": "Timeline Combo"
+                }
+            },
+            {
+                "Name": "Boss Slayer",
+                "AchievementID": "ACH_BossSlayer",
+                "Description": "Defeat all timeline bosses",
+                "Category": "Combat",
+                "Difficulty": "Hard",
+                "Requirements": {
+                    "BossesDefeated": ["ShadowLord", "LightBringer", "TimeWeaver"]
+                },
+                "Rewards": {
+                    "Title": "the Timeline Conqueror",
+                    "TimelineEssence": 5000,
+                    "UniqueWeapon": "Timeline Blade"
+                }
+            }
+        ],
+        "Crafting": [
+            {
+                "Name": "Master Craftsman",
+                "AchievementID": "ACH_MasterCraftsman",
+                "Description": "Craft 100 items of epic quality or higher",
+                "Category": "Crafting",
+                "Difficulty": "Hard",
+                "Requirements": {
+                    "EpicCrafts": 100
+                },
+                "Rewards": {
+                    "Title": "the Master Craftsman",
+                    "TimelineEssence": 3000,
+                    "UniqueCraftingStation": "Timeline Forge"
+                }
+            }
+        ],
+        "Collection": [
+            {
+                "Name": "Timeline Collector",
+                "AchievementID": "ACH_TimelineCollector",
+                "Description": "Collect all timeline artifacts",
+                "Category": "Collection",
+                "Difficulty": "Legendary",
+                "Requirements": {
+                    "ArtifactsCollected": 20
+                },
+                "Rewards": {
+                    "Title": "the Artifact Master",
+                    "TimelineEssence": 8000,
+                    "UniqueHousingItem": "Timeline Display"
+                }
+            }
+        ]
+    },
+    "Titles": {
+        "Timeline": [
+            {
+                "Name": "Shadow Walker",
+                "TitleID": "Title_ShadowWalker",
+                "Description": "Reach Dark Timeline Mastery Level 50",
+                "Requirements": {
+                    "DarkMastery": 50
+                },
+                "Effects": {
+                    "DarkDamageBonus": 5,
+                    "StealthBonus": 10
+                }
+            },
+            {
+                "Name": "Light Bringer",
+                "TitleID": "Title_LightBringer",
+                "Description": "Reach Light Timeline Mastery Level 50",
+                "Requirements": {
+                    "LightMastery": 50
+                },
+                "Effects": {
+                    "LightDamageBonus": 5,
+                    "HealingBonus": 10
+                }
+            }
+        ],
+        "Combat": [
+            {
+                "Name": "Timeline Warrior",
+                "TitleID": "Title_TimelineWarrior",
+                "Description": "Win 1000 battles across both timelines",
+                "Requirements": {
+                    "BattlesWon": 1000
+                },
+                "Effects": {
+                    "DamageBonus": 5,
+                    "DefenseBonus": 5
+                }
+            }
+        ],
+        "Special": [
+            {
+                "Name": "Timeline Savior",
+                "TitleID": "Title_TimelineSavior",
+                "Description": "Complete the main storyline",
+                "Requirements": {
+                    "MainQuestComplete": true
+                },
+                "Effects": {
+                    "AllStatsBonus": 5,
+                    "TimelineEnergyRegen": 10
+                }
+            }
+        ]
+    },
+    "Progression": {
+        "AchievementPoints": {
+            "Easy": 10,
+            "Medium": 25,
+            "Hard": 50,
+            "Legendary": 100
+        },
+        "Milestones": [
+            {
+                "Points": 100,
+                "Rewards": {
+                    "Title": "Achievement Hunter",
+                    "TimelineEssence": 1000
+                }
+            },
+            {
+                "Points": 500,
+                "Rewards": {
+                    "Title": "Achievement Master",
+                    "TimelineEssence": 5000,
+                    "UniquePet": "Achievement Guardian"
+                }
+            },
+            {
+                "Points": 1000,
+                "Rewards": {
+                    "Title": "Timeline Legend",
+                    "TimelineEssence": 10000,
+                    "UniqueMount": "Achievement Drake"
+                }
+            }
+        ]
+    },
+    "Categories": {
+        "Timeline": {
+            "Icon": "Timeline_Icon",
+            "Color": "#8A2BE2",
+            "Priority": 1
+        },
+        "Combat": {
+            "Icon": "Combat_Icon",
+            "Color": "#FF4500",
+            "Priority": 2
+        },
+        "Crafting": {
+            "Icon": "Crafting_Icon",
+            "Color": "#4169E1",
+            "Priority": 3
+        },
+        "Collection": {
+            "Icon": "Collection_Icon",
+            "Color": "#FFD700",
+            "Priority": 4
+        }
+    },
+    "UI": {
+        "AchievementNotification": {
+            "Duration": 5.0,
+            "Sound": "Achievement_Complete",
+            "ParticleEffect": "Achievement_Sparkle"
+        },
+        "TitleUnlock": {
+            "Duration": 7.0,
+            "Sound": "Title_Unlock",
+            "ParticleEffect": "Title_Aura"
+        },
+        "MilestoneComplete": {
+            "Duration": 10.0,
+            "Sound": "Milestone_Complete",
+            "ParticleEffect": "Milestone_Explosion"
+        }
+    }
+}
