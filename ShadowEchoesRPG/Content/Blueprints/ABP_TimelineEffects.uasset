@@ -1,0 +1,9 @@
+{
+    "Parent": "UAnimInstance",
+    "Features": [
+        "Timeline Shifts",
+        "Ability Effects",
+        "Environmental Changes",
+        "Combat Impacts"
+    ]
+}
