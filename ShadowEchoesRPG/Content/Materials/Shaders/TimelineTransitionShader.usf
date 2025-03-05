@@ -1,0 +1,192 @@
+// Timeline Transition Shader for Shadow Echoes RPG
+// Handles visual effects during timeline state transitions
+
+#include "/Engine/Private/Common.ush"
+
+// Material parameters
+float TransitionProgress;
+float4 LightTimelineColor;
+float4 DarkTimelineColor;
+float DistortionStrength;
+float EmissiveIntensity;
+float NoiseScale;
+float TimeScale;
+
+// Textures
+Texture2D NoiseTexture;
+Texture2D DistortionMap;
+SamplerState NoiseSampler;
+SamplerState DistortionSampler;
+
+// Custom noise function for timeline distortion
+float3 TimelineNoise(float2 UV, float Time)
+{
+    float2 ScrollUV = UV + Time * 0.1f;
+    float3 Noise = NoiseTexture.SampleLevel(NoiseSampler, ScrollUV * NoiseScale, 0).rgb;
+    return Noise;
+}
+
+// Timeline energy flow effect
+float3 EnergyFlow(float2 UV, float Time)
+{
+    float2 FlowUV = UV + Time * 0.2f;
+    float2 Distortion = (DistortionMap.SampleLevel(DistortionSampler, FlowUV, 0).rg - 0.5f) * 2.0f;
+    return float3(Distortion, 0.0f) * DistortionStrength;
+}
+
+// Timeline state color blend
+float4 BlendTimelineColors(float Progress, float3 NoiseValue)
+{
+    // Apply noise to transition progress for organic feel
+    float BlendFactor = saturate(Progress + NoiseValue.r * 0.2f);
+    
+    // Smooth step for cleaner transition
+    BlendFactor = smoothstep(0.0f, 1.0f, BlendFactor);
+    
+    // Blend between timeline colors
+    float4 BlendedColor = lerp(LightTimelineColor, DarkTimelineColor, BlendFactor);
+    
+    // Add energy glow based on transition progress
+    float EnergyGlow = sin(Progress * PI) * EmissiveIntensity;
+    BlendedColor.rgb += BlendedColor.rgb * EnergyGlow;
+    
+    return BlendedColor;
+}
+
+// Edge detection for timeline boundary effects
+float3 TimelineBoundary(float2 UV, float Progress)
+{
+    float Edge = abs(Progress - 0.5f) * 2.0f;
+    Edge = pow(Edge, 8.0f); // Sharp edge falloff
+    return float3(Edge, Edge, Edge);
+}
+
+// Main vertex shader
+void TimelineTransitionVS(
+    in float4 Position : POSITION,
+    in float2 UV : TEXCOORD0,
+    out float4 OutPosition : SV_POSITION,
+    out float2 OutUV : TEXCOORD0
+)
+{
+    OutPosition = TransformPosition(Position);
+    OutUV = UV;
+}
+
+// Main pixel shader
+void TimelineTransitionPS(
+    in float4 Position : SV_POSITION,
+    in float2 UV : TEXCOORD0,
+    out float4 OutColor : SV_Target0
+)
+{
+    // Calculate time-based effects
+    float Time = TimeScale * View.RealTime;
+    
+    // Generate noise and distortion
+    float3 Noise = TimelineNoise(UV, Time);
+    float3 Flow = EnergyFlow(UV, Time);
+    
+    // Apply distortion to UVs
+    float2 DistortedUV = UV + Flow.xy;
+    
+    // Calculate timeline blend
+    float4 BlendedColor = BlendTimelineColors(TransitionProgress, Noise);
+    
+    // Add boundary effects
+    float3 Boundary = TimelineBoundary(DistortedUV, TransitionProgress);
+    
+    // Combine effects
+    OutColor = BlendedColor;
+    OutColor.rgb += Boundary * BlendedColor.rgb;
+    OutColor.rgb += Flow * 0.1f; // Subtle energy flow
+    
+    // Apply transition-specific effects
+    if (TransitionProgress < 0.5f)
+    {
+        // Light to Dark transition effects
+        float LightPulse = sin(Time * 5.0f + UV.x * 10.0f) * 0.1f;
+        OutColor.rgb += LightPulse * LightTimelineColor.rgb;
+    }
+    else
+    {
+        // Dark to Light transition effects
+        float DarkPulse = cos(Time * 3.0f + UV.y * 8.0f) * 0.15f;
+        OutColor.rgb += DarkPulse * DarkTimelineColor.rgb;
+    }
+    
+    // Add edge highlighting during transition
+    float EdgeGlow = pow(abs(sin(TransitionProgress * PI)), 4.0f);
+    OutColor.rgb += EdgeGlow * lerp(LightTimelineColor.rgb, DarkTimelineColor.rgb, TransitionProgress) * 0.5f;
+    
+    // Ensure proper alpha
+    OutColor.a = saturate(OutColor.a);
+}
+
+// Timeline particle vertex shader
+void TimelineParticleVS(
+    in float4 Position : POSITION,
+    in float2 UV : TEXCOORD0,
+    in float4 Color : COLOR0,
+    out float4 OutPosition : SV_POSITION,
+    out float2 OutUV : TEXCOORD0,
+    out float4 OutColor : COLOR0
+)
+{
+    OutPosition = TransformPosition(Position);
+    OutUV = UV;
+    
+    // Modify particle color based on transition
+    float4 ModifiedColor = Color;
+    ModifiedColor.rgb = lerp(LightTimelineColor.rgb, DarkTimelineColor.rgb, TransitionProgress);
+    ModifiedColor.a *= sin(TransitionProgress * PI); // Fade based on transition
+    
+    OutColor = ModifiedColor;
+}
+
+// Timeline particle pixel shader
+void TimelineParticlePS(
+    in float4 Position : SV_POSITION,
+    in float2 UV : TEXCOORD0,
+    in float4 Color : COLOR0,
+    out float4 OutColor : SV_Target0
+)
+{
+    // Sample particle texture
+    float4 ParticleColor = Color;
+    
+    // Add timeline-specific effects
+    float Time = TimeScale * View.RealTime;
+    float3 Noise = TimelineNoise(UV, Time);
+    
+    // Apply energy flow
+    ParticleColor.rgb += EnergyFlow(UV, Time) * 0.2f;
+    
+    // Add timeline state influence
+    float StateInfluence = lerp(0.8f, 1.2f, TransitionProgress);
+    ParticleColor.rgb *= StateInfluence;
+    
+    // Apply final color
+    OutColor = ParticleColor;
+}
+
+// Custom functions for material instances
+float3 CalculateTimelineEmissive(float2 UV, float Progress)
+{
+    float3 Emissive = lerp(LightTimelineColor.rgb, DarkTimelineColor.rgb, Progress);
+    float PulseIntensity = sin(TimeScale * View.RealTime * 2.0f) * 0.5f + 0.5f;
+    return Emissive * EmissiveIntensity * PulseIntensity;
+}
+
+float2 CalculateTimelineDistortion(float2 UV, float Progress)
+{
+    float2 Distortion = EnergyFlow(UV, TimeScale * View.RealTime).xy;
+    return Distortion * lerp(0.5f, 1.5f, Progress);
+}
+
+float CalculateTimelineOpacity(float2 UV, float Progress)
+{
+    float BaseOpacity = lerp(LightTimelineColor.a, DarkTimelineColor.a, Progress);
+    float TransitionFade = sin(Progress * PI);
+    return BaseOpacity * TransitionFade;
+}
