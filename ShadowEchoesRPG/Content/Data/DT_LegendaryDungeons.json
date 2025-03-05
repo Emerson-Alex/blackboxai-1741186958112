@@ -1,0 +1,187 @@
+{
+    "Dungeons": [
+        {
+            "Name": "Void Between Timelines",
+            "DungeonID": "Dungeon_VoidBetween",
+            "Description": "A twisted realm where both timelines collide, filled with reality-bending challenges and timeline anomalies.",
+            "MinLevel": 40,
+            "Requirements": {
+                "LightMastery": 30,
+                "DarkMastery": 30,
+                "CompletedQuests": ["TimelineConvergence", "VoidMastery"]
+            },
+            "Mechanics": [
+                {
+                    "Name": "Timeline Flux",
+                    "Description": "Random timeline shifts that require quick adaptation",
+                    "Effect": "Forces players to switch combat styles and abilities rapidly"
+                },
+                {
+                    "Name": "Reality Tears",
+                    "Description": "Areas where both timelines exist simultaneously",
+                    "Effect": "Allows using abilities from both timelines but doubles damage taken"
+                }
+            ],
+            "Bosses": [
+                {
+                    "Name": "The Paradox Twins",
+                    "Phase1": "Light Timeline Boss",
+                    "Phase2": "Dark Timeline Boss",
+                    "Phase3": "Combined Timeline Ultimate"
+                }
+            ],
+            "LegendaryReward": {
+                "Name": "Paradox Blade",
+                "Type": "Weapon",
+                "Rarity": "Mythic",
+                "Effects": [
+                    "Allows simultaneous use of both timeline abilities",
+                    "50% increased damage in timeline flux zones",
+                    "Creates mini reality tears on critical hits"
+                ]
+            }
+        },
+        {
+            "Name": "Chronolith Depths",
+            "DungeonID": "Dungeon_Chronolith",
+            "Description": "Ancient ruins that hold the secrets of timeline manipulation, guarded by the most powerful timeline entities.",
+            "MinLevel": 45,
+            "Requirements": {
+                "TimelineMastery": 40,
+                "CompletedDungeons": ["Dungeon_VoidBetween"],
+                "LegendaryItems": 3
+            },
+            "Mechanics": [
+                {
+                    "Name": "Time Dilation",
+                    "Description": "Areas where time flows differently",
+                    "Effect": "Abilities and movements are affected by time speed changes"
+                },
+                {
+                    "Name": "Timeline Echoes",
+                    "Description": "Past versions of players appear as allies or enemies",
+                    "Effect": "Must coordinate with or fight against your own previous actions"
+                }
+            ],
+            "Bosses": [
+                {
+                    "Name": "The Timeweaver Supreme",
+                    "Phases": [
+                        "Past Timeline",
+                        "Present Timeline",
+                        "Future Timeline",
+                        "All Timelines Merged"
+                    ]
+                }
+            ],
+            "LegendaryReward": {
+                "Name": "Chronolith Crown",
+                "Type": "Accessory",
+                "Rarity": "Mythic",
+                "Effects": [
+                    "Creates a personal timeline bubble",
+                    "Abilities can be cast from any timeline regardless of current state",
+                    "Summons timeline echoes during combat"
+                ]
+            }
+        },
+        {
+            "Name": "Eternity's End",
+            "DungeonID": "Dungeon_EternityEnd",
+            "Description": "The final challenge that exists at the end of all timelines, where reality itself breaks down.",
+            "MinLevel": 50,
+            "Requirements": {
+                "LightMastery": 50,
+                "DarkMastery": 50,
+                "CompletedDungeons": ["Dungeon_Chronolith"],
+                "MythicItems": 1
+            },
+            "Mechanics": [
+                {
+                    "Name": "Reality Collapse",
+                    "Description": "Areas of complete timeline chaos",
+                    "Effect": "Random ability effects and unpredictable timeline shifts"
+                },
+                {
+                    "Name": "Timeline Convergence",
+                    "Description": "All timelines exist simultaneously",
+                    "Effect": "Access to all abilities but extreme difficulty in controlling them"
+                }
+            ],
+            "Bosses": [
+                {
+                    "Name": "The Eternal One",
+                    "Description": "A being that exists in all timelines simultaneously",
+                    "Phases": [
+                        "Timeline Separation",
+                        "Reality Breakdown",
+                        "Eternal Convergence",
+                        "Beyond Time"
+                    ]
+                }
+            ],
+            "LegendaryReward": {
+                "Name": "The Eternal Aegis",
+                "Type": "Armor",
+                "Rarity": "Ultimate",
+                "Effects": [
+                    "Grants control over personal timeline",
+                    "Immune to timeline shifts",
+                    "Can create permanent reality tears",
+                    "Abilities affect all timelines simultaneously"
+                ],
+                "SetBonus": {
+                    "WithParadoxBlade": "Gain ability to create temporary timelines",
+                    "WithChronolithCrown": "Control over timeline flow in large area"
+                }
+            }
+        }
+    ],
+    "DungeonModifiers": {
+        "Weekly": [
+            {
+                "Name": "Timeline Storm",
+                "Effect": "Increased frequency of timeline shifts",
+                "Reward": "Double legendary drop chance"
+            },
+            {
+                "Name": "Reality Fracture",
+                "Effect": "More reality tears appear",
+                "Reward": "Additional mythic reward chance"
+            }
+        ],
+        "Challenge": {
+            "NoTimelineSwitch": {
+                "Description": "Must complete dungeon in single timeline",
+                "Reward": "Guaranteed timeline-specific legendary"
+            },
+            "TimeParadox": {
+                "Description": "Fight against echoes of your previous runs",
+                "Reward": "Unique cosmetic rewards"
+            }
+        }
+    },
+    "ProgressionRequirements": {
+        "VoidBetween": {
+            "Recommended": {
+                "ItemLevel": 200,
+                "TimelineMastery": 30,
+                "GroupSize": "5 players"
+            }
+        },
+        "Chronolith": {
+            "Recommended": {
+                "ItemLevel": 250,
+                "TimelineMastery": 40,
+                "GroupSize": "10 players"
+            }
+        },
+        "EternityEnd": {
+            "Recommended": {
+                "ItemLevel": 300,
+                "TimelineMastery": 50,
+                "GroupSize": "20 players"
+            }
+        }
+    }
+}
