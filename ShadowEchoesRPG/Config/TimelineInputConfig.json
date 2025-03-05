@@ -1,0 +1,202 @@
+{
+    "TimelineControls": {
+        "Keyboard": {
+            "TimelineTransitions": {
+                "ToggleTimelineMode": {
+                    "Key": "Tab",
+                    "ModifierKeys": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Enter timeline selection mode"
+                },
+                "SelectLightTimeline": {
+                    "Key": "Q",
+                    "ModifierKeys": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Switch to Light Timeline"
+                },
+                "SelectDarkTimeline": {
+                    "Key": "E",
+                    "ModifierKeys": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Switch to Dark Timeline"
+                },
+                "QuickTransitionLight": {
+                    "Key": "Q",
+                    "ModifierKeys": ["Shift"],
+                    "HoldDuration": 0.0,
+                    "Description": "Quick transition to Light Timeline"
+                },
+                "QuickTransitionDark": {
+                    "Key": "E",
+                    "ModifierKeys": ["Shift"],
+                    "HoldDuration": 0.0,
+                    "Description": "Quick transition to Dark Timeline"
+                },
+                "CancelTransition": {
+                    "Key": "Escape",
+                    "ModifierKeys": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Cancel current timeline transition"
+                }
+            },
+            "TimelineAbilities": {
+                "PrimaryAbility": {
+                    "Key": "1",
+                    "ModifierKeys": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Use primary timeline ability"
+                },
+                "SecondaryAbility": {
+                    "Key": "2",
+                    "ModifierKeys": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Use secondary timeline ability"
+                },
+                "UtilityAbility": {
+                    "Key": "3",
+                    "ModifierKeys": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Use utility timeline ability"
+                },
+                "UltimateAbility": {
+                    "Key": "4",
+                    "ModifierKeys": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Use ultimate timeline ability"
+                }
+            },
+            "TimelineCombos": {
+                "StartCombo": {
+                    "Key": "R",
+                    "ModifierKeys": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Initiate timeline combo"
+                },
+                "ContinueCombo": {
+                    "Key": "F",
+                    "ModifierKeys": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Continue timeline combo"
+                }
+            }
+        },
+        "Gamepad": {
+            "TimelineTransitions": {
+                "ToggleTimelineMode": {
+                    "Button": "RightShoulder",
+                    "ModifierButtons": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Enter timeline selection mode"
+                },
+                "SelectTimeline": {
+                    "Axis": "RightTrigger",
+                    "Direction": "Both",
+                    "Description": "Select timeline (Left = Light, Right = Dark)"
+                },
+                "QuickTransition": {
+                    "Button": "RightShoulder",
+                    "ModifierButtons": ["LeftShoulder"],
+                    "HoldDuration": 0.0,
+                    "Description": "Quick transition between timelines"
+                },
+                "CancelTransition": {
+                    "Button": "B",
+                    "ModifierButtons": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Cancel current timeline transition"
+                }
+            },
+            "TimelineAbilities": {
+                "AbilityWheel": {
+                    "Button": "LeftShoulder",
+                    "ModifierButtons": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Open ability selection wheel"
+                },
+                "SelectAbility": {
+                    "Axis": "RightStick",
+                    "Direction": "All",
+                    "Description": "Select ability from wheel"
+                },
+                "ConfirmAbility": {
+                    "Button": "A",
+                    "ModifierButtons": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Confirm ability selection"
+                }
+            },
+            "TimelineCombos": {
+                "ComboActions": {
+                    "Button": "X",
+                    "ModifierButtons": [],
+                    "HoldDuration": 0.0,
+                    "Description": "Perform combo actions"
+                }
+            }
+        }
+    },
+    "UIControls": {
+        "TimelineIndicator": {
+            "ShowDetails": {
+                "Key": "Alt",
+                "ModifierKeys": [],
+                "HoldDuration": 0.0,
+                "Description": "Show detailed timeline information"
+            },
+            "CycleInfo": {
+                "Key": "Tab",
+                "ModifierKeys": ["Alt"],
+                "HoldDuration": 0.0,
+                "Description": "Cycle through timeline information"
+            }
+        },
+        "AbilityWheel": {
+            "OpenWheel": {
+                "Key": "T",
+                "ModifierKeys": [],
+                "HoldDuration": 0.0,
+                "Description": "Open ability selection wheel"
+            },
+            "SelectAbility": {
+                "Type": "MouseMovement",
+                "Description": "Move mouse to select ability"
+            },
+            "ConfirmSelection": {
+                "Key": "LeftMouseButton",
+                "ModifierKeys": [],
+                "HoldDuration": 0.0,
+                "Description": "Confirm ability selection"
+            }
+        }
+    },
+    "Settings": {
+        "InputBuffer": {
+            "Duration": 0.2,
+            "EnableBuffering": true,
+            "MaxBufferedActions": 3
+        },
+        "HoldThresholds": {
+            "MinHoldTime": 0.1,
+            "MaxHoldTime": 1.0,
+            "CancelThreshold": 0.05
+        },
+        "ComboSettings": {
+            "MaxComboWindow": 2.0,
+            "MinInputDelay": 0.1,
+            "MaxInputDelay": 0.5
+        },
+        "Accessibility": {
+            "EnableHoldToggles": true,
+            "EnableAutoTargeting": true,
+            "EnableInputAssist": true,
+            "EnableVisualCues": true,
+            "EnableAudioCues": true
+        },
+        "CustomizationOptions": {
+            "AllowKeyRebinding": true,
+            "AllowModifierCustomization": true,
+            "AllowHoldDurationCustomization": true,
+            "AllowComboTimingCustomization": true
+        }
+    }
+}
