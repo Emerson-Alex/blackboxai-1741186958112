@@ -1,0 +1,273 @@
+{
+    "RaidEncounters": [
+        {
+            "Name": "The Eternal Conflict",
+            "RaidID": "Raid_EternalConflict",
+            "Description": "A battle against beings that exist simultaneously across both timelines, requiring perfect coordination and timeline mastery.",
+            "RequiredPlayers": 20,
+            "RequiredTimelines": ["Any"],
+            "MinLevel": 50,
+            "Requirements": {
+                "TimelineMastery": 40,
+                "CompletedDungeons": ["Dungeon_VoidBetween", "Dungeon_Chronolith"]
+            },
+            "Phases": [
+                {
+                    "Name": "Timeline Convergence",
+                    "Type": "Preparation",
+                    "Duration": 300,
+                    "Mechanics": [
+                        "TimelineAlignment",
+                        "PowerChanneling"
+                    ]
+                },
+                {
+                    "Name": "Dual Reality",
+                    "Type": "Combat",
+                    "Duration": 600,
+                    "Mechanics": [
+                        "RealitySplit",
+                        "TimelineEcho",
+                        "VoidEruption"
+                    ],
+                    "BossAbilities": [
+                        "DualTimelineStrike",
+                        "RealityShatter",
+                        "VoidPortal"
+                    ]
+                },
+                {
+                    "Name": "Reality Collapse",
+                    "Type": "Transition",
+                    "Duration": 180,
+                    "Mechanics": [
+                        "TimelineMerge",
+                        "VoidStorm"
+                    ]
+                },
+                {
+                    "Name": "Beyond Time",
+                    "Type": "Final",
+                    "Duration": 420,
+                    "Mechanics": [
+                        "EternalityBreach",
+                        "TimelineCollapse",
+                        "VoidAscension"
+                    ],
+                    "BossAbilities": [
+                        "EternalityStrike",
+                        "TimelineOblivion",
+                        "VoidConsumption"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Void Harbinger",
+            "RaidID": "Raid_VoidHarbinger",
+            "Description": "A battle against an ancient entity that corrupts timelines, requiring careful management of timeline energy and void corruption.",
+            "RequiredPlayers": 20,
+            "RequiredTimelines": ["DarkWorld"],
+            "MinLevel": 45,
+            "Requirements": {
+                "DarkTimelineMastery": 35,
+                "CompletedDungeons": ["Dungeon_VoidBetween"]
+            },
+            "Phases": [
+                {
+                    "Name": "Void Awakening",
+                    "Type": "Preparation",
+                    "Duration": 240,
+                    "Mechanics": [
+                        "VoidPurification",
+                        "ShadowAlignment"
+                    ]
+                },
+                {
+                    "Name": "Shadow Dominion",
+                    "Type": "Combat",
+                    "Duration": 540,
+                    "Mechanics": [
+                        "VoidCorruption",
+                        "ShadowEcho",
+                        "DarkPortal"
+                    ],
+                    "BossAbilities": [
+                        "VoidStrike",
+                        "ShadowConsumption",
+                        "DarkEruption"
+                    ]
+                },
+                {
+                    "Name": "Void Ascension",
+                    "Type": "Final",
+                    "Duration": 360,
+                    "Mechanics": [
+                        "VoidMastery",
+                        "ShadowRealm",
+                        "DarkAscension"
+                    ],
+                    "BossAbilities": [
+                        "VoidOblivion",
+                        "ShadowDominion",
+                        "DarkEternity"
+                    ]
+                }
+            ]
+        }
+    ],
+    "RaidMechanics": {
+        "TimelineAlignment": {
+            "Type": "Coordination",
+            "Description": "Players must align their timeline energies to stabilize the raid space.",
+            "Requirements": {
+                "PlayerCount": 5,
+                "TimelineEnergy": 50,
+                "Duration": 30
+            },
+            "Effects": {
+                "Success": {
+                    "TimelinePower": 50,
+                    "DamageReduction": 30
+                },
+                "Failure": {
+                    "TimelineDamage": 5000,
+                    "TimelineInstability": true
+                }
+            }
+        },
+        "RealitySplit": {
+            "Type": "Division",
+            "Description": "Raid splits into two timeline groups, each handling different mechanics.",
+            "Requirements": {
+                "GroupSize": 10,
+                "TimelineMastery": 30
+            },
+            "Effects": {
+                "Success": {
+                    "DualTimelinePower": true,
+                    "CrossTimelineDamage": 50
+                },
+                "Failure": {
+                    "RealityCollapse": true,
+                    "RaidWideDamage": 10000
+                }
+            }
+        },
+        "VoidEruption": {
+            "Type": "Avoidance",
+            "Description": "Void energy erupts from multiple points, requiring careful positioning and timeline shifting.",
+            "Pattern": {
+                "SpawnPoints": 8,
+                "WarningTime": 3.0,
+                "DamageInterval": 0.5
+            },
+            "Effects": {
+                "Hit": {
+                    "Damage": 15000,
+                    "VoidCorruption": 30,
+                    "MovementReduction": 50
+                }
+            }
+        }
+    },
+    "RaidRewards": {
+        "Completion": {
+            "Guaranteed": {
+                "TimelineEssence": 5000,
+                "RaidTokens": 100,
+                "LegendaryChance": 0.1
+            },
+            "NoDeaths": {
+                "ExtraTokens": 50,
+                "LegendaryChance": 0.2,
+                "UniqueTitle": true
+            },
+            "SpeedRun": {
+                "ExtraTokens": 100,
+                "LegendaryChance": 0.3,
+                "UniquePet": true
+            }
+        },
+        "LegendaryPool": {
+            "Weapons": [
+                {
+                    "Name": "Eternity's End",
+                    "Type": "Sword",
+                    "Effects": [
+                        "TimelineMastery",
+                        "VoidControl",
+                        "RealityBend"
+                    ]
+                },
+                {
+                    "Name": "Void Harbinger's Scythe",
+                    "Type": "Scythe",
+                    "Effects": [
+                        "VoidHarvest",
+                        "SoulDrain",
+                        "DarkEmpowerment"
+                    ]
+                }
+            ],
+            "Armor": [
+                {
+                    "Name": "Timeweaver's Embrace",
+                    "Type": "Chest",
+                    "Effects": [
+                        "TimelineBarrier",
+                        "RealityWarp",
+                        "VoidResistance"
+                    ]
+                }
+            ]
+        },
+        "TokenShop": {
+            "Weapons": {
+                "Cost": 500,
+                "Quality": "Epic",
+                "WeeklyLimit": 1
+            },
+            "Armor": {
+                "Cost": 400,
+                "Quality": "Epic",
+                "WeeklyLimit": 1
+            },
+            "Accessories": {
+                "Cost": 300,
+                "Quality": "Epic",
+                "WeeklyLimit": 2
+            }
+        }
+    },
+    "RaidProgression": {
+        "WeeklyLockout": true,
+        "CrossCharacterLoot": false,
+        "TokenCap": 1000,
+        "LootRules": {
+            "PersonalLoot": true,
+            "TradeWindow": 7200,
+            "MinimumQuality": "Epic"
+        },
+        "Difficulty": {
+            "Normal": {
+                "DamageMultiplier": 1.0,
+                "HealthMultiplier": 1.0,
+                "MechanicComplexity": 1.0
+            },
+            "Heroic": {
+                "DamageMultiplier": 1.5,
+                "HealthMultiplier": 1.3,
+                "MechanicComplexity": 1.2,
+                "AdditionalMechanics": true
+            },
+            "Mythic": {
+                "DamageMultiplier": 2.0,
+                "HealthMultiplier": 1.5,
+                "MechanicComplexity": 1.5,
+                "AdditionalMechanics": true,
+                "TimelineChaos": true
+            }
+        }
+    }
+}
