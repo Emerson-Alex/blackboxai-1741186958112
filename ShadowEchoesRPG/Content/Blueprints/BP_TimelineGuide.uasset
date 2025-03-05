@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SENPCBase",
+    "Features": [
+        "Timeline Training",
+        "Ability Teaching",
+        "Lore Exposition",
+        "Special Quests"
+    ]
+}
