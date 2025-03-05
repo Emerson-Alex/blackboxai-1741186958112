@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SEBossBase",
+    "Features": [
+        "Corruption Mechanics",
+        "Void Portals",
+        "Shadow Minions",
+        "Dark Timeline Powers"
+    ]
+}
