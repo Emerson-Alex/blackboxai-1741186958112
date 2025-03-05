@@ -1,0 +1,196 @@
+{
+    "Rows": [
+        {
+            "Name": "Duality Blade",
+            "EquipmentID": "Weapon_DualityBlade",
+            "Description": "A legendary sword that resonates with both timelines, growing stronger as its wielder masters both light and darkness.",
+            "Slot": "Weapon",
+            "Rarity": "Legendary",
+            "Level": 30,
+            "Stats": {
+                "Attack": 250.0,
+                "Defense": 0.0,
+                "CriticalChance": 0.15,
+                "CriticalDamage": 2.0,
+                "Health": 0.0,
+                "MaxHealth": 0.0
+            }
+        },
+        {
+            "Name": "Void Edge",
+            "EquipmentID": "Weapon_VoidEdge",
+            "Description": "A dark blade forged in the depths of the shadow realm, empowered by dark timeline energy.",
+            "Slot": "Weapon",
+            "Rarity": "Epic",
+            "Level": 20,
+            "Stats": {
+                "Attack": 200.0,
+                "Defense": 0.0,
+                "CriticalChance": 0.2,
+                "CriticalDamage": 1.8,
+                "Health": 0.0,
+                "MaxHealth": 0.0
+            }
+        },
+        {
+            "Name": "Radiant Saber",
+            "EquipmentID": "Weapon_RadiantSaber",
+            "Description": "A blade of pure light that channels the power of the bright timeline.",
+            "Slot": "Weapon",
+            "Rarity": "Epic",
+            "Level": 20,
+            "Stats": {
+                "Attack": 180.0,
+                "Defense": 20.0,
+                "CriticalChance": 0.1,
+                "CriticalDamage": 2.2,
+                "Health": 100.0,
+                "MaxHealth": 100.0
+            }
+        },
+        {
+            "Name": "Chronoweave Armor",
+            "EquipmentID": "Armor_Chronoweave",
+            "Description": "Armor woven from threads of time itself, offering protection in both timelines.",
+            "Slot": "Armor",
+            "Rarity": "Legendary",
+            "Level": 30,
+            "Stats": {
+                "Attack": 50.0,
+                "Defense": 200.0,
+                "CriticalChance": 0.05,
+                "CriticalDamage": 1.5,
+                "Health": 500.0,
+                "MaxHealth": 500.0
+            }
+        },
+        {
+            "Name": "Shadow Shroud",
+            "EquipmentID": "Armor_ShadowShroud",
+            "Description": "Dark armor that grants enhanced abilities in the dark timeline.",
+            "Slot": "Armor",
+            "Rarity": "Epic",
+            "Level": 20,
+            "Stats": {
+                "Attack": 30.0,
+                "Defense": 150.0,
+                "CriticalChance": 0.1,
+                "CriticalDamage": 1.6,
+                "Health": 300.0,
+                "MaxHealth": 300.0
+            }
+        },
+        {
+            "Name": "Lightforged Plate",
+            "EquipmentID": "Armor_LightforgePlate",
+            "Description": "Armor infused with light energy, providing superior protection in the bright timeline.",
+            "Slot": "Armor",
+            "Rarity": "Epic",
+            "Level": 20,
+            "Stats": {
+                "Attack": 20.0,
+                "Defense": 180.0,
+                "CriticalChance": 0.05,
+                "CriticalDamage": 1.4,
+                "Health": 400.0,
+                "MaxHealth": 400.0
+            }
+        },
+        {
+            "Name": "Temporal Resonator",
+            "EquipmentID": "Accessory_TemporalResonator",
+            "Description": "A powerful artifact that enhances timeline energy regeneration and ability power.",
+            "Slot": "Accessory1",
+            "Rarity": "Legendary",
+            "Level": 30,
+            "Stats": {
+                "Attack": 100.0,
+                "Defense": 50.0,
+                "CriticalChance": 0.1,
+                "CriticalDamage": 1.8,
+                "Health": 200.0,
+                "MaxHealth": 200.0
+            }
+        },
+        {
+            "Name": "Shadow Essence",
+            "EquipmentID": "Accessory_ShadowEssence",
+            "Description": "A dark crystal that enhances abilities in the dark timeline.",
+            "Slot": "Accessory1",
+            "Rarity": "Epic",
+            "Level": 20,
+            "Stats": {
+                "Attack": 80.0,
+                "Defense": 30.0,
+                "CriticalChance": 0.15,
+                "CriticalDamage": 1.6,
+                "Health": 100.0,
+                "MaxHealth": 100.0
+            }
+        },
+        {
+            "Name": "Light Crystal",
+            "EquipmentID": "Accessory_LightCrystal",
+            "Description": "A crystal of pure light that enhances abilities in the bright timeline.",
+            "Slot": "Accessory1",
+            "Rarity": "Epic",
+            "Level": 20,
+            "Stats": {
+                "Attack": 60.0,
+                "Defense": 40.0,
+                "CriticalChance": 0.08,
+                "CriticalDamage": 1.7,
+                "Health": 150.0,
+                "MaxHealth": 150.0
+            }
+        },
+        {
+            "Name": "Paradox Pendant",
+            "EquipmentID": "Accessory_ParadoxPendant",
+            "Description": "A mysterious pendant that grows stronger as you master both timelines.",
+            "Slot": "Accessory2",
+            "Rarity": "Legendary",
+            "Level": 30,
+            "Stats": {
+                "Attack": 75.0,
+                "Defense": 75.0,
+                "CriticalChance": 0.12,
+                "CriticalDamage": 2.0,
+                "Health": 250.0,
+                "MaxHealth": 250.0
+            }
+        },
+        {
+            "Name": "Void Talisman",
+            "EquipmentID": "Accessory_VoidTalisman",
+            "Description": "A dark talisman that enhances critical strikes in the dark timeline.",
+            "Slot": "Accessory2",
+            "Rarity": "Epic",
+            "Level": 20,
+            "Stats": {
+                "Attack": 50.0,
+                "Defense": 25.0,
+                "CriticalChance": 0.2,
+                "CriticalDamage": 1.8,
+                "Health": 100.0,
+                "MaxHealth": 100.0
+            }
+        },
+        {
+            "Name": "Radiant Charm",
+            "EquipmentID": "Accessory_RadiantCharm",
+            "Description": "A bright charm that enhances healing and defense in the bright timeline.",
+            "Slot": "Accessory2",
+            "Rarity": "Epic",
+            "Level": 20,
+            "Stats": {
+                "Attack": 30.0,
+                "Defense": 60.0,
+                "CriticalChance": 0.05,
+                "CriticalDamage": 1.5,
+                "Health": 200.0,
+                "MaxHealth": 200.0
+            }
+        }
+    ]
+}
