@@ -1,0 +1,216 @@
+{
+    "Properties": [
+        {
+            "Name": "Timeline Sanctuary",
+            "PropertyID": "Property_TimelineSanctuary",
+            "Description": "A mystical sanctuary that exists in both timelines",
+            "UnlockRequirement": "Complete 'Master of Timelines' quest",
+            "BasePrice": 50000,
+            "Features": [
+                "Timeline Switching Room",
+                "Crafting Stations",
+                "Trophy Hall",
+                "Training Area"
+            ],
+            "Rooms": 8,
+            "MaxExpansions": 4,
+            "TimelineFeatures": {
+                "BrightWorld": {
+                    "LightGarden": "Grow special light plants",
+                    "MeditationChamber": "Regenerate timeline energy faster",
+                    "LightforgeStation": "Craft light-based items"
+                },
+                "DarkWorld": {
+                    "ShadowNexus": "Store void energy",
+                    "DarkAltar": "Enhance dark abilities",
+                    "VoidCraftingStation": "Craft shadow-based items"
+                }
+            }
+        },
+        {
+            "Name": "Light Haven",
+            "PropertyID": "Property_LightHaven",
+            "Description": "A serene home in the bright timeline",
+            "UnlockRequirement": "Reach Light Timeline Mastery Level 5",
+            "BasePrice": 30000,
+            "Features": [
+                "Light Energy Well",
+                "Sacred Garden",
+                "Blessing Chamber"
+            ],
+            "Rooms": 6,
+            "MaxExpansions": 3,
+            "TimelineFeatures": {
+                "BrightWorld": {
+                    "LightShrine": "Daily light energy bonus",
+                    "HealingPool": "Health regeneration boost",
+                    "LightLibrary": "Store light timeline knowledge"
+                }
+            }
+        },
+        {
+            "Name": "Shadow Refuge",
+            "PropertyID": "Property_ShadowRefuge",
+            "Description": "A mysterious hideout in the dark timeline",
+            "UnlockRequirement": "Reach Dark Timeline Mastery Level 5",
+            "BasePrice": 30000,
+            "Features": [
+                "Void Energy Pool",
+                "Shadow Training Ground",
+                "Dark Meditation Room"
+            ],
+            "Rooms": 6,
+            "MaxExpansions": 3,
+            "TimelineFeatures": {
+                "DarkWorld": {
+                    "VoidPortal": "Fast travel between shadow locations",
+                    "DarkEssencePool": "Void energy regeneration",
+                    "ShadowArchives": "Store dark timeline knowledge"
+                }
+            }
+        }
+    ],
+    "Decorations": {
+        "Furniture": [
+            {
+                "Name": "Timeline Throne",
+                "DecorationID": "Deco_TimelineThrone",
+                "Description": "A majestic throne that shifts appearance with timelines",
+                "Price": 10000,
+                "Rarity": "Legendary",
+                "Effects": {
+                    "TimelineEnergyRegen": 10,
+                    "RestBonus": 15
+                }
+            },
+            {
+                "Name": "Light Crystal Chandelier",
+                "DecorationID": "Deco_LightChandelier",
+                "Description": "Illuminates with pure light energy",
+                "Price": 5000,
+                "Rarity": "Epic",
+                "Timeline": "BrightWorld",
+                "Effects": {
+                    "LightEnergyRegen": 5,
+                    "Ambience": 10
+                }
+            },
+            {
+                "Name": "Shadow Essence Brazier",
+                "DecorationID": "Deco_ShadowBrazier",
+                "Description": "Burns with eternal dark flame",
+                "Price": 5000,
+                "Rarity": "Epic",
+                "Timeline": "DarkWorld",
+                "Effects": {
+                    "VoidEnergyRegen": 5,
+                    "Ambience": 10
+                }
+            }
+        ],
+        "Utility": [
+            {
+                "Name": "Timeline Storage Vault",
+                "DecorationID": "Util_TimelineVault",
+                "Description": "Extra storage that persists across timelines",
+                "Price": 15000,
+                "Slots": 50,
+                "Effects": {
+                    "StorageBonus": 20,
+                    "ItemPreservation": true
+                }
+            },
+            {
+                "Name": "Crafting Enhancement Table",
+                "DecorationID": "Util_CraftingTable",
+                "Description": "Improves crafting success rates",
+                "Price": 8000,
+                "Effects": {
+                    "CraftingBonus": 15,
+                    "ResourceEfficiency": 10
+                }
+            }
+        ],
+        "Trophies": [
+            {
+                "Name": "Boss Trophy Display",
+                "DecorationID": "Trophy_BossDisplay",
+                "Description": "Displays defeated boss trophies",
+                "Price": 5000,
+                "Effects": {
+                    "Prestige": 10,
+                    "StatBonus": 5
+                }
+            },
+            {
+                "Name": "Timeline Achievement Wall",
+                "DecorationID": "Trophy_AchievementWall",
+                "Description": "Showcases timeline mastery achievements",
+                "Price": 7000,
+                "Effects": {
+                    "TimelineMasteryGain": 5,
+                    "Prestige": 15
+                }
+            }
+        ]
+    },
+    "Customization": {
+        "Themes": [
+            {
+                "Name": "Timeline Flux",
+                "ThemeID": "Theme_TimelineFlux",
+                "Description": "Dynamic theme that changes with timeline shifts",
+                "Price": 20000,
+                "Effects": {
+                    "VisualEffects": "Timeline Shift",
+                    "AmbientSounds": "Timeline Resonance"
+                }
+            },
+            {
+                "Name": "Sacred Light",
+                "ThemeID": "Theme_SacredLight",
+                "Description": "Bright timeline architectural style",
+                "Price": 10000,
+                "Timeline": "BrightWorld",
+                "Effects": {
+                    "VisualEffects": "Light Aura",
+                    "AmbientSounds": "Celestial Harmony"
+                }
+            },
+            {
+                "Name": "Shadow Realm",
+                "ThemeID": "Theme_ShadowRealm",
+                "Description": "Dark timeline architectural style",
+                "Price": 10000,
+                "Timeline": "DarkWorld",
+                "Effects": {
+                    "VisualEffects": "Shadow Mist",
+                    "AmbientSounds": "Void Whispers"
+                }
+            }
+        ],
+        "Upgrades": [
+            {
+                "Name": "Room Expansion",
+                "UpgradeID": "Upgrade_RoomExpansion",
+                "Description": "Adds a new room to your property",
+                "BaseCost": 5000,
+                "CostMultiplier": 1.5,
+                "Requirements": {
+                    "PlayerLevel": 10,
+                    "PreviousUpgrades": []
+                }
+            },
+            {
+                "Name": "Timeline Resonance",
+                "UpgradeID": "Upgrade_TimelineResonance",
+                "Description": "Enhances timeline-specific features",
+                "BaseCost": 10000,
+                "Requirements": {
+                    "TimelineMastery": 10,
+                    "PropertyLevel": 5
+                }
+            }
+        ]
+    }
+}
