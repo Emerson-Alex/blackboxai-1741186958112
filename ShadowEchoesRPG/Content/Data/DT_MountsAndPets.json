@@ -1,0 +1,276 @@
+{
+    "Mounts": [
+        {
+            "Name": "Chronosteed",
+            "MountID": "Mount_Chronosteed",
+            "Description": "A mystical horse that can traverse both timelines",
+            "Type": "Ground",
+            "Timeline": "Any",
+            "Rarity": "Legendary",
+            "UnlockCondition": "Complete 'Timeline Harmony' quest",
+            "Stats": {
+                "MovementSpeed": 150,
+                "TimelineEnergyRegen": 10,
+                "TimelineSwitchCost": -20
+            },
+            "Abilities": [
+                {
+                    "Name": "Timeline Dash",
+                    "Description": "Quickly dash between timeline points",
+                    "Cooldown": 30
+                },
+                {
+                    "Name": "Temporal Shield",
+                    "Description": "Protect rider during timeline transitions",
+                    "Cooldown": 60
+                }
+            ]
+        },
+        {
+            "Name": "Shadow Drake",
+            "MountID": "Mount_ShadowDrake",
+            "Description": "A dark timeline dragon that excels in aerial combat",
+            "Type": "Flying",
+            "Timeline": "DarkWorld",
+            "Rarity": "Epic",
+            "UnlockCondition": "Reach Dark Timeline Mastery Level 10",
+            "Stats": {
+                "MovementSpeed": 180,
+                "VoidEnergyBonus": 15,
+                "CombatDamage": 20
+            },
+            "Abilities": [
+                {
+                    "Name": "Shadow Flight",
+                    "Description": "Temporary flight with stealth bonus",
+                    "Cooldown": 45
+                },
+                {
+                    "Name": "Void Breath",
+                    "Description": "Deal dark damage to enemies below",
+                    "Cooldown": 30
+                }
+            ]
+        },
+        {
+            "Name": "Light Griffin",
+            "MountID": "Mount_LightGriffin",
+            "Description": "A majestic griffin from the bright timeline",
+            "Type": "Flying",
+            "Timeline": "BrightWorld",
+            "Rarity": "Epic",
+            "UnlockCondition": "Reach Light Timeline Mastery Level 10",
+            "Stats": {
+                "MovementSpeed": 160,
+                "LightEnergyBonus": 15,
+                "DefenseBonus": 20
+            },
+            "Abilities": [
+                {
+                    "Name": "Divine Ascent",
+                    "Description": "Temporary flight with healing aura",
+                    "Cooldown": 45
+                },
+                {
+                    "Name": "Light Strike",
+                    "Description": "Diving attack with light damage",
+                    "Cooldown": 30
+                }
+            ]
+        }
+    ],
+    "Pets": [
+        {
+            "Name": "Timeline Fox",
+            "PetID": "Pet_TimelineFox",
+            "Description": "A mystical fox that can detect timeline anomalies",
+            "Type": "Support",
+            "Timeline": "Any",
+            "Rarity": "Legendary",
+            "UnlockCondition": "Find all timeline fragments",
+            "Stats": {
+                "TimelineDetection": 20,
+                "ResourceGathering": 15,
+                "LuckBonus": 10
+            },
+            "Abilities": [
+                {
+                    "Name": "Timeline Sense",
+                    "Description": "Detect nearby timeline secrets",
+                    "Cooldown": 300
+                },
+                {
+                    "Name": "Resource Tracking",
+                    "Description": "Track rare resources in both timelines",
+                    "Cooldown": 180
+                }
+            ]
+        },
+        {
+            "Name": "Shadow Panther",
+            "PetID": "Pet_ShadowPanther",
+            "Description": "A stealthy companion from the dark timeline",
+            "Type": "Combat",
+            "Timeline": "DarkWorld",
+            "Rarity": "Epic",
+            "UnlockCondition": "Defeat the Shadow Lord",
+            "Stats": {
+                "CombatDamage": 25,
+                "StealthBonus": 15,
+                "CriticalChance": 10
+            },
+            "Abilities": [
+                {
+                    "Name": "Shadow Strike",
+                    "Description": "Sneak attack on enemies",
+                    "Cooldown": 45
+                },
+                {
+                    "Name": "Dark Scout",
+                    "Description": "Reveal hidden enemies",
+                    "Cooldown": 60
+                }
+            ]
+        },
+        {
+            "Name": "Light Phoenix",
+            "PetID": "Pet_LightPhoenix",
+            "Description": "A radiant bird from the bright timeline",
+            "Type": "Support",
+            "Timeline": "BrightWorld",
+            "Rarity": "Epic",
+            "UnlockCondition": "Complete the Light Temple trials",
+            "Stats": {
+                "HealingPower": 20,
+                "LightEnergyRegen": 15,
+                "ResourceEfficiency": 10
+            },
+            "Abilities": [
+                {
+                    "Name": "Healing Light",
+                    "Description": "Heal owner over time",
+                    "Cooldown": 120
+                },
+                {
+                    "Name": "Divine Scout",
+                    "Description": "Reveal hidden treasures",
+                    "Cooldown": 180
+                }
+            ]
+        }
+    ],
+    "Progression": {
+        "MountLevels": {
+            "MaxLevel": 30,
+            "ExperienceScale": 1000,
+            "BonusPerLevel": {
+                "MovementSpeed": 2,
+                "TimelineEnergy": 1,
+                "CombatStats": 1
+            }
+        },
+        "PetLevels": {
+            "MaxLevel": 20,
+            "ExperienceScale": 500,
+            "BonusPerLevel": {
+                "AbilityPower": 2,
+                "ResourceBonus": 1,
+                "CombatStats": 1
+            }
+        },
+        "Bonding": {
+            "Levels": [
+                {
+                    "Level": 1,
+                    "Name": "Acquaintance",
+                    "RequiredPoints": 0,
+                    "Bonus": "Basic abilities unlocked"
+                },
+                {
+                    "Level": 2,
+                    "Name": "Friend",
+                    "RequiredPoints": 1000,
+                    "Bonus": "5% increased stats"
+                },
+                {
+                    "Level": 3,
+                    "Name": "Partner",
+                    "RequiredPoints": 3000,
+                    "Bonus": "Special ability unlocked"
+                },
+                {
+                    "Level": 4,
+                    "Name": "Soulbound",
+                    "RequiredPoints": 6000,
+                    "Bonus": "10% increased stats"
+                },
+                {
+                    "Level": 5,
+                    "Name": "Timeline Bond",
+                    "RequiredPoints": 10000,
+                    "Bonus": "Ultimate ability unlocked"
+                }
+            ]
+        }
+    },
+    "Customization": {
+        "MountArmor": [
+            {
+                "Name": "Timeline Barding",
+                "ArmorID": "MountArmor_Timeline",
+                "Description": "Protective gear that shifts with timelines",
+                "Stats": {
+                    "Defense": 50,
+                    "TimelineResistance": 20
+                }
+            },
+            {
+                "Name": "Shadow Plates",
+                "ArmorID": "MountArmor_Shadow",
+                "Description": "Dark timeline armor with stealth benefits",
+                "Stats": {
+                    "Defense": 40,
+                    "StealthBonus": 15
+                }
+            },
+            {
+                "Name": "Light Mail",
+                "ArmorID": "MountArmor_Light",
+                "Description": "Bright timeline armor with healing properties",
+                "Stats": {
+                    "Defense": 40,
+                    "HealingReceived": 15
+                }
+            }
+        ],
+        "PetAccessories": [
+            {
+                "Name": "Timeline Charm",
+                "AccessoryID": "PetAcc_Timeline",
+                "Description": "Enhances timeline abilities",
+                "Stats": {
+                    "TimelinePower": 20,
+                    "AbilityCooldown": -10
+                }
+            },
+            {
+                "Name": "Shadow Collar",
+                "AccessoryID": "PetAcc_Shadow",
+                "Description": "Increases dark timeline effectiveness",
+                "Stats": {
+                    "DarkPower": 15,
+                    "StealthDuration": 20
+                }
+            },
+            {
+                "Name": "Light Amulet",
+                "AccessoryID": "PetAcc_Light",
+                "Description": "Enhances light timeline abilities",
+                "Stats": {
+                    "LightPower": 15,
+                    "HealingPower": 20
+                }
+            }
+        ]
+    }
+}
