@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SEBossBase",
+    "Features": [
+        "Light-based Attacks",
+        "Healing Mechanics",
+        "Protection Barriers",
+        "Holy Timeline Powers"
+    ]
+}
