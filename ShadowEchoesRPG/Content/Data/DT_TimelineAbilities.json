@@ -1,0 +1,208 @@
+{
+    "TimelineAbilities": {
+        "Light": {
+            "Basic": [
+                {
+                    "Name": "LightStrike",
+                    "DisplayName": "Light Strike",
+                    "Description": "A quick attack empowered by light energy",
+                    "BaseDamage": 25.0,
+                    "EnergyCost": 10.0,
+                    "Cooldown": 1.0,
+                    "CanCombo": true,
+                    "TimelineBonus": {
+                        "Type": "Damage",
+                        "Value": 1.25
+                    },
+                    "Effects": {
+                        "VFX": "/Game/VFX/Timeline/Light/P_LightStrike",
+                        "SFX": "/Game/Audio/Timeline/Light/S_LightStrike",
+                        "Animation": "/Game/Animations/Timeline/Light/A_LightStrike"
+                    }
+                },
+                {
+                    "Name": "LightBarrier",
+                    "DisplayName": "Light Barrier",
+                    "Description": "Creates a protective barrier of light",
+                    "BaseDefense": 30.0,
+                    "EnergyCost": 20.0,
+                    "Cooldown": 8.0,
+                    "Duration": 5.0,
+                    "TimelineBonus": {
+                        "Type": "Defense",
+                        "Value": 1.5
+                    },
+                    "Effects": {
+                        "VFX": "/Game/VFX/Timeline/Light/P_LightBarrier",
+                        "SFX": "/Game/Audio/Timeline/Light/S_LightBarrier",
+                        "Animation": "/Game/Animations/Timeline/Light/A_LightBarrier"
+                    }
+                }
+            ],
+            "Advanced": [
+                {
+                    "Name": "LightSurge",
+                    "DisplayName": "Light Surge",
+                    "Description": "Channels light energy into a powerful burst",
+                    "BaseDamage": 75.0,
+                    "EnergyCost": 35.0,
+                    "Cooldown": 12.0,
+                    "CastTime": 1.5,
+                    "TimelineBonus": {
+                        "Type": "Area",
+                        "Value": 1.5
+                    },
+                    "Effects": {
+                        "VFX": "/Game/VFX/Timeline/Light/P_LightSurge",
+                        "SFX": "/Game/Audio/Timeline/Light/S_LightSurge",
+                        "Animation": "/Game/Animations/Timeline/Light/A_LightSurge"
+                    }
+                },
+                {
+                    "Name": "LightHealing",
+                    "DisplayName": "Light's Embrace",
+                    "Description": "Heals using light energy",
+                    "BaseHealing": 50.0,
+                    "EnergyCost": 40.0,
+                    "Cooldown": 15.0,
+                    "TimelineBonus": {
+                        "Type": "Healing",
+                        "Value": 1.75
+                    },
+                    "Effects": {
+                        "VFX": "/Game/VFX/Timeline/Light/P_LightHealing",
+                        "SFX": "/Game/Audio/Timeline/Light/S_LightHealing",
+                        "Animation": "/Game/Animations/Timeline/Light/A_LightHealing"
+                    }
+                }
+            ]
+        },
+        "Dark": {
+            "Basic": [
+                {
+                    "Name": "DarkSlash",
+                    "DisplayName": "Dark Slash",
+                    "Description": "A vicious attack infused with dark energy",
+                    "BaseDamage": 35.0,
+                    "EnergyCost": 15.0,
+                    "Cooldown": 2.0,
+                    "CanCombo": true,
+                    "TimelineBonus": {
+                        "Type": "CriticalChance",
+                        "Value": 1.25
+                    },
+                    "Effects": {
+                        "VFX": "/Game/VFX/Timeline/Dark/P_DarkSlash",
+                        "SFX": "/Game/Audio/Timeline/Dark/S_DarkSlash",
+                        "Animation": "/Game/Animations/Timeline/Dark/A_DarkSlash"
+                    }
+                },
+                {
+                    "Name": "DarkShroud",
+                    "DisplayName": "Dark Shroud",
+                    "Description": "Surrounds the user with protective darkness",
+                    "BaseDefense": 20.0,
+                    "EnergyCost": 25.0,
+                    "Cooldown": 10.0,
+                    "Duration": 6.0,
+                    "TimelineBonus": {
+                        "Type": "Evasion",
+                        "Value": 1.5
+                    },
+                    "Effects": {
+                        "VFX": "/Game/VFX/Timeline/Dark/P_DarkShroud",
+                        "SFX": "/Game/Audio/Timeline/Dark/S_DarkShroud",
+                        "Animation": "/Game/Animations/Timeline/Dark/A_DarkShroud"
+                    }
+                }
+            ],
+            "Advanced": [
+                {
+                    "Name": "VoidBurst",
+                    "DisplayName": "Void Burst",
+                    "Description": "Unleashes concentrated dark energy",
+                    "BaseDamage": 100.0,
+                    "EnergyCost": 45.0,
+                    "Cooldown": 15.0,
+                    "CastTime": 2.0,
+                    "TimelineBonus": {
+                        "Type": "DamageOverTime",
+                        "Value": 2.0
+                    },
+                    "Effects": {
+                        "VFX": "/Game/VFX/Timeline/Dark/P_VoidBurst",
+                        "SFX": "/Game/Audio/Timeline/Dark/S_VoidBurst",
+                        "Animation": "/Game/Animations/Timeline/Dark/A_VoidBurst"
+                    }
+                },
+                {
+                    "Name": "ShadowLeech",
+                    "DisplayName": "Shadow Leech",
+                    "Description": "Drains enemy health and converts to energy",
+                    "BaseDamage": 60.0,
+                    "EnergyCost": 30.0,
+                    "Cooldown": 18.0,
+                    "TimelineBonus": {
+                        "Type": "LifeSteal",
+                        "Value": 1.5
+                    },
+                    "Effects": {
+                        "VFX": "/Game/VFX/Timeline/Dark/P_ShadowLeech",
+                        "SFX": "/Game/Audio/Timeline/Dark/S_ShadowLeech",
+                        "Animation": "/Game/Animations/Timeline/Dark/A_ShadowLeech"
+                    }
+                }
+            ]
+        },
+        "Combo": {
+            "Light": {
+                "LightCombo1": {
+                    "Name": "LightCombo1",
+                    "DisplayName": "Light Combination",
+                    "RequiredAbilities": ["LightStrike", "LightSurge"],
+                    "BonusDamage": 1.5,
+                    "EnergyCost": 25.0,
+                    "TimelineBonus": {
+                        "Type": "Area",
+                        "Value": 1.25
+                    }
+                },
+                "LightCombo2": {
+                    "Name": "LightCombo2",
+                    "DisplayName": "Radiant Sequence",
+                    "RequiredAbilities": ["LightStrike", "LightBarrier", "LightSurge"],
+                    "BonusDamage": 2.0,
+                    "EnergyCost": 40.0,
+                    "TimelineBonus": {
+                        "Type": "Healing",
+                        "Value": 1.5
+                    }
+                }
+            },
+            "Dark": {
+                "DarkCombo1": {
+                    "Name": "DarkCombo1",
+                    "DisplayName": "Dark Sequence",
+                    "RequiredAbilities": ["DarkSlash", "VoidBurst"],
+                    "BonusDamage": 1.75,
+                    "EnergyCost": 35.0,
+                    "TimelineBonus": {
+                        "Type": "CriticalDamage",
+                        "Value": 1.5
+                    }
+                },
+                "DarkCombo2": {
+                    "Name": "DarkCombo2",
+                    "DisplayName": "Void Chain",
+                    "RequiredAbilities": ["DarkSlash", "DarkShroud", "ShadowLeech"],
+                    "BonusDamage": 2.25,
+                    "EnergyCost": 50.0,
+                    "TimelineBonus": {
+                        "Type": "LifeSteal",
+                        "Value": 2.0
+                    }
+                }
+            }
+        }
+    }
+}
