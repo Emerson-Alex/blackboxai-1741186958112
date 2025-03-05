@@ -1,0 +1,15 @@
+{
+    "Parent": "BP_SEArmorBase",
+    "Types": [
+        "Shadow Set",
+        "Void Robes",
+        "Light Plate",
+        "Time Warrior Armor"
+    ],
+    "Properties": {
+        "Defense": 10.0,
+    "TimelineResistance": 5.0,
+    "ElementalResistance": 3.0,
+    "MovementPenalty": 1.0
+    }
+}
