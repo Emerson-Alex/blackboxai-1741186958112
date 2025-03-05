@@ -1,0 +1,208 @@
+{
+    "Rows": [
+        {
+            "Name": "Milestone_05",
+            "Level": 5,
+            "Title": "Timeline Initiate",
+            "Description": "Master the basics of timeline manipulation.",
+            "RequiredQuests": ["Main_04"],
+            "Rewards": {
+                "Stats": {
+                    "MaxHealth": 200,
+                    "TimelineEnergy": 100,
+                    "DamageBonus": 0.1,
+                    "TimelineResistance": 0.1
+                },
+                "Items": [
+                    {
+                        "ID": "Armor_InitiateSet",
+                        "Name": "Timeline Initiate's Armor Set",
+                        "Type": "ArmorSet",
+                        "Stats": {
+                            "Defense": 100,
+                            "TimelineResistance": 0.15
+                        }
+                    },
+                    {
+                        "ID": "Weapon_InitiateBlade",
+                        "Name": "Timeline Initiate's Blade",
+                        "Type": "Weapon",
+                        "Stats": {
+                            "Damage": 150,
+                            "TimelinePower": 50
+                        }
+                    }
+                ],
+                "Abilities": [
+                    {
+                        "ID": "Ability_TimelineControl",
+                        "Name": "Timeline Control",
+                        "Description": "Enhanced control over timeline shifting",
+                        "Effects": ["Reduced timeline shift cooldown", "Increased shift range"]
+                    },
+                    {
+                        "ID": "Ability_TimelineBarrier",
+                        "Name": "Timeline Barrier",
+                        "Description": "Create a protective barrier using timeline energy",
+                        "Effects": ["Damage absorption", "Timeline resistance"]
+                    }
+                ],
+                "Currency": 1000,
+                "XP": 2000
+            }
+        },
+        {
+            "Name": "Milestone_10",
+            "Level": 10,
+            "Title": "Void Walker",
+            "Description": "Gain mastery over void energy between timelines.",
+            "RequiredQuests": ["Main_06"],
+            "Rewards": {
+                "Stats": {
+                    "MaxHealth": 400,
+                    "TimelineEnergy": 200,
+                    "DamageBonus": 0.2,
+                    "VoidResistance": 0.2
+                },
+                "Items": [
+                    {
+                        "ID": "Armor_VoidwalkerSet",
+                        "Name": "Voidwalker's Armor Set",
+                        "Type": "ArmorSet",
+                        "Stats": {
+                            "Defense": 200,
+                            "VoidResistance": 0.25
+                        }
+                    },
+                    {
+                        "ID": "Weapon_VoidBlade",
+                        "Name": "Voidwalker's Blade",
+                        "Type": "Weapon",
+                        "Stats": {
+                            "Damage": 300,
+                            "VoidPower": 100
+                        }
+                    }
+                ],
+                "Abilities": [
+                    {
+                        "ID": "Ability_VoidStep",
+                        "Name": "Void Step",
+                        "Description": "Teleport through the void between timelines",
+                        "Effects": ["Short-range teleport", "Void damage bonus"]
+                    },
+                    {
+                        "ID": "Ability_VoidShield",
+                        "Name": "Void Shield",
+                        "Description": "Harness void energy for protection",
+                        "Effects": ["Void damage absorption", "Health regeneration"]
+                    }
+                ],
+                "Currency": 2000,
+                "XP": 4000
+            }
+        },
+        {
+            "Name": "Milestone_15",
+            "Level": 15,
+            "Title": "Timeline Weaver",
+            "Description": "Learn to weave and manipulate timeline energies.",
+            "RequiredQuests": ["Main_08"],
+            "Rewards": {
+                "Stats": {
+                    "MaxHealth": 600,
+                    "TimelineEnergy": 300,
+                    "DamageBonus": 0.3,
+                    "TimelineControl": 0.3
+                },
+                "Items": [
+                    {
+                        "ID": "Armor_WeaverSet",
+                        "Name": "Timeline Weaver's Armor Set",
+                        "Type": "ArmorSet",
+                        "Stats": {
+                            "Defense": 300,
+                            "TimelineControl": 0.35
+                        }
+                    },
+                    {
+                        "ID": "Weapon_WeaverStaff",
+                        "Name": "Timeline Weaver's Staff",
+                        "Type": "Weapon",
+                        "Stats": {
+                            "Damage": 450,
+                            "TimelinePower": 150
+                        }
+                    }
+                ],
+                "Abilities": [
+                    {
+                        "ID": "Ability_TimeWeave",
+                        "Name": "Time Weave",
+                        "Description": "Create complex patterns of timeline energy",
+                        "Effects": ["Area control", "Timeline manipulation"]
+                    },
+                    {
+                        "ID": "Ability_RealityBend",
+                        "Name": "Reality Bend",
+                        "Description": "Temporarily alter local reality",
+                        "Effects": ["Environment manipulation", "Reality damage"]
+                    }
+                ],
+                "Currency": 3000,
+                "XP": 6000
+            }
+        },
+        {
+            "Name": "Milestone_20",
+            "Level": 20,
+            "Title": "Timeline Lord",
+            "Description": "Achieve mastery over multiple timelines.",
+            "RequiredQuests": ["Main_10"],
+            "Rewards": {
+                "Stats": {
+                    "MaxHealth": 800,
+                    "TimelineEnergy": 400,
+                    "DamageBonus": 0.4,
+                    "TimelineMastery": 0.4
+                },
+                "Items": [
+                    {
+                        "ID": "Armor_LordSet",
+                        "Name": "Timeline Lord's Armor Set",
+                        "Type": "ArmorSet",
+                        "Stats": {
+                            "Defense": 400,
+                            "TimelineMastery": 0.45
+                        }
+                    },
+                    {
+                        "ID": "Weapon_LordBlade",
+                        "Name": "Timeline Lord's Blade",
+                        "Type": "Weapon",
+                        "Stats": {
+                            "Damage": 600,
+                            "TimelinePower": 200
+                        }
+                    }
+                ],
+                "Abilities": [
+                    {
+                        "ID": "Ability_TimelineLord",
+                        "Name": "Timeline Lordship",
+                        "Description": "Command multiple timelines simultaneously",
+                        "Effects": ["Multi-timeline control", "Enhanced timeline powers"]
+                    },
+                    {
+                        "ID": "Ability_RealityMaster",
+                        "Name": "Reality Mastery",
+                        "Description": "Achieve complete control over local reality",
+                        "Effects": ["Reality manipulation", "Timeline convergence"]
+                    }
+                ],
+                "Currency": 4000,
+                "XP": 8000
+            }
+        }
+    ]
+}
