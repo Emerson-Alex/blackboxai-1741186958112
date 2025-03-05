@@ -1,0 +1,9 @@
+{
+    "Parent": "USEUserWidget",
+    "Features": [
+        "Character Selection",
+        "Timeline Overview",
+        "Quest Journal",
+        "Equipment Management"
+    ]
+}
