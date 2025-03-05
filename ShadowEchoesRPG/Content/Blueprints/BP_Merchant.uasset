@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SENPCBase",
+    "Features": [
+        "Inventory System",
+        "Trading Interface",
+        "Price Calculation",
+        "Special Offers"
+    ]
+}
