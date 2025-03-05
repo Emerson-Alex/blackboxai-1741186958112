@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SEWorldBase",
+    "Features": [
+        "Dark Atmosphere",
+        "Stealth Bonuses",
+        "Corruption Effects",
+        "Shadow Creatures"
+    ]
+}
