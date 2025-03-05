@@ -1,0 +1,15 @@
+{
+    "Parent": "BP_SEWeaponBase",
+    "Types": [
+        "Timeline Blade",
+        "Void Staff",
+        "Light Mace",
+        "Time Greatsword"
+    ],
+    "Properties":{
+    "BaseDamage": 15.0,
+    "TimelinePower": 10.0,
+    "ElementalDamage": 5.0,
+    "CriticalMultiplier": 2.0
+}
+}
