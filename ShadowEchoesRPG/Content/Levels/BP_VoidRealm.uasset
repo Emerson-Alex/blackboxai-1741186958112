@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SELevelBase",
+    "Features": [
+        "Corrupted Environment",
+        "Challenging Enemies",
+        "Unique Resources",
+        "Special Events"
+    ]
+}
