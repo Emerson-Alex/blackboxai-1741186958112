@@ -1,0 +1,220 @@
+{
+    "Events": [
+        {
+            "Name": "Void Storm",
+            "EventID": "Event_VoidStorm",
+            "Description": "A cataclysmic storm of void energy that warps reality and empowers dark creatures.",
+            "Type": "WorldEvent",
+            "Duration": 600,
+            "Cooldown": 3600,
+            "RequiredTimeline": "DarkWorld",
+            "TriggerConditions": {
+                "PlayerLevel": 20,
+                "TimeOfDay": "Night",
+                "AreaStates": ["ShadowedVale", "VoidCitadel"]
+            },
+            "Effects": {
+                "Environment": {
+                    "VisibilityReduction": 70,
+                    "VoidEnergyDensity": 200,
+                    "AmbientSoundSet": "VoidStorm"
+                },
+                "Enemies": {
+                    "DamageBonus": 50,
+                    "VoidPowerBonus": 100,
+                    "SpawnRateIncrease": 30
+                },
+                "Players": {
+                    "VoidResistanceRequired": 40,
+                    "TimelineEnergyDrain": 5,
+                    "MovementSpeedPenalty": 20
+                }
+            },
+            "SpecialEncounters": [
+                {
+                    "Name": "Void Harbinger",
+                    "SpawnChance": 25,
+                    "RequiredKills": 50,
+                    "UniqueRewards": ["VoidforgedWeapon", "StormEssence"]
+                }
+            ]
+        },
+        {
+            "Name": "Timeline Convergence",
+            "EventID": "Event_TimelineConvergence",
+            "Description": "A rare phenomenon where timelines blur, allowing beings from both realities to coexist.",
+            "Type": "WorldEvent",
+            "Duration": 900,
+            "Cooldown": 7200,
+            "RequiredTimeline": "Any",
+            "TriggerConditions": {
+                "PlayerLevel": 30,
+                "TimelineMastery": 50,
+                "AreaStates": ["TimelineNexus"]
+            },
+            "Effects": {
+                "Environment": {
+                    "RealityDistortion": 100,
+                    "TimelineBlending": true,
+                    "AmbientSoundSet": "Convergence"
+                },
+                "Enemies": {
+                    "DualTimelineAbilities": true,
+                    "PowerIncrease": 100,
+                    "AdaptiveBehavior": true
+                },
+                "Players": {
+                    "TimelinePowerBonus": 50,
+                    "AbilityCooldownReduction": 30,
+                    "DualTimelineEffects": true
+                }
+            },
+            "SpecialEncounters": [
+                {
+                    "Name": "Timeline Anomaly",
+                    "SpawnChance": 35,
+                    "RequiredConvergenceTime": 300,
+                    "UniqueRewards": ["ConvergenceRelic", "TimelineEssence"]
+                }
+            ]
+        },
+        {
+            "Name": "Eternal Hunt",
+            "EventID": "Event_EternalHunt",
+            "Description": "A deadly game where powerful hunters from both timelines pursue the player.",
+            "Type": "PursuitEvent",
+            "Duration": 1200,
+            "Cooldown": 5400,
+            "RequiredTimeline": "Any",
+            "TriggerConditions": {
+                "PlayerLevel": 40,
+                "ReputationLevel": "Notorious",
+                "AreaStates": ["Any"]
+            },
+            "Hunters": [
+                {
+                    "Name": "Shadow Stalker",
+                    "Timeline": "DarkWorld",
+                    "TrackingAbility": 90,
+                    "UniqueAbilities": ["VoidTrace", "ShadowAmbush"]
+                },
+                {
+                    "Name": "Light Seeker",
+                    "Timeline": "BrightWorld",
+                    "TrackingAbility": 90,
+                    "UniqueAbilities": ["LightTrace", "RadiantPursuit"]
+                }
+            ],
+            "Rewards": {
+                "Survival": ["HuntersTrophy", "TimelineEssence"],
+                "Defeat": ["HuntersMark", "TimelineFragment"]
+            }
+        },
+        {
+            "Name": "Reality Fracture",
+            "EventID": "Event_RealityFracture",
+            "Description": "Tears in reality create unpredictable and dangerous combat scenarios.",
+            "Type": "CombatEvent",
+            "Duration": 300,
+            "Cooldown": 1800,
+            "RequiredTimeline": "Any",
+            "TriggerConditions": {
+                "PlayerLevel": 35,
+                "TimelineInstability": 70,
+                "AreaStates": ["VoidCitadel", "TimelineNexus"]
+            },
+            "Encounters": [
+                {
+                    "Type": "RealityTear",
+                    "SpawnInterval": 60,
+                    "Effects": {
+                        "RandomTimelineShift": true,
+                        "EnemyPowerBoost": 75,
+                        "RealityDistortion": 50
+                    }
+                },
+                {
+                    "Type": "TimelineInvasion",
+                    "SpawnInterval": 120,
+                    "Effects": {
+                        "InvaderPowerBoost": 100,
+                        "TimelineChaos": true,
+                        "RealityWarping": true
+                    }
+                }
+            ]
+        },
+        {
+            "Name": "Timeline War",
+            "EventID": "Event_TimelineWar",
+            "Description": "A massive conflict between forces of light and darkness across multiple areas.",
+            "Type": "WorldEvent",
+            "Duration": 1800,
+            "Cooldown": 14400,
+            "RequiredTimeline": "Any",
+            "TriggerConditions": {
+                "PlayerLevel": 45,
+                "TimelineTension": 100,
+                "AreaStates": ["All"]
+            },
+            "Phases": [
+                {
+                    "Name": "Initial Conflict",
+                    "Duration": 600,
+                    "Effects": {
+                        "BattleIntensity": 50,
+                        "TimelineFlux": 30,
+                        "RewardMultiplier": 1.5
+                    }
+                },
+                {
+                    "Name": "Escalation",
+                    "Duration": 600,
+                    "Effects": {
+                        "BattleIntensity": 75,
+                        "TimelineFlux": 60,
+                        "RewardMultiplier": 2.0
+                    }
+                },
+                {
+                    "Name": "Climax",
+                    "Duration": 600,
+                    "Effects": {
+                        "BattleIntensity": 100,
+                        "TimelineFlux": 100,
+                        "RewardMultiplier": 3.0
+                    }
+                }
+            ],
+            "FactionRewards": {
+                "LightVictory": {
+                    "LightAlignment": 50,
+                    "LightArtifacts": true,
+                    "TimelineInfluence": "BrightWorld"
+                },
+                "DarkVictory": {
+                    "DarkAlignment": 50,
+                    "DarkArtifacts": true,
+                    "TimelineInfluence": "DarkWorld"
+                }
+            }
+        }
+    ],
+    "GlobalSettings": {
+        "EventFrequency": {
+            "Base": 0.1,
+            "PlayerLevelMultiplier": 0.01,
+            "TimelineMasteryMultiplier": 0.02
+        },
+        "RewardScaling": {
+            "Base": 1.0,
+            "DifficultyMultiplier": 0.2,
+            "TimelineAlignmentBonus": 0.3
+        },
+        "DifficultyAdjustment": {
+            "PlayerPowerLevel": 0.5,
+            "GroupSize": 0.3,
+            "TimelineMastery": 0.2
+        }
+    }
+}
