@@ -1,0 +1,7 @@
+{
+    "Parent": "USEUserWidget",
+    "Features": [
+        "Display of items",
+        "Management of inventory slots"
+    ]
+}
