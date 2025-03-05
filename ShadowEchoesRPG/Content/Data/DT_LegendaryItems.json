@@ -1,0 +1,231 @@
+{
+    "LegendaryItems": [
+        {
+            "Name": "Paradox Blade",
+            "ItemID": "Legendary_ParadoxBlade",
+            "Type": "Weapon",
+            "Rarity": "Mythic",
+            "Source": "Void Between Timelines",
+            "RequiredLevel": 40,
+            "Stats": {
+                "Attack": 500,
+                "CriticalChance": 0.25,
+                "CriticalDamage": 2.5,
+                "TimelineEnergy": 100
+            },
+            "UniqueEffects": [
+                {
+                    "Name": "Timeline Convergence",
+                    "Description": "Allows simultaneous use of both timeline abilities",
+                    "Trigger": "OnEquip",
+                    "Effect": "EnableDualTimelineAbilities"
+                },
+                {
+                    "Name": "Reality Shatter",
+                    "Description": "Creates mini reality tears on critical hits",
+                    "Trigger": "OnCriticalHit",
+                    "Effect": "SpawnRealityTear",
+                    "Cooldown": 10
+                }
+            ],
+            "TimelineBonus": {
+                "BrightWorld": {
+                    "LightDamage": 50,
+                    "HealingPower": 25
+                },
+                "DarkWorld": {
+                    "DarkDamage": 50,
+                    "StealthBonus": 25
+                }
+            }
+        },
+        {
+            "Name": "Chronolith Crown",
+            "ItemID": "Legendary_ChronolithCrown",
+            "Type": "Accessory",
+            "Rarity": "Mythic",
+            "Source": "Chronolith Depths",
+            "RequiredLevel": 45,
+            "Stats": {
+                "TimelineEnergy": 200,
+                "CooldownReduction": 30,
+                "AbilityPower": 100,
+                "TimelineMasteryGain": 50
+            },
+            "UniqueEffects": [
+                {
+                    "Name": "Personal Timeline",
+                    "Description": "Creates a bubble where you control timeline state",
+                    "Trigger": "OnActivate",
+                    "Effect": "CreateTimelineBubble",
+                    "Duration": 15,
+                    "Cooldown": 180
+                },
+                {
+                    "Name": "Timeline Echo",
+                    "Description": "Summons an echo of yourself from another timeline",
+                    "Trigger": "OnAbilityUse",
+                    "Effect": "SummonTimelineEcho",
+                    "Duration": 10,
+                    "Chance": 0.15
+                }
+            ],
+            "TimelineBonus": {
+                "Any": {
+                    "TimelineEnergyRegen": 100,
+                    "AbilityCooldown": -20
+                }
+            }
+        },
+        {
+            "Name": "The Eternal Aegis",
+            "ItemID": "Legendary_EternalAegis",
+            "Type": "Armor",
+            "Rarity": "Ultimate",
+            "Source": "Eternity's End",
+            "RequiredLevel": 50,
+            "Stats": {
+                "Defense": 1000,
+                "Health": 2000,
+                "TimelineResistance": 100,
+                "AllStats": 50
+            },
+            "UniqueEffects": [
+                {
+                    "Name": "Timeline Mastery",
+                    "Description": "Complete control over personal timeline state",
+                    "Trigger": "Passive",
+                    "Effect": "TimelineControl"
+                },
+                {
+                    "Name": "Reality Anchor",
+                    "Description": "Create permanent reality tears",
+                    "Trigger": "OnActivate",
+                    "Effect": "CreatePermanentTear",
+                    "Cooldown": 300
+                },
+                {
+                    "Name": "Eternal Resonance",
+                    "Description": "Abilities affect all timelines simultaneously",
+                    "Trigger": "OnAbilityUse",
+                    "Effect": "MultiTimelineEffect"
+                }
+            ],
+            "SetBonuses": {
+                "WithParadoxBlade": {
+                    "Name": "Timeline Architect",
+                    "Effect": "Create temporary timelines",
+                    "Duration": 30,
+                    "Cooldown": 600
+                },
+                "WithChronolithCrown": {
+                    "Name": "Master of Time",
+                    "Effect": "Control timeline flow in large area",
+                    "Radius": 50,
+                    "Duration": 20,
+                    "Cooldown": 300
+                }
+            }
+        },
+        {
+            "Name": "Void Walker's Embrace",
+            "ItemID": "Legendary_VoidWalkerEmbrace",
+            "Type": "Cloak",
+            "Rarity": "Mythic",
+            "Source": "Void Between Timelines (Hidden)",
+            "RequiredLevel": 40,
+            "Stats": {
+                "Defense": 300,
+                "TimelineEnergy": 150,
+                "MovementSpeed": 30,
+                "StealthBonus": 50
+            },
+            "UniqueEffects": [
+                {
+                    "Name": "Timeline Phase",
+                    "Description": "Phase between timelines without energy cost",
+                    "Trigger": "OnDodge",
+                    "Effect": "TimelinePhase",
+                    "Cooldown": 15
+                },
+                {
+                    "Name": "Void Step",
+                    "Description": "Short teleport through reality tears",
+                    "Trigger": "OnActivate",
+                    "Effect": "VoidTeleport",
+                    "Range": 20,
+                    "Cooldown": 8
+                }
+            ],
+            "TimelineBonus": {
+                "DarkWorld": {
+                    "StealthDuration": 100,
+                    "VoidDamage": 30
+                },
+                "BrightWorld": {
+                    "MovementSpeed": 50,
+                    "DodgeChance": 20
+                }
+            }
+        }
+    ],
+    "SetEffects": {
+        "TimelineMaster": {
+            "RequiredPieces": ["Paradox Blade", "Chronolith Crown", "Eternal Aegis"],
+            "Effects": [
+                {
+                    "Name": "Timeline Sovereign",
+                    "Description": "Achieve perfect mastery over all timelines",
+                    "Bonuses": {
+                        "TimelineEnergyRegen": 200,
+                        "AbilityPower": 100,
+                        "CooldownReduction": 50,
+                        "AllStats": 100
+                    }
+                },
+                {
+                    "Name": "Reality Architect",
+                    "Description": "Create and manipulate timeline anomalies at will",
+                    "Abilities": [
+                        "CreateTimeline",
+                        "MergeTimelines",
+                        "StabilizeReality"
+                    ]
+                }
+            ]
+        }
+    },
+    "UpgradeSystem": {
+        "Materials": {
+            "TimelineEssence": {
+                "Rarity": "Mythic",
+                "Source": "Legendary Dungeons",
+                "MaxStack": 100
+            },
+            "VoidCrystal": {
+                "Rarity": "Legendary",
+                "Source": "Reality Tears",
+                "MaxStack": 250
+            }
+        },
+        "Costs": {
+            "Mythic": {
+                "TimelineEssence": 10,
+                "VoidCrystal": 25,
+                "GoldCost": 100000
+            },
+            "Ultimate": {
+                "TimelineEssence": 25,
+                "VoidCrystal": 50,
+                "GoldCost": 250000
+            }
+        },
+        "Bonuses": {
+            "PerUpgrade": {
+                "Stats": 10,
+                "UniqueEffectPower": 15,
+                "TimelineBonuses": 20
+            }
+        }
+    }
+}
