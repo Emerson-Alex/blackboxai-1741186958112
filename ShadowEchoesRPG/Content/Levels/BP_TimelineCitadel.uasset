@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SELevelBase",
+    "Features": [
+        "Hub Area",
+        "Quest Givers",
+        "Merchants",
+        "Training Areas"
+    ]
+}
