@@ -1,0 +1,211 @@
+{
+    "Rows": [
+        {
+            "Name": "ShadowLord",
+            "BossID": "Boss_ShadowLord",
+            "Description": "Master of the Dark Timeline, wielding corrupted powers of shadow and void.",
+            "RequiredLevel": 20,
+            "PreferredTimeline": "DarkWorld",
+            "BaseStats": {
+                "Health": 5000.0,
+                "MaxHealth": 5000.0,
+                "Attack": 150.0,
+                "Defense": 75.0,
+                "CriticalChance": 0.15,
+                "CriticalDamage": 2.0
+            },
+            "Phases": [
+                {
+                    "PhaseName": "Shadow Ascension",
+                    "HealthThreshold": 1.0,
+                    "PhaseAbilities": [
+                        "ShadowBolt",
+                        "DarkBarrier",
+                        "VoidStrike"
+                    ],
+                    "PhaseStats": {
+                        "Attack": 150.0,
+                        "Defense": 75.0
+                    },
+                    "PreferredTimeline": "DarkWorld"
+                },
+                {
+                    "PhaseName": "Void Corruption",
+                    "HealthThreshold": 0.7,
+                    "PhaseAbilities": [
+                        "VoidEruption",
+                        "ShadowClones",
+                        "DarkConsumption"
+                    ],
+                    "PhaseStats": {
+                        "Attack": 200.0,
+                        "Defense": 60.0
+                    },
+                    "PreferredTimeline": "DarkWorld"
+                },
+                {
+                    "PhaseName": "Dark Apocalypse",
+                    "HealthThreshold": 0.3,
+                    "PhaseAbilities": [
+                        "VoidMaelstrom",
+                        "ShadowRealm",
+                        "DarkAnnihilation"
+                    ],
+                    "PhaseStats": {
+                        "Attack": 300.0,
+                        "Defense": 40.0
+                    },
+                    "PreferredTimeline": "DarkWorld"
+                }
+            ],
+            "UnlockableAbilities": [
+                "ShadowBolt",
+                "VoidStrike",
+                "DarkConsumption"
+            ]
+        },
+        {
+            "Name": "LightBringer",
+            "BossID": "Boss_LightBringer",
+            "Description": "Guardian of the Bright Timeline, commanding powers of light and radiance.",
+            "RequiredLevel": 20,
+            "PreferredTimeline": "BrightWorld",
+            "BaseStats": {
+                "Health": 4500.0,
+                "MaxHealth": 4500.0,
+                "Attack": 175.0,
+                "Defense": 60.0,
+                "CriticalChance": 0.2,
+                "CriticalDamage": 1.8
+            },
+            "Phases": [
+                {
+                    "PhaseName": "Divine Awakening",
+                    "HealthThreshold": 1.0,
+                    "PhaseAbilities": [
+                        "LightBeam",
+                        "HolyShield",
+                        "RadiantStrike"
+                    ],
+                    "PhaseStats": {
+                        "Attack": 175.0,
+                        "Defense": 60.0
+                    },
+                    "PreferredTimeline": "BrightWorld"
+                },
+                {
+                    "PhaseName": "Celestial Judgment",
+                    "HealthThreshold": 0.6,
+                    "PhaseAbilities": [
+                        "CelestialBurst",
+                        "LightPillars",
+                        "HolyWrath"
+                    ],
+                    "PhaseStats": {
+                        "Attack": 225.0,
+                        "Defense": 50.0
+                    },
+                    "PreferredTimeline": "BrightWorld"
+                },
+                {
+                    "PhaseName": "Divine Retribution",
+                    "HealthThreshold": 0.3,
+                    "PhaseAbilities": [
+                        "CelestialStorm",
+                        "LightDomain",
+                        "DivinePurge"
+                    ],
+                    "PhaseStats": {
+                        "Attack": 350.0,
+                        "Defense": 30.0
+                    },
+                    "PreferredTimeline": "BrightWorld"
+                }
+            ],
+            "UnlockableAbilities": [
+                "LightBeam",
+                "RadiantStrike",
+                "HolyWrath"
+            ]
+        },
+        {
+            "Name": "TimeWeaver",
+            "BossID": "Boss_TimeWeaver",
+            "Description": "Master of both timelines, capable of manipulating the fabric of reality itself.",
+            "RequiredLevel": 30,
+            "PreferredTimeline": "Any",
+            "BaseStats": {
+                "Health": 7500.0,
+                "MaxHealth": 7500.0,
+                "Attack": 200.0,
+                "Defense": 100.0,
+                "CriticalChance": 0.25,
+                "CriticalDamage": 2.5
+            },
+            "Phases": [
+                {
+                    "PhaseName": "Timeline Convergence",
+                    "HealthThreshold": 1.0,
+                    "PhaseAbilities": [
+                        "TimeShift",
+                        "RealityWarp",
+                        "DualityStrike"
+                    ],
+                    "PhaseStats": {
+                        "Attack": 200.0,
+                        "Defense": 100.0
+                    },
+                    "PreferredTimeline": "Any"
+                },
+                {
+                    "PhaseName": "Temporal Chaos",
+                    "HealthThreshold": 0.7,
+                    "PhaseAbilities": [
+                        "TimeStorm",
+                        "RealityFracture",
+                        "ChronoBlast"
+                    ],
+                    "PhaseStats": {
+                        "Attack": 250.0,
+                        "Defense": 80.0
+                    },
+                    "PreferredTimeline": "Any"
+                },
+                {
+                    "PhaseName": "Reality Collapse",
+                    "HealthThreshold": 0.4,
+                    "PhaseAbilities": [
+                        "TimeCollapse",
+                        "RealitySunder",
+                        "ChronoNova"
+                    ],
+                    "PhaseStats": {
+                        "Attack": 300.0,
+                        "Defense": 60.0
+                    },
+                    "PreferredTimeline": "Any"
+                },
+                {
+                    "PhaseName": "Final Paradox",
+                    "HealthThreshold": 0.2,
+                    "PhaseAbilities": [
+                        "ParadoxBreak",
+                        "TimelineEnd",
+                        "EternalDoom"
+                    ],
+                    "PhaseStats": {
+                        "Attack": 400.0,
+                        "Defense": 40.0
+                    },
+                    "PreferredTimeline": "Any"
+                }
+            ],
+            "UnlockableAbilities": [
+                "TimeShift",
+                "DualityStrike",
+                "ChronoBlast",
+                "ParadoxBreak"
+            ]
+        }
+    ]
+}
