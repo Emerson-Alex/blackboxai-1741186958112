@@ -1,0 +1,268 @@
+{
+    "Areas": [
+        {
+            "Name": "Temporal Crossroads",
+            "AreaID": "StartingArea",
+            "Description": "A nexus where timelines converge, serving as the starting point of your journey.",
+            "RecommendedLevel": 1,
+            "PreferredTimeline": "Any",
+            "ConnectedAreas": [
+                "ShadowedVale",
+                "LightspireCliffs"
+            ],
+            "HiddenSecrets": [
+                "TimewornPath",
+                "AncientShrine"
+            ],
+            "Shortcuts": [
+                {
+                    "FromLocation": "LowerCrossroads",
+                    "ToLocation": "UpperCrossroads",
+                    "UnlockCondition": "Find_TimewornKey"
+                }
+            ],
+            "Landmarks": [
+                "Timeline Obelisk",
+                "Keeper's Sanctuary"
+            ],
+            "bIsSafeZone": true
+        },
+        {
+            "Name": "Shadowed Vale",
+            "AreaID": "ShadowedVale",
+            "Description": "A dark, twisted valley where shadows come alive and reality bends.",
+            "RecommendedLevel": 15,
+            "PreferredTimeline": "DarkWorld",
+            "ConnectedAreas": [
+                "StartingArea",
+                "VoidCitadel",
+                "EchoingDepths"
+            ],
+            "HiddenSecrets": [
+                "ShadowSage_Tomb",
+                "VoidPortal",
+                "DarkShrine"
+            ],
+            "Shortcuts": [
+                {
+                    "FromLocation": "ValleyFloor",
+                    "ToLocation": "ShadowPeaks",
+                    "UnlockCondition": "Defeat_ShadowGuardian"
+                }
+            ],
+            "WorldBosses": [
+                {
+                    "BossID": "ShadowTyrant",
+                    "SpawnCondition": "NightTime_DarkTimeline"
+                }
+            ],
+            "TimelineEffects": {
+                "DarkWorld": {
+                    "EnemyDamageBonus": 30,
+                    "VisibilityReduction": 50,
+                    "ShadowPowerBoost": 25
+                },
+                "BrightWorld": {
+                    "EnemyHealth": -20,
+                    "VisibilityBonus": 30
+                }
+            }
+        },
+        {
+            "Name": "Lightspire Cliffs",
+            "AreaID": "LightspireCliffs",
+            "Description": "Towering cliffs bathed in eternal light, where reality shimmers with divine energy.",
+            "RecommendedLevel": 15,
+            "PreferredTimeline": "BrightWorld",
+            "ConnectedAreas": [
+                "StartingArea",
+                "CelestialCathedral",
+                "RadiantPeaks"
+            ],
+            "HiddenSecrets": [
+                "LightKeeper_Sanctuary",
+                "CelestialForge",
+                "LightShrine"
+            ],
+            "Shortcuts": [
+                {
+                    "FromLocation": "LowerCliffs",
+                    "ToLocation": "UpperSpire",
+                    "UnlockCondition": "Obtain_LightEssence"
+                }
+            ],
+            "WorldBosses": [
+                {
+                    "BossID": "RadiantGuardian",
+                    "SpawnCondition": "DayTime_BrightTimeline"
+                }
+            ],
+            "TimelineEffects": {
+                "BrightWorld": {
+                    "HealingBonus": 30,
+                    "LightDamageBonus": 25,
+                    "DefenseBonus": 20
+                },
+                "DarkWorld": {
+                    "EnemyAggression": 50,
+                    "LightResistance": -20
+                }
+            }
+        },
+        {
+            "Name": "Void Citadel",
+            "AreaID": "VoidCitadel",
+            "Description": "An ancient fortress consumed by the void, where time itself fragments.",
+            "RecommendedLevel": 30,
+            "PreferredTimeline": "DarkWorld",
+            "ConnectedAreas": [
+                "ShadowedVale",
+                "TimelineNexus",
+                "AbyssalCore"
+            ],
+            "HiddenSecrets": [
+                "VoidLord_Chamber",
+                "TimeFragments",
+                "ShadowThrone"
+            ],
+            "Shortcuts": [
+                {
+                    "FromLocation": "OuterWalls",
+                    "ToLocation": "InnerSanctum",
+                    "UnlockCondition": "Defeat_VoidWarden"
+                }
+            ],
+            "WorldBosses": [
+                {
+                    "BossID": "VoidTyrant",
+                    "SpawnCondition": "VoidStorm_Active"
+                }
+            ],
+            "TimelineEffects": {
+                "DarkWorld": {
+                    "VoidPowerBonus": 50,
+                    "TimelineEnergyRegen": 30,
+                    "CriticalDamageBonus": 25
+                },
+                "BrightWorld": {
+                    "VoidDamage": 20,
+                    "TimelineEnergyDrain": 10
+                }
+            }
+        },
+        {
+            "Name": "Timeline Nexus",
+            "AreaID": "TimelineNexus",
+            "Description": "The heart of timeline convergence, where past and future collide.",
+            "RecommendedLevel": 40,
+            "PreferredTimeline": "Any",
+            "ConnectedAreas": [
+                "VoidCitadel",
+                "CelestialCathedral",
+                "EternalityGate"
+            ],
+            "HiddenSecrets": [
+                "TimeKeeper_Sanctum",
+                "ParadoxEngine",
+                "ChronoVault"
+            ],
+            "Shortcuts": [
+                {
+                    "FromLocation": "TimelineHub",
+                    "ToLocation": "NexusCore",
+                    "UnlockCondition": "Master_BothTimelines"
+                }
+            ],
+            "WorldBosses": [
+                {
+                    "BossID": "TimelineWarden",
+                    "SpawnCondition": "TimelineConvergence"
+                }
+            ],
+            "TimelineEffects": {
+                "Any": {
+                    "TimelinePowerBonus": 40,
+                    "RealityShiftSpeed": 50,
+                    "TimelineControlBonus": 30
+                }
+            },
+            "SpecialMechanics": [
+                "TimelineShifting",
+                "RealityBending",
+                "TimeEchoes"
+            ]
+        },
+        {
+            "Name": "Eternity Gate",
+            "AreaID": "EternalityGate",
+            "Description": "The final threshold, where time itself ends and begins anew.",
+            "RecommendedLevel": 50,
+            "PreferredTimeline": "Any",
+            "ConnectedAreas": [
+                "TimelineNexus"
+            ],
+            "HiddenSecrets": [
+                "EternalityCore",
+                "TimelineOrigin",
+                "FinalTruth"
+            ],
+            "Shortcuts": [
+                {
+                    "FromLocation": "GateEntrance",
+                    "ToLocation": "EternalCore",
+                    "UnlockCondition": "Obtain_EternalityKey"
+                }
+            ],
+            "WorldBosses": [
+                {
+                    "BossID": "EternalGuardian",
+                    "SpawnCondition": "Complete_AllTimelines"
+                }
+            ],
+            "TimelineEffects": {
+                "Any": {
+                    "AllPowerBonus": 50,
+                    "TimelineControlMax": 100,
+                    "RealityBendingMastery": 50
+                }
+            },
+            "SpecialMechanics": [
+                "TimeCollapse",
+                "RealityMerge",
+                "EternalityResonance"
+            ]
+        }
+    ],
+    "GlobalEffects": {
+        "TimelineShift": {
+            "TransitionDuration": 3.0,
+            "EnemyBehaviorChange": true,
+            "EnvironmentMorphing": true
+        },
+        "WorldEvents": {
+            "VoidStorm": {
+                "Duration": 600,
+                "Cooldown": 3600,
+                "Effects": {
+                    "EnemyStrength": 50,
+                    "LootQuality": 30,
+                    "TimelineInstability": 25
+                }
+            },
+            "TimelineConvergence": {
+                "Duration": 900,
+                "Cooldown": 7200,
+                "Effects": {
+                    "TimelinePower": 100,
+                    "RealityBending": 50,
+                    "BossSpawnChance": 25
+                }
+            }
+        },
+        "DifficultyScaling": {
+            "PlayerLevelFactor": 0.1,
+            "TimelineMasteryFactor": 0.15,
+            "WorldTierFactor": 0.25
+        }
+    }
+}
