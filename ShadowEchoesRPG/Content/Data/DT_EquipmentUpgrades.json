@@ -1,0 +1,164 @@
+{
+    "Rows": [
+        {
+            "Name": "Weapon Basic Upgrade",
+            "UpgradeID": "Upgrade_WeaponBasic",
+            "Description": "Standard weapon enhancement that increases attack power.",
+            "Level": 1,
+            "MaxLevel": 10,
+            "CostPerLevel": 1000,
+            "StatsPerLevel": {
+                "Attack": 25.0,
+                "Defense": 0.0,
+                "CriticalChance": 0.01,
+                "CriticalDamage": 0.1,
+                "Health": 0.0,
+                "MaxHealth": 0.0
+            }
+        },
+        {
+            "Name": "Armor Basic Upgrade",
+            "UpgradeID": "Upgrade_ArmorBasic",
+            "Description": "Standard armor enhancement that increases defense and health.",
+            "Level": 1,
+            "MaxLevel": 10,
+            "CostPerLevel": 1000,
+            "StatsPerLevel": {
+                "Attack": 0.0,
+                "Defense": 20.0,
+                "CriticalChance": 0.0,
+                "CriticalDamage": 0.0,
+                "Health": 50.0,
+                "MaxHealth": 50.0
+            }
+        },
+        {
+            "Name": "Accessory Basic Upgrade",
+            "UpgradeID": "Upgrade_AccessoryBasic",
+            "Description": "Standard accessory enhancement that provides balanced stat increases.",
+            "Level": 1,
+            "MaxLevel": 10,
+            "CostPerLevel": 1000,
+            "StatsPerLevel": {
+                "Attack": 10.0,
+                "Defense": 10.0,
+                "CriticalChance": 0.01,
+                "CriticalDamage": 0.05,
+                "Health": 25.0,
+                "MaxHealth": 25.0
+            }
+        },
+        {
+            "Name": "Dark Timeline Resonance",
+            "UpgradeID": "Upgrade_DarkResonance",
+            "Description": "Special upgrade for dark timeline equipment that enhances offensive capabilities.",
+            "Level": 1,
+            "MaxLevel": 5,
+            "CostPerLevel": 2000,
+            "StatsPerLevel": {
+                "Attack": 40.0,
+                "Defense": 10.0,
+                "CriticalChance": 0.02,
+                "CriticalDamage": 0.2,
+                "Health": 25.0,
+                "MaxHealth": 25.0
+            }
+        },
+        {
+            "Name": "Light Timeline Resonance",
+            "UpgradeID": "Upgrade_LightResonance",
+            "Description": "Special upgrade for light timeline equipment that enhances defensive capabilities.",
+            "Level": 1,
+            "MaxLevel": 5,
+            "CostPerLevel": 2000,
+            "StatsPerLevel": {
+                "Attack": 20.0,
+                "Defense": 30.0,
+                "CriticalChance": 0.01,
+                "CriticalDamage": 0.1,
+                "Health": 75.0,
+                "MaxHealth": 75.0
+            }
+        },
+        {
+            "Name": "Legendary Enhancement",
+            "UpgradeID": "Upgrade_Legendary",
+            "Description": "Powerful upgrade for legendary equipment that enhances all stats significantly.",
+            "Level": 1,
+            "MaxLevel": 5,
+            "CostPerLevel": 5000,
+            "StatsPerLevel": {
+                "Attack": 50.0,
+                "Defense": 40.0,
+                "CriticalChance": 0.03,
+                "CriticalDamage": 0.3,
+                "Health": 100.0,
+                "MaxHealth": 100.0
+            }
+        },
+        {
+            "Name": "Timeline Mastery",
+            "UpgradeID": "Upgrade_TimelineMastery",
+            "Description": "Ultimate upgrade that scales with timeline mastery levels.",
+            "Level": 1,
+            "MaxLevel": 3,
+            "CostPerLevel": 10000,
+            "StatsPerLevel": {
+                "Attack": 100.0,
+                "Defense": 80.0,
+                "CriticalChance": 0.05,
+                "CriticalDamage": 0.5,
+                "Health": 200.0,
+                "MaxHealth": 200.0
+            }
+        },
+        {
+            "Name": "Weapon Critical Focus",
+            "UpgradeID": "Upgrade_WeaponCritical",
+            "Description": "Specialized weapon upgrade focusing on critical hit capabilities.",
+            "Level": 1,
+            "MaxLevel": 5,
+            "CostPerLevel": 2000,
+            "StatsPerLevel": {
+                "Attack": 15.0,
+                "Defense": 0.0,
+                "CriticalChance": 0.03,
+                "CriticalDamage": 0.3,
+                "Health": 0.0,
+                "MaxHealth": 0.0
+            }
+        },
+        {
+            "Name": "Armor Fortification",
+            "UpgradeID": "Upgrade_ArmorFortification",
+            "Description": "Specialized armor upgrade focusing on maximum health and defense.",
+            "Level": 1,
+            "MaxLevel": 5,
+            "CostPerLevel": 2000,
+            "StatsPerLevel": {
+                "Attack": 0.0,
+                "Defense": 40.0,
+                "CriticalChance": 0.0,
+                "CriticalDamage": 0.0,
+                "Health": 100.0,
+                "MaxHealth": 100.0
+            }
+        },
+        {
+            "Name": "Accessory Empowerment",
+            "UpgradeID": "Upgrade_AccessoryEmpower",
+            "Description": "Specialized accessory upgrade focusing on offensive stats.",
+            "Level": 1,
+            "MaxLevel": 5,
+            "CostPerLevel": 2000,
+            "StatsPerLevel": {
+                "Attack": 30.0,
+                "Defense": 5.0,
+                "CriticalChance": 0.02,
+                "CriticalDamage": 0.2,
+                "Health": 25.0,
+                "MaxHealth": 25.0
+            }
+        }
+    ]
+}
