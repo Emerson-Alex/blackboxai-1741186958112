@@ -1,0 +1,156 @@
+{
+    "Rows": [
+        {
+            "Name": "Basic Attack",
+            "AbilityID": "Ability_BasicAttack",
+            "Description": "A basic melee attack that deals physical damage.",
+            "Type": "Attack",
+            "TargetType": "SingleTarget",
+            "RequiredLevel": 1,
+            "RequiredTimeline": "Any",
+            "Damage": 100.0,
+            "EnergyCost": 0.0,
+            "Cooldown": 0.0,
+            "bCanStartCombo": true,
+            "ComboRequirement": {
+                "RequiredAbilities": ["Ability_BasicAttack"],
+                "TimeWindow": 1.5,
+                "RequiredHits": 3
+            },
+            "ComboDamageMultiplier": 1.5
+        },
+        {
+            "Name": "Shadow Bolt",
+            "AbilityID": "ShadowBolt",
+            "Description": "Launch a bolt of dark energy that pierces through enemies.",
+            "Type": "Attack",
+            "TargetType": "Projectile",
+            "RequiredLevel": 20,
+            "RequiredTimeline": "DarkWorld",
+            "Damage": 250.0,
+            "EnergyCost": 25.0,
+            "Cooldown": 5.0,
+            "bCanStartCombo": true,
+            "ComboRequirement": {
+                "RequiredAbilities": ["VoidStrike", "DarkConsumption"],
+                "TimeWindow": 3.0,
+                "RequiredHits": 2
+            },
+            "ComboDamageMultiplier": 2.0
+        },
+        {
+            "Name": "Void Strike",
+            "AbilityID": "VoidStrike",
+            "Description": "Teleport behind the target and deliver a devastating void-empowered strike.",
+            "Type": "Attack",
+            "TargetType": "SingleTarget",
+            "RequiredLevel": 20,
+            "RequiredTimeline": "DarkWorld",
+            "Damage": 300.0,
+            "EnergyCost": 35.0,
+            "Cooldown": 8.0,
+            "bCanStartCombo": true,
+            "ComboRequirement": {
+                "RequiredAbilities": ["ShadowBolt"],
+                "TimeWindow": 2.0,
+                "RequiredHits": 1
+            },
+            "ComboDamageMultiplier": 1.8
+        },
+        {
+            "Name": "Light Beam",
+            "AbilityID": "LightBeam",
+            "Description": "Channel a beam of pure light that deals continuous damage.",
+            "Type": "Attack",
+            "TargetType": "SingleTarget",
+            "RequiredLevel": 20,
+            "RequiredTimeline": "BrightWorld",
+            "Damage": 200.0,
+            "EnergyCost": 30.0,
+            "Cooldown": 6.0,
+            "bCanStartCombo": true,
+            "ComboRequirement": {
+                "RequiredAbilities": ["RadiantStrike", "HolyWrath"],
+                "TimeWindow": 3.0,
+                "RequiredHits": 2
+            },
+            "ComboDamageMultiplier": 1.75
+        },
+        {
+            "Name": "Time Shift",
+            "AbilityID": "TimeShift",
+            "Description": "Briefly stop time, allowing for multiple attacks in quick succession.",
+            "Type": "Skill",
+            "TargetType": "Self",
+            "RequiredLevel": 30,
+            "RequiredTimeline": "Any",
+            "Damage": 0.0,
+            "EnergyCost": 50.0,
+            "Cooldown": 15.0,
+            "bCanStartCombo": true,
+            "ComboRequirement": {
+                "RequiredAbilities": ["DualityStrike", "ChronoBlast"],
+                "TimeWindow": 4.0,
+                "RequiredHits": 3
+            },
+            "ComboDamageMultiplier": 2.5
+        },
+        {
+            "Name": "Duality Strike",
+            "AbilityID": "DualityStrike",
+            "Description": "Strike with both light and dark energy simultaneously.",
+            "Type": "Attack",
+            "TargetType": "SingleTarget",
+            "RequiredLevel": 30,
+            "RequiredTimeline": "Any",
+            "Damage": 400.0,
+            "EnergyCost": 40.0,
+            "Cooldown": 10.0,
+            "bCanStartCombo": true,
+            "ComboRequirement": {
+                "RequiredAbilities": ["TimeShift"],
+                "TimeWindow": 2.5,
+                "RequiredHits": 1
+            },
+            "ComboDamageMultiplier": 2.0
+        },
+        {
+            "Name": "Chrono Blast",
+            "AbilityID": "ChronoBlast",
+            "Description": "Release a burst of temporal energy that damages and slows enemies.",
+            "Type": "Attack",
+            "TargetType": "AOE",
+            "RequiredLevel": 30,
+            "RequiredTimeline": "Any",
+            "Damage": 350.0,
+            "EnergyCost": 45.0,
+            "Cooldown": 12.0,
+            "bCanStartCombo": true,
+            "ComboRequirement": {
+                "RequiredAbilities": ["TimeShift", "DualityStrike"],
+                "TimeWindow": 3.5,
+                "RequiredHits": 2
+            },
+            "ComboDamageMultiplier": 2.2
+        },
+        {
+            "Name": "Paradox Break",
+            "AbilityID": "ParadoxBreak",
+            "Description": "Create a temporal paradox that deals massive damage to all enemies.",
+            "Type": "Ultimate",
+            "TargetType": "AOE",
+            "RequiredLevel": 30,
+            "RequiredTimeline": "Any",
+            "Damage": 800.0,
+            "EnergyCost": 100.0,
+            "Cooldown": 30.0,
+            "bCanStartCombo": false,
+            "ComboRequirement": {
+                "RequiredAbilities": [],
+                "TimeWindow": 0.0,
+                "RequiredHits": 0
+            },
+            "ComboDamageMultiplier": 1.0
+        }
+    ]
+}
