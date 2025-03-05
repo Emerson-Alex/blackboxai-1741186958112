@@ -1,0 +1,130 @@
+{
+    "Currencies": [
+        {
+            "Name": "Timeline Essence",
+            "CurrencyID": "Currency_TimelineEssence",
+            "Description": "Universal currency accepted in all timelines",
+            "Type": "Primary",
+            "MaxAmount": 999999,
+            "Sources": ["Quests", "Boss Drops", "Trading"]
+        },
+        {
+            "Name": "Dark Shards",
+            "CurrencyID": "Currency_DarkShards",
+            "Description": "Currency from the dark timeline",
+            "Type": "Timeline",
+            "MaxAmount": 99999,
+            "Sources": ["Dark Timeline Enemies", "Shadow Merchants", "Dark Events"]
+        },
+        {
+            "Name": "Light Crystals",
+            "CurrencyID": "Currency_LightCrystals",
+            "Description": "Currency from the bright timeline",
+            "Type": "Timeline",
+            "MaxAmount": 99999,
+            "Sources": ["Light Timeline Enemies", "Light Merchants", "Sacred Events"]
+        }
+    ],
+    "Merchants": [
+        {
+            "Name": "Chronos Market",
+            "MerchantID": "Merchant_ChronosMarket",
+            "Description": "A grand marketplace that exists in both timelines",
+            "Location": "Timeline Hub",
+            "AcceptedCurrencies": ["Currency_TimelineEssence"],
+            "SpecialFeatures": ["Timeline Item Trading", "Currency Exchange"],
+            "RefreshInterval": "Weekly",
+            "Inventory": {
+                "Regular": ["CommonWeapons", "CommonArmor", "BasicConsumables"],
+                "Rare": ["TimelineArtifacts", "LegendaryWeapons", "UniqueAccessories"]
+            }
+        },
+        {
+            "Name": "Shadow Bazaar",
+            "MerchantID": "Merchant_ShadowBazaar",
+            "Description": "A mysterious market in the dark timeline",
+            "Location": "Dark City",
+            "AcceptedCurrencies": ["Currency_DarkShards", "Currency_TimelineEssence"],
+            "SpecialFeatures": ["Dark Item Crafting", "Shadow Enchanting"],
+            "RefreshInterval": "Daily",
+            "Inventory": {
+                "Regular": ["DarkWeapons", "ShadowArmor", "VoidConsumables"],
+                "Rare": ["VoidArtifacts", "ShadowRelics", "DarkAccessories"]
+            }
+        },
+        {
+            "Name": "Light Emporium",
+            "MerchantID": "Merchant_LightEmporium",
+            "Description": "A radiant marketplace in the bright timeline",
+            "Location": "Sacred City",
+            "AcceptedCurrencies": ["Currency_LightCrystals", "Currency_TimelineEssence"],
+            "SpecialFeatures": ["Light Item Crafting", "Divine Blessing"],
+            "RefreshInterval": "Daily",
+            "Inventory": {
+                "Regular": ["LightWeapons", "RadiantArmor", "HolyConsumables"],
+                "Rare": ["LightArtifacts", "SacredRelics", "BlessedAccessories"]
+            }
+        }
+    ],
+    "Trading": {
+        "ExchangeRates": {
+            "TimelineEssence_to_DarkShards": 1.5,
+            "TimelineEssence_to_LightCrystals": 1.5,
+            "DarkShards_to_LightCrystals": 1.0
+        },
+        "Restrictions": {
+            "MinTradeAmount": 10,
+            "MaxTradeAmount": 10000,
+            "DailyTradeLimit": 50000
+        },
+        "Bonuses": {
+            "MerchantReputation": {
+                "Level1": {"Discount": 0.0, "RequiredPoints": 0},
+                "Level2": {"Discount": 0.05, "RequiredPoints": 1000},
+                "Level3": {"Discount": 0.10, "RequiredPoints": 3000},
+                "Level4": {"Discount": 0.15, "RequiredPoints": 6000},
+                "Level5": {"Discount": 0.20, "RequiredPoints": 10000}
+            },
+            "TimelineMastery": {
+                "Dark": {"Discount": 0.1, "RequiredLevel": 5},
+                "Light": {"Discount": 0.1, "RequiredLevel": 5}
+            }
+        }
+    },
+    "SpecialOffers": {
+        "DailyDeals": {
+            "RefreshInterval": 86400,
+            "MaxItems": 5,
+            "DiscountRange": [0.1, 0.3]
+        },
+        "WeeklySpecials": {
+            "RefreshInterval": 604800,
+            "MaxItems": 3,
+            "DiscountRange": [0.2, 0.4]
+        },
+        "TimelineEvents": {
+            "Duration": 259200,
+            "MaxItems": 10,
+            "DiscountRange": [0.3, 0.5],
+            "RequiredTimelineMastery": 10
+        }
+    },
+    "BlackMarket": {
+        "Name": "Timeline Black Market",
+        "MerchantID": "Merchant_BlackMarket",
+        "Description": "A secret marketplace dealing in rare and forbidden items",
+        "UnlockRequirement": "Complete 'Shadow and Light' questline",
+        "AcceptedCurrencies": ["Currency_TimelineEssence", "Currency_DarkShards", "Currency_LightCrystals"],
+        "SpecialFeatures": [
+            "Rare Item Trading",
+            "Timeline Artifact Exchange",
+            "Forbidden Enchantments"
+        ],
+        "Inventory": {
+            "Legendary": ["UniqueWeapons", "MythicalArmor", "AncientArtifacts"],
+            "Forbidden": ["TimelineRelics", "VoidWeapons", "LightArtifacts"]
+        },
+        "PriceMultiplier": 2.5,
+        "RepresentationRequirement": 15000
+    }
+}
