@@ -1,0 +1,289 @@
+{
+    "InvasionItems": [
+        {
+            "Name": "Dark Timeline Orb",
+            "ItemID": "PvP_DarkOrb",
+            "Description": "A crystallized fragment of dark timeline energy. Use to invade other players' timelines from the dark world.",
+            "Rarity": "Rare",
+            "Requirements": {
+                "DarkTimelineMastery": 30,
+                "PlayerLevel": 30,
+                "ItemsRequired": ["VoidEssence"]
+            },
+            "Effects": {
+                "InvasionType": "DarkInvasion",
+                "TimelineAlignment": "DarkWorld",
+                "BuffsGranted": [
+                    {
+                        "Name": "VoidEmpowerment",
+                        "Duration": 300,
+                        "Effects": {
+                            "DarkDamage": 30,
+                            "StealthBonus": 20,
+                            "TimelineControl": 15
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Name": "Light Timeline Crystal",
+            "ItemID": "PvP_LightCrystal",
+            "Description": "A pure crystal of light timeline energy. Use to invade other players' timelines from the light world.",
+            "Rarity": "Rare",
+            "Requirements": {
+                "LightTimelineMastery": 30,
+                "PlayerLevel": 30,
+                "ItemsRequired": ["LightEssence"]
+            },
+            "Effects": {
+                "InvasionType": "LightInvasion",
+                "TimelineAlignment": "BrightWorld",
+                "BuffsGranted": [
+                    {
+                        "Name": "LightEmpowerment",
+                        "Duration": 300,
+                        "Effects": {
+                            "LightDamage": 30,
+                            "HealingPower": 20,
+                            "TimelineControl": 15
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Name": "Timeline Breach Stone",
+            "ItemID": "PvP_BreachStone",
+            "Description": "A mysterious stone that can tear holes between timelines. Allows invasion regardless of timeline state.",
+            "Rarity": "Epic",
+            "Requirements": {
+                "TimelineMastery": 50,
+                "PlayerLevel": 40,
+                "ItemsRequired": ["TimelineEssence", "VoidCrystal"]
+            },
+            "Effects": {
+                "InvasionType": "TimelineBreach",
+                "TimelineAlignment": "Any",
+                "BuffsGranted": [
+                    {
+                        "Name": "TimelineBreacher",
+                        "Duration": 600,
+                        "Effects": {
+                            "AllDamage": 20,
+                            "TimelineControl": 30,
+                            "RealityManipulation": true
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "ArenaRanks": [
+        {
+            "Name": "Timeline Initiate",
+            "RankID": "Rank_Initiate",
+            "MinPoints": 0,
+            "MaxPoints": 1000,
+            "Rewards": {
+                "Weekly": {
+                    "TimelineEssence": 100,
+                    "ArenaTokens": 50
+                },
+                "Seasonal": {
+                    "Title": "Timeline Initiate",
+                    "Cosmetic": "InitiateAura"
+                }
+            }
+        },
+        {
+            "Name": "Timeline Warrior",
+            "RankID": "Rank_Warrior",
+            "MinPoints": 1001,
+            "MaxPoints": 2000,
+            "Rewards": {
+                "Weekly": {
+                    "TimelineEssence": 200,
+                    "ArenaTokens": 100,
+                    "RareEquipment": 1
+                },
+                "Seasonal": {
+                    "Title": "Timeline Warrior",
+                    "Cosmetic": "WarriorAura",
+                    "Mount": "WarriorSteed"
+                }
+            }
+        },
+        {
+            "Name": "Timeline Master",
+            "RankID": "Rank_Master",
+            "MinPoints": 2001,
+            "MaxPoints": 3000,
+            "Rewards": {
+                "Weekly": {
+                    "TimelineEssence": 500,
+                    "ArenaTokens": 250,
+                    "EpicEquipment": 1
+                },
+                "Seasonal": {
+                    "Title": "Timeline Master",
+                    "Cosmetic": "MasterAura",
+                    "Mount": "MasterDrake",
+                    "Weapon": "MasterBlade"
+                }
+            }
+        },
+        {
+            "Name": "Timeline Lord",
+            "RankID": "Rank_Lord",
+            "MinPoints": 3001,
+            "MaxPoints": -1,
+            "Rewards": {
+                "Weekly": {
+                    "TimelineEssence": 1000,
+                    "ArenaTokens": 500,
+                    "LegendaryEquipment": 1
+                },
+                "Seasonal": {
+                    "Title": "Timeline Lord",
+                    "Cosmetic": "LordAura",
+                    "Mount": "TimelineDrake",
+                    "Weapon": "TimelineBlade",
+                    "Armor": "TimelineArmor"
+                }
+            }
+        }
+    ],
+    "TimelineWar": {
+        "Factions": {
+            "DarkTimeline": {
+                "Name": "Void Seekers",
+                "Description": "Those who seek to embrace the power of the dark timeline.",
+                "Ranks": [
+                    {
+                        "Name": "Void Initiate",
+                        "RequiredContribution": 0,
+                        "Powers": ["VoidStep"]
+                    },
+                    {
+                        "Name": "Void Knight",
+                        "RequiredContribution": 1000,
+                        "Powers": ["VoidStep", "ShadowForm"]
+                    },
+                    {
+                        "Name": "Void Lord",
+                        "RequiredContribution": 5000,
+                        "Powers": ["VoidStep", "ShadowForm", "VoidGate"]
+                    }
+                ]
+            },
+            "LightTimeline": {
+                "Name": "Light Bearers",
+                "Description": "Those who champion the cause of the light timeline.",
+                "Ranks": [
+                    {
+                        "Name": "Light Initiate",
+                        "RequiredContribution": 0,
+                        "Powers": ["LightStep"]
+                    },
+                    {
+                        "Name": "Light Knight",
+                        "RequiredContribution": 1000,
+                        "Powers": ["LightStep", "RadiantForm"]
+                    },
+                    {
+                        "Name": "Light Lord",
+                        "RequiredContribution": 5000,
+                        "Powers": ["LightStep", "RadiantForm", "LightGate"]
+                    }
+                ]
+            }
+        },
+        "Objectives": [
+            {
+                "Name": "Timeline Nexus",
+                "Type": "Control",
+                "Points": 100,
+                "Bonuses": {
+                    "TimelineControl": 20,
+                    "ResourceGeneration": 50
+                }
+            },
+            {
+                "Name": "Reality Anchor",
+                "Type": "Capture",
+                "Points": 50,
+                "Bonuses": {
+                    "TimelineStability": 30,
+                    "PowerGeneration": 25
+                }
+            },
+            {
+                "Name": "Timeline Boss",
+                "Type": "Boss",
+                "Points": 200,
+                "Bonuses": {
+                    "FactionPower": 100,
+                    "LegendaryRewardChance": 0.1
+                }
+            }
+        ],
+        "Rewards": {
+            "Victory": {
+                "TimelineEssence": 1000,
+                "FactionTokens": 500,
+                "TimelinePower": 100,
+                "UniqueCosmetics": true
+            },
+            "Participation": {
+                "TimelineEssence": 200,
+                "FactionTokens": 100,
+                "TimelinePower": 20
+            }
+        }
+    },
+    "PvPShop": {
+        "ArenaRewards": [
+            {
+                "Name": "Timeline Warrior Set",
+                "Cost": 1000,
+                "Contents": [
+                    "WarriorArmor",
+                    "WarriorWeapon",
+                    "WarriorTitle"
+                ]
+            },
+            {
+                "Name": "Timeline Mount",
+                "Cost": 2000,
+                "Contents": [
+                    "TimelineSteed",
+                    "MountArmor",
+                    "MountCosmetic"
+                ]
+            }
+        ],
+        "FactionRewards": [
+            {
+                "Name": "Void Lord Set",
+                "Faction": "DarkTimeline",
+                "Cost": 5000,
+                "Contents": [
+                    "VoidArmor",
+                    "VoidWeapon",
+                    "VoidTitle"
+                ]
+            },
+            {
+                "Name": "Light Lord Set",
+                "Faction": "LightTimeline",
+                "Cost": 5000,
+                "Contents": [
+                    "LightArmor",
+                    "LightWeapon",
+                    "LightTitle"
+                ]
+            }
+        ]
+    }
+}
