@@ -1,0 +1,9 @@
+{
+    "Parent": "UAnimInstance",
+    "StateMachines": [
+        "Locomotion",
+        "Combat",
+        "Timeline Transitions",
+        "Special Abilities"
+    ]
+}
