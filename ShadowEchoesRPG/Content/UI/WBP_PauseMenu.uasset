@@ -1,0 +1,8 @@
+{
+    "Parent": "USEUserWidget",
+    "Features": [
+        "Resume Game",
+        "Options",
+        "Quit to Main Menu"
+    ]
+}
