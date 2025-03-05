@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SECharacterBase",
+    "UniqueFeatures": [
+        "Corruption System",
+        "Void Portal Creation",
+        "Dark Timeline Affinity",
+        "Area Effect Spells"
+    ]
+}
