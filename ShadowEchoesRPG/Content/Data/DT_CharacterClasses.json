@@ -1,0 +1,184 @@
+{
+    "Rows": [
+        {
+            "Name": "Timeline Walker",
+            "ClassID": "Class_TimelineWalker",
+            "Description": "Masters of timeline manipulation, capable of wielding both light and dark powers.",
+            "BaseStats": {
+                "Health": 1000,
+                "MaxHealth": 1000,
+                "Attack": 100,
+                "Defense": 80,
+                "CriticalChance": 0.1,
+                "CriticalDamage": 1.5
+            },
+            "Specializations": [
+                {
+                    "Name": "Chronomancer",
+                    "Description": "Focuses on time manipulation and timeline energy mastery.",
+                    "UnlockLevel": 20,
+                    "BonusStats": {
+                        "TimelineEnergyRegen": 50,
+                        "TimelineDamageBonus": 30,
+                        "CooldownReduction": 20
+                    },
+                    "UniqueAbilities": [
+                        "TimeFreeze",
+                        "TimelineShatter",
+                        "ChronoAcceleration"
+                    ]
+                },
+                {
+                    "Name": "Duality Blade",
+                    "Description": "Combines timeline powers with martial prowess.",
+                    "UnlockLevel": 20,
+                    "BonusStats": {
+                        "WeaponDamage": 40,
+                        "AttackSpeed": 30,
+                        "CriticalChance": 15
+                    },
+                    "UniqueAbilities": [
+                        "TimeSlash",
+                        "DualityBurst",
+                        "TimelineWeaving"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Shadow Weaver",
+            "ClassID": "Class_ShadowWeaver",
+            "Description": "Dark timeline specialists who harness void energy.",
+            "BaseStats": {
+                "Health": 800,
+                "MaxHealth": 800,
+                "Attack": 120,
+                "Defense": 60,
+                "CriticalChance": 0.15,
+                "CriticalDamage": 1.8
+            },
+            "Specializations": [
+                {
+                    "Name": "Void Stalker",
+                    "Description": "Assassin-style combat using shadow powers.",
+                    "UnlockLevel": 20,
+                    "BonusStats": {
+                        "StealthDamage": 50,
+                        "MovementSpeed": 30,
+                        "CriticalDamage": 40
+                    },
+                    "UniqueAbilities": [
+                        "ShadowStrike",
+                        "VoidAssault",
+                        "DarkAmbush"
+                    ]
+                },
+                {
+                    "Name": "Dark Harbinger",
+                    "Description": "Channels raw void energy for devastating attacks.",
+                    "UnlockLevel": 20,
+                    "BonusStats": {
+                        "VoidDamage": 45,
+                        "AreaDamage": 35,
+                        "StatusEffectPower": 25
+                    },
+                    "UniqueAbilities": [
+                        "VoidEruption",
+                        "DarkNova",
+                        "ShadowConsumption"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Light Bringer",
+            "ClassID": "Class_LightBringer",
+            "Description": "Bright timeline specialists who wield divine power.",
+            "BaseStats": {
+                "Health": 900,
+                "MaxHealth": 900,
+                "Attack": 90,
+                "Defense": 100,
+                "CriticalChance": 0.08,
+                "CriticalDamage": 1.6
+            },
+            "Specializations": [
+                {
+                    "Name": "Radiant Guardian",
+                    "Description": "Defensive specialist with healing abilities.",
+                    "UnlockLevel": 20,
+                    "BonusStats": {
+                        "HealingPower": 40,
+                        "DamageReduction": 30,
+                        "ShieldStrength": 35
+                    },
+                    "UniqueAbilities": [
+                        "RadiantBarrier",
+                        "LightMending",
+                        "DivineProtection"
+                    ]
+                },
+                {
+                    "Name": "Light Sovereign",
+                    "Description": "Offensive light powers with crowd control.",
+                    "UnlockLevel": 20,
+                    "BonusStats": {
+                        "LightDamage": 40,
+                        "ControlDuration": 30,
+                        "AreaEffect": 25
+                    },
+                    "UniqueAbilities": [
+                        "LightPurge",
+                        "RadiantStorm",
+                        "CelestialJudgment"
+                    ]
+                }
+            ]
+        },
+        {
+            "Name": "Timeline Sage",
+            "ClassID": "Class_TimelineSage",
+            "Description": "Masters of timeline theory and ancient knowledge.",
+            "BaseStats": {
+                "Health": 750,
+                "MaxHealth": 750,
+                "Attack": 110,
+                "Defense": 70,
+                "CriticalChance": 0.12,
+                "CriticalDamage": 1.7
+            },
+            "Specializations": [
+                {
+                    "Name": "Timeline Scholar",
+                    "Description": "Focuses on timeline manipulation and support.",
+                    "UnlockLevel": 20,
+                    "BonusStats": {
+                        "TimelineControl": 45,
+                        "SupportPower": 35,
+                        "ResourceEfficiency": 30
+                    },
+                    "UniqueAbilities": [
+                        "TimelineShift",
+                        "TemporalBlessing",
+                        "ChronoMastery"
+                    ]
+                },
+                {
+                    "Name": "Reality Shaper",
+                    "Description": "Manipulates reality itself through timeline power.",
+                    "UnlockLevel": 20,
+                    "BonusStats": {
+                        "RealityDamage": 40,
+                        "TimelineEnergy": 35,
+                        "AbilityPower": 30
+                    },
+                    "UniqueAbilities": [
+                        "RealityBreach",
+                        "TimelineCollapse",
+                        "ParadoxControl"
+                    ]
+                }
+            ]
+        }
+    ]
+}
