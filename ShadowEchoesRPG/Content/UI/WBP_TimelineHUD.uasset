@@ -1,0 +1,10 @@
+{
+    "Parent": "USEUserWidget",
+    "Components": [
+        "Health Bar",
+        "Energy Bar",
+        "Timeline Energy",
+        "Ability Icons",
+        "Mini-map"
+    ]
+}
