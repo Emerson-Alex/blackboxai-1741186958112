@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SEWorldBase",
+    "Features": [
+        "Bright Environment",
+        "Healing Bonuses",
+        "Purification Effects",
+        "Light Beings"
+    ]
+}
