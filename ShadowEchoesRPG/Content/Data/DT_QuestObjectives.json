@@ -1,0 +1,184 @@
+{
+    "Rows": [
+        {
+            "Name": "Main01_Awaken",
+            "ObjectiveID": "Main01_Awaken",
+            "Description": "Regain consciousness and discover your timeline powers",
+            "bIsOptional": false,
+            "RequiredTimeline": "BrightWorld",
+            "RequiredLevel": 1,
+            "RewardXP": 150,
+            "RewardCurrency": 25
+        },
+        {
+            "Name": "Main01_Escape",
+            "ObjectiveID": "Main01_Escape",
+            "Description": "Escape the collapsing reality chamber",
+            "bIsOptional": false,
+            "RequiredTimeline": "BrightWorld",
+            "RequiredLevel": 1,
+            "RewardXP": 150,
+            "RewardCurrency": 35
+        },
+        {
+            "Name": "Main01_Shift",
+            "ObjectiveID": "Main01_Shift",
+            "Description": "Perform your first timeline shift",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 1,
+            "RewardXP": 200,
+            "RewardCurrency": 40
+        },
+        {
+            "Name": "Main02_Track",
+            "ObjectiveID": "Main02_Track",
+            "Description": "Track the Crimson Knight through timeline distortions",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 2,
+            "RewardXP": 250,
+            "RewardCurrency": 50
+        },
+        {
+            "Name": "Main02_Fight",
+            "ObjectiveID": "Main02_Fight",
+            "Description": "Survive the Crimson Knight's dual-timeline attacks",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 2,
+            "RewardXP": 275,
+            "RewardCurrency": 75
+        },
+        {
+            "Name": "Main02_Defeat",
+            "ObjectiveID": "Main02_Defeat",
+            "Description": "Defeat the Crimson Knight using timeline shifts",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 2,
+            "RewardXP": 275,
+            "RewardCurrency": 75
+        },
+        {
+            "Name": "Main03_Enter",
+            "ObjectiveID": "Main03_Enter",
+            "Description": "Find a way into the Shadow Cathedral",
+            "bIsOptional": false,
+            "RequiredTimeline": "DarkWorld",
+            "RequiredLevel": 4,
+            "RewardXP": 350,
+            "RewardCurrency": 100
+        },
+        {
+            "Name": "Main03_Explore",
+            "ObjectiveID": "Main03_Explore",
+            "Description": "Navigate the cathedral's shifting architecture",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 4,
+            "RewardXP": 400,
+            "RewardCurrency": 100
+        },
+        {
+            "Name": "Main03_Boss",
+            "ObjectiveID": "Main03_Boss",
+            "Description": "Defeat the Cathedral Guardian",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 4,
+            "RewardXP": 450,
+            "RewardCurrency": 100
+        },
+        {
+            "Name": "Main04_Find",
+            "ObjectiveID": "Main04_Find",
+            "Description": "Locate the Time Weaver's sanctuary",
+            "bIsOptional": false,
+            "RequiredTimeline": "BrightWorld",
+            "RequiredLevel": 6,
+            "RewardXP": 450,
+            "RewardCurrency": 125
+        },
+        {
+            "Name": "Main04_Learn",
+            "ObjectiveID": "Main04_Learn",
+            "Description": "Complete the Time Weaver's trials",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 6,
+            "RewardXP": 500,
+            "RewardCurrency": 125
+        },
+        {
+            "Name": "Main04_Master",
+            "ObjectiveID": "Main04_Master",
+            "Description": "Master advanced timeline manipulation",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 6,
+            "RewardXP": 550,
+            "RewardCurrency": 150
+        },
+        {
+            "Name": "Main05_Hunt",
+            "ObjectiveID": "Main05_Hunt",
+            "Description": "Track the Void Dragon across timelines",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 8,
+            "RewardXP": 600,
+            "RewardCurrency": 150
+        },
+        {
+            "Name": "Main05_Fight",
+            "ObjectiveID": "Main05_Fight",
+            "Description": "Survive the Void Dragon's reality-warping attacks",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 8,
+            "RewardXP": 650,
+            "RewardCurrency": 175
+        },
+        {
+            "Name": "Main05_Slay",
+            "ObjectiveID": "Main05_Slay",
+            "Description": "Slay the Void Dragon using both timelines",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 8,
+            "RewardXP": 750,
+            "RewardCurrency": 175
+        },
+        {
+            "Name": "Main10_Prepare",
+            "ObjectiveID": "Main10_Prepare",
+            "Description": "Gather allies and prepare for the final battle",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 18,
+            "RewardXP": 1500,
+            "RewardCurrency": 300
+        },
+        {
+            "Name": "Main10_Battle",
+            "ObjectiveID": "Main10_Battle",
+            "Description": "Fight through waves of void creatures and timeline aberrations",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 18,
+            "RewardXP": 1750,
+            "RewardCurrency": 350
+        },
+        {
+            "Name": "Main10_Save",
+            "ObjectiveID": "Main10_Save",
+            "Description": "Save all timelines from collapse",
+            "bIsOptional": false,
+            "RequiredTimeline": "Any",
+            "RequiredLevel": 18,
+            "RewardXP": 1750,
+            "RewardCurrency": 350
+        }
+    ]
+}
