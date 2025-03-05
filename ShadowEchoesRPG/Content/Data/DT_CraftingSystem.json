@@ -1,0 +1,193 @@
+{
+    "Resources": [
+        {
+            "Name": "Timeline Crystal",
+            "ResourceID": "Resource_TimelineCrystal",
+            "Description": "Pure crystallized timeline energy, essential for powerful crafting.",
+            "Rarity": "Rare",
+            "Timeline": "Any",
+            "MaxStack": 100,
+            "Sources": ["Boss Drops", "Timeline Rifts", "Hidden Caches"]
+        },
+        {
+            "Name": "Void Essence",
+            "ResourceID": "Resource_VoidEssence",
+            "Description": "Dark timeline energy in its purest form.",
+            "Rarity": "Uncommon",
+            "Timeline": "DarkWorld",
+            "MaxStack": 200,
+            "Sources": ["Dark Enemies", "Shadow Zones", "Void Rifts"]
+        },
+        {
+            "Name": "Light Shard",
+            "ResourceID": "Resource_LightShard",
+            "Description": "Crystallized light energy from the bright timeline.",
+            "Rarity": "Uncommon",
+            "Timeline": "BrightWorld",
+            "MaxStack": 200,
+            "Sources": ["Light Enemies", "Sacred Areas", "Light Wells"]
+        },
+        {
+            "Name": "Temporal Steel",
+            "ResourceID": "Resource_TemporalSteel",
+            "Description": "Metal infused with timeline energy, perfect for weapons.",
+            "Rarity": "Common",
+            "Timeline": "Any",
+            "MaxStack": 500,
+            "Sources": ["Mining", "Enemy Drops", "Treasure Chests"]
+        }
+    ],
+    "Recipes": [
+        {
+            "Name": "Timeline Blade",
+            "RecipeID": "Recipe_TimelineBlade",
+            "Description": "A powerful sword that can channel timeline energy.",
+            "Type": "Weapon",
+            "RequiredLevel": 25,
+            "Materials": [
+                {
+                    "ResourceID": "Resource_TimelineCrystal",
+                    "Amount": 5
+                },
+                {
+                    "ResourceID": "Resource_TemporalSteel",
+                    "Amount": 20
+                }
+            ],
+            "Result": {
+                "ItemID": "Weapon_TimelineBlade",
+                "Amount": 1
+            }
+        },
+        {
+            "Name": "Void Armor",
+            "RecipeID": "Recipe_VoidArmor",
+            "Description": "Dark timeline armor that provides superior protection.",
+            "Type": "Armor",
+            "RequiredLevel": 20,
+            "Materials": [
+                {
+                    "ResourceID": "Resource_VoidEssence",
+                    "Amount": 15
+                },
+                {
+                    "ResourceID": "Resource_TemporalSteel",
+                    "Amount": 25
+                }
+            ],
+            "Result": {
+                "ItemID": "Armor_VoidArmor",
+                "Amount": 1
+            }
+        },
+        {
+            "Name": "Light Infused Talisman",
+            "RecipeID": "Recipe_LightTalisman",
+            "Description": "A powerful accessory enhanced with light energy.",
+            "Type": "Accessory",
+            "RequiredLevel": 20,
+            "Materials": [
+                {
+                    "ResourceID": "Resource_LightShard",
+                    "Amount": 15
+                },
+                {
+                    "ResourceID": "Resource_TimelineCrystal",
+                    "Amount": 2
+                }
+            ],
+            "Result": {
+                "ItemID": "Accessory_LightTalisman",
+                "Amount": 1
+            }
+        }
+    ],
+    "Upgrades": [
+        {
+            "Name": "Timeline Infusion",
+            "UpgradeID": "Upgrade_TimelineInfusion",
+            "Description": "Enhances equipment with pure timeline energy.",
+            "RequiredLevel": 30,
+            "Materials": [
+                {
+                    "ResourceID": "Resource_TimelineCrystal",
+                    "Amount": 3
+                }
+            ],
+            "StatBonus": {
+                "Attack": 50,
+                "Defense": 30,
+                "TimelinePower": 20
+            }
+        },
+        {
+            "Name": "Void Enhancement",
+            "UpgradeID": "Upgrade_VoidEnhancement",
+            "Description": "Empowers equipment with dark timeline energy.",
+            "RequiredLevel": 25,
+            "Materials": [
+                {
+                    "ResourceID": "Resource_VoidEssence",
+                    "Amount": 10
+                }
+            ],
+            "StatBonus": {
+                "Attack": 40,
+                "CriticalChance": 0.1,
+                "DarkPower": 25
+            }
+        },
+        {
+            "Name": "Light Blessing",
+            "UpgradeID": "Upgrade_LightBlessing",
+            "Description": "Enhances equipment with light timeline energy.",
+            "RequiredLevel": 25,
+            "Materials": [
+                {
+                    "ResourceID": "Resource_LightShard",
+                    "Amount": 10
+                }
+            ],
+            "StatBonus": {
+                "Defense": 40,
+                "Health": 200,
+                "LightPower": 25
+            }
+        }
+    ],
+    "CraftingLocations": [
+        {
+            "Name": "Timeline Forge",
+            "LocationID": "Craft_TimelineForge",
+            "Description": "A mystical forge that can work with timeline energies.",
+            "UnlockRequirement": "Complete 'Master of Time' quest",
+            "AvailableRecipes": ["Recipe_TimelineBlade", "Upgrade_TimelineInfusion"],
+            "Bonuses": {
+                "CraftingSuccess": 1.2,
+                "ResourceEfficiency": 1.1
+            }
+        },
+        {
+            "Name": "Shadow Workshop",
+            "LocationID": "Craft_ShadowWorkshop",
+            "Description": "A dark timeline crafting location specializing in void-infused items.",
+            "UnlockRequirement": "Reach Dark Timeline Mastery Level 5",
+            "AvailableRecipes": ["Recipe_VoidArmor", "Upgrade_VoidEnhancement"],
+            "Bonuses": {
+                "DarkPowerBonus": 1.3,
+                "CriticalCraftChance": 0.15
+            }
+        },
+        {
+            "Name": "Light Sanctuary",
+            "LocationID": "Craft_LightSanctuary",
+            "Description": "A bright timeline crafting location for light-infused items.",
+            "UnlockRequirement": "Reach Light Timeline Mastery Level 5",
+            "AvailableRecipes": ["Recipe_LightTalisman", "Upgrade_LightBlessing"],
+            "Bonuses": {
+                "LightPowerBonus": 1.3,
+                "QualityBonus": 1.2
+            }
+        }
+    ]
+}
