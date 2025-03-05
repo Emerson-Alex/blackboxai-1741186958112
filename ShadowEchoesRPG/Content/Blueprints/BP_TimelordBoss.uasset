@@ -1,0 +1,23 @@
+{
+    "Parent": "BP_SEBossBase",
+    "Features": [
+        "Multi-Phase Combat",
+        "Timeline Manipulation",
+        "Area Control",
+        "Special Abilities"
+    ],
+    "Phases": [
+        {
+            "Name": "Initial Phase",
+            "Abilities": ["Basic attacks", "Timeline shifts"]
+        },
+        {
+            "Name": "Power Phase",
+            "Abilities": ["Enhanced abilities", "Environmental effects"]
+        },
+        {
+            "Name": "Final Phase",
+            "Abilities": ["Ultimate powers", "Multiple timeline control"]
+        }
+    ]
+}
