@@ -1,0 +1,270 @@
+{
+    "WorldBosses": [
+        {
+            "Name": "Void Tyrant",
+            "BossID": "Boss_VoidTyrant",
+            "Description": "A colossal entity of pure void energy that corrupts reality around it.",
+            "Level": 35,
+            "RespawnTime": 7200,
+            "PossibleSpawnAreas": [
+                "ShadowedVale",
+                "VoidCitadel"
+            ],
+            "PreferredTimeline": "DarkWorld",
+            "Stats": {
+                "Health": 100000,
+                "DamageOutput": 500,
+                "DefenseRating": 200,
+                "TimelineResistance": 75
+            },
+            "Phases": [
+                {
+                    "Name": "Void Awakening",
+                    "HealthThreshold": 100,
+                    "Abilities": [
+                        "VoidEruption",
+                        "ShadowStrike",
+                        "RealityWarp"
+                    ],
+                    "AreaEffects": {
+                        "VoidCorruption": 30,
+                        "VisibilityReduction": 50
+                    }
+                },
+                {
+                    "Name": "Reality Corruption",
+                    "HealthThreshold": 50,
+                    "Abilities": [
+                        "MassVoidEruption",
+                        "RealityShatter",
+                        "VoidPortal"
+                    ],
+                    "AreaEffects": {
+                        "VoidCorruption": 60,
+                        "TimelineInstability": 40
+                    }
+                },
+                {
+                    "Name": "Void Ascension",
+                    "HealthThreshold": 25,
+                    "Abilities": [
+                        "VoidCataclysm",
+                        "TimelineCollapse",
+                        "VoidAscension"
+                    ],
+                    "AreaEffects": {
+                        "VoidCorruption": 100,
+                        "RealityBreakdown": true
+                    }
+                }
+            ],
+            "AdaptiveBehavior": {
+                "BrightWorld": {
+                    "DefenseIncrease": 50,
+                    "AggressionIncrease": 30,
+                    "NewAbilities": ["LightAbsorption"]
+                },
+                "PlayerCount": {
+                    "HealthMultiplier": 0.5,
+                    "DamageMultiplier": 0.3,
+                    "MechanicComplexity": 0.2
+                }
+            },
+            "UniqueDrops": [
+                {
+                    "ItemID": "VoidTyrantHeart",
+                    "DropChance": 100,
+                    "RequiredForCrafting": ["VoidforgedWeapon", "VoidArmor"]
+                },
+                {
+                    "ItemID": "VoidEssenceCore",
+                    "DropChance": 25,
+                    "Effects": ["VoidMastery", "TimelineControl"]
+                }
+            ]
+        },
+        {
+            "Name": "Radiant Guardian",
+            "BossID": "Boss_RadiantGuardian",
+            "Description": "An ancient protector of the light timeline, wielding divine power.",
+            "Level": 35,
+            "RespawnTime": 7200,
+            "PossibleSpawnAreas": [
+                "LightspireCliffs",
+                "CelestialCathedral"
+            ],
+            "PreferredTimeline": "BrightWorld",
+            "Stats": {
+                "Health": 90000,
+                "DamageOutput": 400,
+                "DefenseRating": 300,
+                "TimelineResistance": 75
+            },
+            "Phases": [
+                {
+                    "Name": "Divine Awakening",
+                    "HealthThreshold": 100,
+                    "Abilities": [
+                        "RadiantBeam",
+                        "LightShield",
+                        "HolySmite"
+                    ],
+                    "AreaEffects": {
+                        "LightPurification": 30,
+                        "HealingSuppression": 50
+                    }
+                },
+                {
+                    "Name": "Celestial Judgment",
+                    "HealthThreshold": 50,
+                    "Abilities": [
+                        "DivinePurge",
+                        "CelestialStorm",
+                        "LightPillar"
+                    ],
+                    "AreaEffects": {
+                        "LightPurification": 60,
+                        "TimelinePurge": 40
+                    }
+                },
+                {
+                    "Name": "Radiant Ascension",
+                    "HealthThreshold": 25,
+                    "Abilities": [
+                        "DivineRetribution",
+                        "TimelineCleansing",
+                        "RadiantAscension"
+                    ],
+                    "AreaEffects": {
+                        "LightPurification": 100,
+                        "RealityPurge": true
+                    }
+                }
+            ],
+            "AdaptiveBehavior": {
+                "DarkWorld": {
+                    "AttackIncrease": 50,
+                    "AggressionIncrease": 50,
+                    "NewAbilities": ["DarkPurge"]
+                },
+                "PlayerCount": {
+                    "HealthMultiplier": 0.5,
+                    "DamageMultiplier": 0.3,
+                    "MechanicComplexity": 0.2
+                }
+            },
+            "UniqueDrops": [
+                {
+                    "ItemID": "RadiantCore",
+                    "DropChance": 100,
+                    "RequiredForCrafting": ["LightforgedWeapon", "RadiantArmor"]
+                },
+                {
+                    "ItemID": "CelestialEssence",
+                    "DropChance": 25,
+                    "Effects": ["LightMastery", "TimelinePurity"]
+                }
+            ]
+        },
+        {
+            "Name": "Timeline Warden",
+            "BossID": "Boss_TimelineWarden",
+            "Description": "A mysterious entity that maintains balance between timelines.",
+            "Level": 40,
+            "RespawnTime": 14400,
+            "PossibleSpawnAreas": [
+                "TimelineNexus",
+                "EternalityGate"
+            ],
+            "PreferredTimeline": "Any",
+            "Stats": {
+                "Health": 150000,
+                "DamageOutput": 600,
+                "DefenseRating": 250,
+                "TimelineResistance": 100
+            },
+            "Phases": [
+                {
+                    "Name": "Timeline Convergence",
+                    "HealthThreshold": 100,
+                    "Abilities": [
+                        "TimeShift",
+                        "RealityBend",
+                        "DualityStrike"
+                    ],
+                    "AreaEffects": {
+                        "TimelineFlux": 30,
+                        "RealityDistortion": 50
+                    }
+                },
+                {
+                    "Name": "Reality Collapse",
+                    "HealthThreshold": 50,
+                    "Abilities": [
+                        "TimeCollapse",
+                        "RealitySunder",
+                        "ChronoBlast"
+                    ],
+                    "AreaEffects": {
+                        "TimelineFlux": 60,
+                        "RealityBreakdown": 40
+                    }
+                },
+                {
+                    "Name": "Eternal Convergence",
+                    "HealthThreshold": 25,
+                    "Abilities": [
+                        "TimelineMerge",
+                        "EternalityBurst",
+                        "ChronoAscension"
+                    ],
+                    "AreaEffects": {
+                        "TimelineFlux": 100,
+                        "RealityMerge": true
+                    }
+                }
+            ],
+            "AdaptiveBehavior": {
+                "TimelineState": {
+                    "PowerShift": 50,
+                    "AbilityAdaptation": true,
+                    "NewAbilities": ["TimelineBalance"]
+                },
+                "PlayerCount": {
+                    "HealthMultiplier": 0.6,
+                    "DamageMultiplier": 0.4,
+                    "MechanicComplexity": 0.3
+                }
+            },
+            "UniqueDrops": [
+                {
+                    "ItemID": "TimelineHeart",
+                    "DropChance": 100,
+                    "RequiredForCrafting": ["ChronoWeapon", "TimelineArmor"]
+                },
+                {
+                    "ItemID": "EternalityCore",
+                    "DropChance": 10,
+                    "Effects": ["TimelineMastery", "RealityControl"]
+                }
+            ]
+        }
+    ],
+    "GlobalSettings": {
+        "BossScaling": {
+            "PlayerLevel": 0.1,
+            "GroupSize": 0.5,
+            "TimelineMastery": 0.2
+        },
+        "AdaptiveDifficulty": {
+            "BaseMultiplier": 1.0,
+            "PlayerSkillFactor": 0.3,
+            "DeathPenaltyReduction": 0.1
+        },
+        "RewardModifiers": {
+            "FirstKill": 2.0,
+            "WeeklyLimit": 3,
+            "GroupSizeBonus": 0.1
+        }
+    }
+}
