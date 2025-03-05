@@ -1,0 +1,230 @@
+{
+    "GuildFeatures": [
+        {
+            "Name": "Timeline Resonance Chamber",
+            "FeatureID": "Feature_TimelineResonance",
+            "Description": "A sacred chamber that amplifies timeline energy for guild members.",
+            "UnlockLevel": 10,
+            "Timeline": "Any",
+            "Effects": {
+                "TimelineEnergyRegen": 30,
+                "TimelinePowerGain": 20,
+                "AbilityCooldownReduction": 10
+            }
+        },
+        {
+            "Name": "Dark Sanctum",
+            "FeatureID": "Feature_DarkSanctum",
+            "Description": "A void-infused sanctuary that empowers dark timeline abilities.",
+            "UnlockLevel": 15,
+            "Timeline": "DarkWorld",
+            "Effects": {
+                "DarkDamageBonus": 25,
+                "VoidResistance": 30,
+                "StealthBonus": 20
+            }
+        },
+        {
+            "Name": "Light Bastion",
+            "FeatureID": "Feature_LightBastion",
+            "Description": "A radiant fortress that enhances light timeline powers.",
+            "UnlockLevel": 15,
+            "Timeline": "BrightWorld",
+            "Effects": {
+                "LightDamageBonus": 25,
+                "HealingPower": 30,
+                "PurificationAura": true
+            }
+        }
+    ],
+    "GuildMissions": [
+        {
+            "Name": "Timeline Purge",
+            "MissionID": "Mission_TimelinePurge",
+            "Description": "Cleanse timeline anomalies from the guild's territory.",
+            "Type": "Combat",
+            "RequiredTimeline": "Any",
+            "RequiredMembers": 5,
+            "Duration": 3600,
+            "Objectives": [
+                {
+                    "Type": "Kill",
+                    "Target": "TimelineAbomination",
+                    "Count": 50
+                },
+                {
+                    "Type": "Collect",
+                    "Item": "TimelineFragment",
+                    "Count": 20
+                }
+            ],
+            "Rewards": {
+                "TimelineEssence": 1000,
+                "GuildExperience": 5000,
+                "TimelinePower": 100
+            }
+        },
+        {
+            "Name": "Void Incursion",
+            "MissionID": "Mission_VoidIncursion",
+            "Description": "Lead an assault into the depths of the dark timeline.",
+            "Type": "Raid",
+            "RequiredTimeline": "DarkWorld",
+            "RequiredMembers": 10,
+            "Duration": 7200,
+            "Objectives": [
+                {
+                    "Type": "Boss",
+                    "Target": "VoidLord",
+                    "Count": 1
+                },
+                {
+                    "Type": "Control",
+                    "Target": "VoidNexus",
+                    "Duration": 1800
+                }
+            ],
+            "Rewards": {
+                "VoidEssence": 2000,
+                "GuildExperience": 10000,
+                "LegendaryItem": {
+                    "Chance": 0.1,
+                    "Pool": ["VoidforgedWeapon", "ShadowArmor"]
+                }
+            }
+        },
+        {
+            "Name": "Light's Crusade",
+            "MissionID": "Mission_LightCrusade",
+            "Description": "Launch a holy campaign in the bright timeline.",
+            "Type": "Raid",
+            "RequiredTimeline": "BrightWorld",
+            "RequiredMembers": 10,
+            "Duration": 7200,
+            "Objectives": [
+                {
+                    "Type": "Boss",
+                    "Target": "LightHarbinger",
+                    "Count": 1
+                },
+                {
+                    "Type": "Purify",
+                    "Target": "SacredGround",
+                    "Count": 5
+                }
+            ],
+            "Rewards": {
+                "LightEssence": 2000,
+                "GuildExperience": 10000,
+                "LegendaryItem": {
+                    "Chance": 0.1,
+                    "Pool": ["LightforgedWeapon", "RadiantArmor"]
+                }
+            }
+        }
+    ],
+    "HallUpgrades": [
+        {
+            "Name": "Timeline Forge",
+            "UpgradeID": "Upgrade_TimelineForge",
+            "Description": "A mystical forge that can craft timeline-infused equipment.",
+            "RequiredLevel": 20,
+            "Cost": {
+                "TimelineEssence": 5000,
+                "GuildResources": 1000
+            },
+            "Effects": {
+                "CraftingBonus": 30,
+                "TimelineInfusion": true,
+                "ResourceEfficiency": 20
+            }
+        },
+        {
+            "Name": "Void Nexus",
+            "UpgradeID": "Upgrade_VoidNexus",
+            "Description": "A dark timeline power source that enhances void abilities.",
+            "RequiredLevel": 25,
+            "Timeline": "DarkWorld",
+            "Cost": {
+                "VoidEssence": 5000,
+                "GuildResources": 1500
+            },
+            "Effects": {
+                "VoidPowerBonus": 50,
+                "DarkTimelineControl": 30,
+                "ShadowPortal": true
+            }
+        },
+        {
+            "Name": "Light Sanctum",
+            "UpgradeID": "Upgrade_LightSanctum",
+            "Description": "A bright timeline sanctuary that empowers light abilities.",
+            "RequiredLevel": 25,
+            "Timeline": "BrightWorld",
+            "Cost": {
+                "LightEssence": 5000,
+                "GuildResources": 1500
+            },
+            "Effects": {
+                "LightPowerBonus": 50,
+                "BrightTimelineControl": 30,
+                "LightPortal": true
+            }
+        }
+    ],
+    "GuildRanks": {
+        "Member": {
+            "Benefits": {
+                "ResourceGatheringBonus": 10,
+                "TimelinePowerBonus": 5
+            }
+        },
+        "Officer": {
+            "RequiredContribution": 5000,
+            "Benefits": {
+                "ResourceGatheringBonus": 20,
+                "TimelinePowerBonus": 15,
+                "MissionRewardBonus": 10
+            }
+        },
+        "TimelineGuide": {
+            "RequiredContribution": 20000,
+            "Benefits": {
+                "ResourceGatheringBonus": 30,
+                "TimelinePowerBonus": 25,
+                "MissionRewardBonus": 20,
+                "TimelineControlBonus": 15
+            }
+        },
+        "GuildMaster": {
+            "Benefits": {
+                "ResourceGatheringBonus": 50,
+                "TimelinePowerBonus": 40,
+                "MissionRewardBonus": 30,
+                "TimelineControlBonus": 25,
+                "LeadershipAura": true
+            }
+        }
+    },
+    "GuildProgression": {
+        "LevelRequirements": {
+            "Base": 1000,
+            "Multiplier": 1.5
+        },
+        "UnlockSchedule": {
+            "Level10": ["TimelineResonance", "BasicMissions"],
+            "Level20": ["AdvancedMissions", "TimelineForge"],
+            "Level30": ["EliteMissions", "TimelineNexus"],
+            "Level40": ["LegendaryMissions", "TimelineAscension"],
+            "Level50": ["UltimateMissions", "TimelineMastery"]
+        },
+        "TimelineBonuses": {
+            "Alignment": {
+                "Perfect": 2.0,
+                "Strong": 1.5,
+                "Neutral": 1.0,
+                "Opposed": 0.5
+            }
+        }
+    }
+}
