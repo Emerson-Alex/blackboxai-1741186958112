@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SENPCBase",
+    "Features": [
+        "Dialog System",
+        "Quest Management",
+        "Reputation System",
+        "Reward Distribution"
+    ]
+}
