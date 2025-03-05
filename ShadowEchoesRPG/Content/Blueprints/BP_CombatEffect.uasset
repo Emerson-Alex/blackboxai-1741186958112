@@ -1,0 +1,15 @@
+{
+    "Parent": "BP_SEEffectBase",
+    "Types": [
+        "Damage Numbers",
+        "Hit Impacts",
+        "Critical Strikes",
+        "Status Effects"
+    ],
+    "Properties": {
+        "Damage": 10.0,
+        "bIsCritical": false,
+        "Location": "FVector",
+        "ImpactVFX": "UParticleSystem*"
+    }
+}
