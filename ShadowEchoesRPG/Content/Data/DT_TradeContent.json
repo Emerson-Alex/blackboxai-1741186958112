@@ -1,0 +1,253 @@
+{
+    "MarketRules": {
+        "ListingDurationInSeconds": 604800,
+        "AuctionDurationInSeconds": 86400,
+        "MaxListingsPerPlayer": 50,
+        "MinimumBidIncrementPercentage": 0.1,
+        "CrossTimelineFeePercentage": 0.15,
+        "MarketTaxPercentage": 0.05,
+        "PriceFluctuationLimits": {
+            "MinimumMultiplier": 0.5,
+            "MaximumMultiplier": 2.0
+        }
+    },
+    "TimelineEffects": {
+        "BrightWorld": {
+            "ResourceGatheringBonus": 0.2,
+            "CraftingCostReduction": 0.1,
+            "LightItemPriceReduction": 0.2,
+            "DarkItemPriceIncrease": 0.3,
+            "MarketStability": 0.8
+        },
+        "DarkWorld": {
+            "RareItemDropBonus": 0.2,
+            "BlackMarketAccess": true,
+            "DarkItemPriceReduction": 0.2,
+            "LightItemPriceIncrease": 0.3,
+            "MarketVolatility": 1.2
+        }
+    },
+    "TradeableItems": {
+        "Resources": [
+            {
+                "Name": "Timeline Essence",
+                "ItemID": "Resource_TimelineEssence",
+                "BasePrice": 1000,
+                "MaxStack": 100,
+                "TimelineAlignment": "Any",
+                "MarketCategory": "Essential",
+                "PriceVolatility": 0.3
+            },
+            {
+                "Name": "Void Crystal",
+                "ItemID": "Resource_VoidCrystal",
+                "BasePrice": 2000,
+                "MaxStack": 50,
+                "TimelineAlignment": "DarkWorld",
+                "MarketCategory": "Rare",
+                "PriceVolatility": 0.5
+            },
+            {
+                "Name": "Light Shard",
+                "ItemID": "Resource_LightShard",
+                "BasePrice": 2000,
+                "MaxStack": 50,
+                "TimelineAlignment": "BrightWorld",
+                "MarketCategory": "Rare",
+                "PriceVolatility": 0.5
+            }
+        ],
+        "Equipment": [
+            {
+                "Name": "Voidforged Weapon",
+                "ItemID": "Equipment_VoidforgedWeapon",
+                "BasePrice": 50000,
+                "TimelineAlignment": "DarkWorld",
+                "MarketCategory": "Legendary",
+                "PriceVolatility": 0.2,
+                "TradeRestrictions": {
+                    "RequiredRank": "Expert",
+                    "BindOnTrade": true
+                }
+            },
+            {
+                "Name": "Lightforged Armor",
+                "ItemID": "Equipment_LightforgedArmor",
+                "BasePrice": 50000,
+                "TimelineAlignment": "BrightWorld",
+                "MarketCategory": "Legendary",
+                "PriceVolatility": 0.2,
+                "TradeRestrictions": {
+                    "RequiredRank": "Expert",
+                    "BindOnTrade": true
+                }
+            }
+        ],
+        "Consumables": [
+            {
+                "Name": "Timeline Shift Potion",
+                "ItemID": "Consumable_TimelineShift",
+                "BasePrice": 5000,
+                "MaxStack": 10,
+                "TimelineAlignment": "Any",
+                "MarketCategory": "Utility",
+                "PriceVolatility": 0.4
+            },
+            {
+                "Name": "Void Elixir",
+                "ItemID": "Consumable_VoidElixir",
+                "BasePrice": 3000,
+                "MaxStack": 20,
+                "TimelineAlignment": "DarkWorld",
+                "MarketCategory": "Combat",
+                "PriceVolatility": 0.3
+            }
+        ]
+    },
+    "MarketEvents": {
+        "TimelineConvergence": {
+            "DurationInSeconds": 3600,
+            "Effects": {
+                "CrossTimelineFeeReduction": 0.5,
+                "PriceVolatilityIncrease": 0.3,
+                "RareItemDropChance": 0.2
+            }
+        },
+        "VoidStorm": {
+            "DurationInSeconds": 1800,
+            "Effects": {
+                "DarkItemPriceReduction": 0.3,
+                "LightItemPriceIncrease": 0.4,
+                "MarketVolatilityIncrease": 0.5
+            }
+        },
+        "LightSurge": {
+            "DurationInSeconds": 1800,
+            "Effects": {
+                "LightItemPriceReduction": 0.3,
+                "DarkItemPriceIncrease": 0.4,
+                "MarketStabilityIncrease": 0.3
+            }
+        }
+    },
+    "BlackMarket": {
+        "UnlockRequirements": {
+            "DarkTimelineMasteryLevel": 30,
+            "ReputationLevel": "Notorious",
+            "RequiredQuestIDs": ["DarkPact"]
+        },
+        "Items": [
+            {
+                "Name": "Forbidden Timeline Relic",
+                "ItemID": "BlackMarket_TimelineRelic",
+                "BasePrice": 100000,
+                "AvailabilityChance": 0.1,
+                "TimelineAlignment": "Any",
+                "TradeRestrictions": {
+                    "RequiredRank": "Master",
+                    "BindOnTrade": true
+                }
+            },
+            {
+                "Name": "Void Resonance Crystal",
+                "ItemID": "BlackMarket_VoidCrystal",
+                "BasePrice": 75000,
+                "AvailabilityChance": 0.2,
+                "TimelineAlignment": "DarkWorld",
+                "TradeRestrictions": {
+                    "RequiredRank": "Expert",
+                    "BindOnTrade": true
+                }
+            }
+        ],
+        "Penalties": {
+            "DetectionChance": 0.1,
+            "ReputationLossAmount": 100,
+            "TriggersGuardHostility": true
+        }
+    },
+    "TradingPosts": {
+        "MainHub": {
+            "Name": "Timeline Nexus Market",
+            "LocationID": "TimelineNexus",
+            "Features": [
+                "CrossTimelineTrading",
+                "AuctionHouse",
+                "ItemValuation"
+            ],
+            "Restrictions": {
+                "MinimumLevel": 10,
+                "RequiredQuestID": "MarketUnlock"
+            }
+        },
+        "DarkBazaar": {
+            "Name": "Shadow Market",
+            "LocationID": "VoidCitadel",
+            "Features": [
+                "BlackMarketAccess",
+                "DarkItemTrading",
+                "IllegalGoods"
+            ],
+            "Restrictions": {
+                "MinimumLevel": 30,
+                "DarkTimelineMasteryLevel": 20,
+                "RequiredQuestID": "ShadowPact"
+            }
+        },
+        "LightEmporium": {
+            "Name": "Radiant Exchange",
+            "LocationID": "LightspireCliffs",
+            "Features": [
+                "LightItemTrading",
+                "CrafterMarket",
+                "RareGoods"
+            ],
+            "Restrictions": {
+                "MinimumLevel": 30,
+                "LightTimelineMasteryLevel": 20,
+                "RequiredQuestID": "LightPact"
+            }
+        }
+    },
+    "MarketProgression": {
+        "Ranks": {
+            "Novice": {
+                "RequiredTradeCount": 0,
+                "MaxListingCount": 10,
+                "MarketTaxPercentage": 0.1
+            },
+            "Apprentice": {
+                "RequiredTradeCount": 50,
+                "MaxListingCount": 20,
+                "MarketTaxPercentage": 0.08
+            },
+            "Expert": {
+                "RequiredTradeCount": 200,
+                "MaxListingCount": 35,
+                "MarketTaxPercentage": 0.05
+            },
+            "Master": {
+                "RequiredTradeCount": 1000,
+                "MaxListingCount": 50,
+                "MarketTaxPercentage": 0.03
+            }
+        },
+        "Reputation": {
+            "Trusted": {
+                "RequiredReputationScore": 1000,
+                "PriceBonusPercentage": 0.05,
+                "UnlockedFeatures": ["BulkTrading"]
+            },
+            "Renowned": {
+                "RequiredReputationScore": 5000,
+                "PriceBonusPercentage": 0.1,
+                "UnlockedFeatures": ["SpecialAuctions"]
+            },
+            "Legendary": {
+                "RequiredReputationScore": 10000,
+                "PriceBonusPercentage": 0.15,
+                "UnlockedFeatures": ["MarketManipulation"]
+            }
+        }
+    }
+}
