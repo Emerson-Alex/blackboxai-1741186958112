@@ -1,0 +1,214 @@
+{
+    "Companions": [
+        {
+            "Name": "Lyra Brightweaver",
+            "CompanionID": "Companion_LyraBright",
+            "Description": "A powerful light timeline mage who specializes in healing and support.",
+            "Timeline": "BrightWorld",
+            "Class": "Light Bringer",
+            "UnlockCondition": "Complete 'Light's Chosen' quest",
+            "BaseStats": {
+                "Health": 800,
+                "MaxHealth": 800,
+                "Attack": 70,
+                "Defense": 60,
+                "CriticalChance": 0.05,
+                "CriticalDamage": 1.3
+            },
+            "Abilities": [
+                {
+                    "AbilityID": "LightHeal",
+                    "UnlockLevel": 1
+                },
+                {
+                    "AbilityID": "RadiantShield",
+                    "UnlockLevel": 5
+                },
+                {
+                    "AbilityID": "TimelineBlessing",
+                    "UnlockLevel": 10
+                }
+            ],
+            "Synergies": [
+                {
+                    "CompanionID": "Companion_KainShadow",
+                    "Name": "Balance of Power",
+                    "Description": "When both companions are active, timeline switching costs are reduced by 30%"
+                }
+            ]
+        },
+        {
+            "Name": "Kain Shadowblade",
+            "CompanionID": "Companion_KainShadow",
+            "Description": "A skilled dark timeline assassin with powerful void abilities.",
+            "Timeline": "DarkWorld",
+            "Class": "Shadow Weaver",
+            "UnlockCondition": "Complete 'Shadow's Embrace' quest",
+            "BaseStats": {
+                "Health": 700,
+                "MaxHealth": 700,
+                "Attack": 90,
+                "Defense": 40,
+                "CriticalChance": 0.15,
+                "CriticalDamage": 1.8
+            },
+            "Abilities": [
+                {
+                    "AbilityID": "ShadowStrike",
+                    "UnlockLevel": 1
+                },
+                {
+                    "AbilityID": "VoidCloak",
+                    "UnlockLevel": 5
+                },
+                {
+                    "AbilityID": "DarkAmbush",
+                    "UnlockLevel": 10
+                }
+            ],
+            "Synergies": [
+                {
+                    "CompanionID": "Companion_LyraBright",
+                    "Name": "Shadow and Light",
+                    "Description": "Companions gain 20% increased damage when in opposite timelines"
+                }
+            ]
+        },
+        {
+            "Name": "Chronos Walker",
+            "CompanionID": "Companion_ChronosWalker",
+            "Description": "A mysterious timeline sage who can manipulate time itself.",
+            "Timeline": "Any",
+            "Class": "Timeline Sage",
+            "UnlockCondition": "Defeat the TimeWeaver boss",
+            "BaseStats": {
+                "Health": 750,
+                "MaxHealth": 750,
+                "Attack": 80,
+                "Defense": 50,
+                "CriticalChance": 0.1,
+                "CriticalDamage": 1.5
+            },
+            "Abilities": [
+                {
+                    "AbilityID": "TimeFreeze",
+                    "UnlockLevel": 1
+                },
+                {
+                    "AbilityID": "ChronoShift",
+                    "UnlockLevel": 5
+                },
+                {
+                    "AbilityID": "TimelineConvergence",
+                    "UnlockLevel": 10
+                }
+            ],
+            "Synergies": [
+                {
+                    "CompanionID": "Any",
+                    "Name": "Time Master",
+                    "Description": "All companions gain increased ability cooldown reduction"
+                }
+            ]
+        }
+    ],
+    "CompanionSystem": {
+        "MaxActiveCompanions": 2,
+        "CompanionLevelCap": 30,
+        "ExperienceSharing": 0.8,
+        "SynergyBonusMultiplier": 1.5,
+        "TimelineBonusMultiplier": 1.25
+    },
+    "Relationship": {
+        "Levels": [
+            {
+                "Level": 1,
+                "Name": "Stranger",
+                "RequiredPoints": 0,
+                "Bonus": "None"
+            },
+            {
+                "Level": 2,
+                "Name": "Acquaintance",
+                "RequiredPoints": 1000,
+                "Bonus": "5% increased stats"
+            },
+            {
+                "Level": 3,
+                "Name": "Friend",
+                "RequiredPoints": 3000,
+                "Bonus": "Unlocks special dialogue and quests"
+            },
+            {
+                "Level": 4,
+                "Name": "Trusted Ally",
+                "RequiredPoints": 6000,
+                "Bonus": "10% increased stats and new ability combinations"
+            },
+            {
+                "Level": 5,
+                "Name": "Timeline Bond",
+                "RequiredPoints": 10000,
+                "Bonus": "Unlocks ultimate ability and 15% increased stats"
+            }
+        ],
+        "Activities": [
+            {
+                "Name": "Joint Combat",
+                "Points": 100,
+                "Description": "Fight together in battle"
+            },
+            {
+                "Name": "Timeline Exploration",
+                "Points": 150,
+                "Description": "Explore timeline anomalies together"
+            },
+            {
+                "Name": "Personal Quest",
+                "Points": 500,
+                "Description": "Complete companion's personal storyline quest"
+            }
+        ]
+    },
+    "Commands": {
+        "Combat": [
+            {
+                "Name": "Aggressive",
+                "Description": "Companion focuses on dealing damage",
+                "AIBehavior": "Aggressive"
+            },
+            {
+                "Name": "Defensive",
+                "Description": "Companion prioritizes survival and protection",
+                "AIBehavior": "Defensive"
+            },
+            {
+                "Name": "Support",
+                "Description": "Companion focuses on healing and buffing",
+                "AIBehavior": "Support"
+            },
+            {
+                "Name": "Follow",
+                "Description": "Companion stays close and mimics player actions",
+                "AIBehavior": "Follow"
+            }
+        ],
+        "Exploration": [
+            {
+                "Name": "Scout",
+                "Description": "Companion searches for hidden items and secrets",
+                "AIBehavior": "Scout"
+            },
+            {
+                "Name": "Guard",
+                "Description": "Companion watches for enemies and protects player",
+                "AIBehavior": "Guard"
+            },
+            {
+                "Name": "Gather",
+                "Description": "Companion collects nearby resources",
+                "AIBehavior": "Gather"
+            }
+        ]
+    }
+}
