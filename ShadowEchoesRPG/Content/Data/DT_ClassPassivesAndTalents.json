@@ -1,0 +1,253 @@
+{
+    "ClassPassivesAndTalents": {
+        "TimelineAssassin": {
+            "Passives": {
+                "ShadowAffinity": {
+                    "Name": "Shadow Affinity",
+                    "Description": "Increases stealth effectiveness and critical strike chance in dark timeline",
+                    "Effects": {
+                        "StealthDetectionRadius": -0.3,
+                        "CriticalChance": 0.15,
+                        "TimelineRequirement": "DarkWorld"
+                    }
+                },
+                "TimelineAgility": {
+                    "Name": "Timeline Agility",
+                    "Description": "Gain movement speed after timeline transitions",
+                    "Effects": {
+                        "MovementSpeedBonus": 0.2,
+                        "Duration": 5.0,
+                        "Trigger": "TimelineTransition"
+                    }
+                },
+                "PhaseResonance": {
+                    "Name": "Phase Resonance",
+                    "Description": "Timeline energy regenerates faster while in stealth",
+                    "Effects": {
+                        "TimelineEnergyRegenBonus": 0.25,
+                        "Condition": "InStealth"
+                    }
+                }
+            },
+            "TalentTrees": {
+                "ShadowMaster": {
+                    "Description": "Master the arts of stealth and assassination",
+                    "Tiers": [
+                        {
+                            "Level": 1,
+                            "Talents": [
+                                {
+                                    "Name": "Enhanced Stealth",
+                                    "Description": "Reduces stealth detection radius by 15%",
+                                    "Effects": {
+                                        "StealthDetectionRadius": -0.15
+                                    }
+                                },
+                                {
+                                    "Name": "Swift Shadows",
+                                    "Description": "Increases movement speed in stealth by 10%",
+                                    "Effects": {
+                                        "StealthMovementSpeed": 0.1
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "Level": 2,
+                            "Requirements": ["Enhanced Stealth", "Swift Shadows"],
+                            "Talents": [
+                                {
+                                    "Name": "Shadow Strike",
+                                    "Description": "Backstabs deal 25% additional damage",
+                                    "Effects": {
+                                        "BackstabDamageBonus": 0.25
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "TimelineWeaver": {
+                    "Description": "Master timeline manipulation techniques",
+                    "Tiers": [
+                        {
+                            "Level": 1,
+                            "Talents": [
+                                {
+                                    "Name": "Timeline Efficiency",
+                                    "Description": "Reduces timeline energy cost of abilities by 15%",
+                                    "Effects": {
+                                        "TimelineEnergyCostReduction": 0.15
+                                    }
+                                },
+                                {
+                                    "Name": "Phase Mastery",
+                                    "Description": "Increases phase shift duration by 1 second",
+                                    "Effects": {
+                                        "PhaseShiftDurationBonus": 1.0
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "VoidMage": {
+            "Passives": {
+                "VoidEmbrace": {
+                    "Name": "Void Embrace",
+                    "Description": "Gain increased damage as corruption rises",
+                    "Effects": {
+                        "DamagePerCorruptionStack": 0.02,
+                        "MaxStacks": 10
+                    }
+                },
+                "DarkResonance": {
+                    "Name": "Dark Resonance",
+                    "Description": "Void abilities have a chance to generate additional corruption for bonus effects",
+                    "Effects": {
+                        "ProcChance": 0.2,
+                        "AdditionalCorruption": 1,
+                        "DamageBonus": 0.3
+                    }
+                }
+            },
+            "TalentTrees": {
+                "VoidWalker": {
+                    "Description": "Embrace the void's corruption for greater power",
+                    "Tiers": [
+                        {
+                            "Level": 1,
+                            "Talents": [
+                                {
+                                    "Name": "Corruption Mastery",
+                                    "Description": "Increases corruption threshold by 20%",
+                                    "Effects": {
+                                        "CorruptionThresholdBonus": 0.2
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "LightPaladin": {
+            "Passives": {
+                "LightBlessing": {
+                    "Name": "Light's Blessing",
+                    "Description": "Healing abilities have a chance to grant damage reduction",
+                    "Effects": {
+                        "ProcChance": 0.25,
+                        "DamageReduction": 0.15,
+                        "Duration": 4.0
+                    }
+                },
+                "HolyResonance": {
+                    "Name": "Holy Resonance",
+                    "Description": "Light abilities generate additional resonance in bright timeline",
+                    "Effects": {
+                        "ResonanceBonus": 0.3,
+                        "TimelineRequirement": "BrightWorld"
+                    }
+                }
+            },
+            "TalentTrees": {
+                "LightBringer": {
+                    "Description": "Channel the power of light for protection and healing",
+                    "Tiers": [
+                        {
+                            "Level": 1,
+                            "Talents": [
+                                {
+                                    "Name": "Enhanced Healing",
+                                    "Description": "Increases healing effectiveness by 20%",
+                                    "Effects": {
+                                        "HealingBonus": 0.2
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "TimeWarrior": {
+            "Passives": {
+                "TimelineResilience": {
+                    "Name": "Timeline Resilience",
+                    "Description": "Gain increased defense after timeline transitions",
+                    "Effects": {
+                        "DefenseBonus": 0.2,
+                        "Duration": 5.0,
+                        "Trigger": "TimelineTransition"
+                    }
+                },
+                "StanceMastery": {
+                    "Name": "Stance Mastery",
+                    "Description": "Switching stances grants temporary power",
+                    "Effects": {
+                        "DamageBonus": 0.15,
+                        "Duration": 3.0,
+                        "Trigger": "StanceSwitch"
+                    }
+                }
+            },
+            "TalentTrees": {
+                "TimelineChampion": {
+                    "Description": "Master timeline combat techniques",
+                    "Tiers": [
+                        {
+                            "Level": 1,
+                            "Talents": [
+                                {
+                                    "Name": "Enhanced Stances",
+                                    "Description": "Increases stance bonuses by 15%",
+                                    "Effects": {
+                                        "StanceBonusMultiplier": 0.15
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        },
+        "GlobalSettings": {
+            "MaxTalentPoints": 10,
+            "UnlockLevels": [1, 5, 10, 15, 20],
+            "RespecCost": 1000,
+            "MinLevel": 1,
+            "MaxLevel": 50,
+            "TalentTiers": {
+                "Tier1": {
+                    "RequiredLevel": 1,
+                    "PointsRequired": 0
+                },
+                "Tier2": {
+                    "RequiredLevel": 10,
+                    "PointsRequired": 5
+                },
+                "Tier3": {
+                    "RequiredLevel": 20,
+                    "PointsRequired": 10
+                }
+            },
+            "PassiveUnlocks": {
+                "Basic": {
+                    "Level": 1,
+                    "Description": "Unlocks basic class passive"
+                },
+                "Advanced": {
+                    "Level": 15,
+                    "Description": "Unlocks advanced class passive"
+                },
+                "Master": {
+                    "Level": 30,
+                    "Description": "Unlocks master class passive"
+                }
+            }
+        }
+    }
+}
