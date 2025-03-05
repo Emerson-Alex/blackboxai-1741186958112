@@ -1,0 +1,15 @@
+{
+    "Parent": "BP_SEEffectBase",
+    "Types": [
+        "Phase Shift",
+        "Time Slow",
+        "Timeline Blend",
+        "Reality Warp"
+    ],
+    "Properties": {
+    "Duration": 5.0,
+    "Intensity": 10.0,
+        "Color": "FLinearColor",
+        "VFX": "UParticleSystem*"
+    }
+}
