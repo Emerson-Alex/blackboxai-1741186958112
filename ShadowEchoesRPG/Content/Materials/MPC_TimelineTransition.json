@@ -1,0 +1,181 @@
+{
+    "MaterialParameterCollection": {
+        "Name": "MPC_TimelineTransition",
+        "ScalarParameters": {
+            "TransitionProgress": {
+                "DefaultValue": 0.0,
+                "Description": "Overall transition progress (0-1)"
+            },
+            "TimeScale": {
+                "DefaultValue": 1.0,
+                "Description": "Global time scale for transition effects"
+            },
+            "DistortionStrength": {
+                "DefaultValue": 0.1,
+                "Description": "Strength of spatial distortion during transition"
+            },
+            "EmissiveIntensity": {
+                "DefaultValue": 2.0,
+                "Description": "Intensity of emissive effects"
+            },
+            "NoiseScale": {
+                "DefaultValue": 1.0,
+                "Description": "Scale of noise patterns"
+            },
+            "EdgeSharpness": {
+                "DefaultValue": 8.0,
+                "Description": "Sharpness of transition boundaries"
+            },
+            "ParticleSpawnRate": {
+                "DefaultValue": 100.0,
+                "Description": "Rate of transition particle spawning"
+            },
+            "ParticleLifetime": {
+                "DefaultValue": 1.5,
+                "Description": "Lifetime of transition particles"
+            },
+            "EnergyFlowSpeed": {
+                "DefaultValue": 2.0,
+                "Description": "Speed of energy flow effects"
+            },
+            "TransitionSharpness": {
+                "DefaultValue": 4.0,
+                "Description": "Sharpness of the transition blend"
+            }
+        },
+        "VectorParameters": {
+            "LightTimelineColor": {
+                "DefaultValue": {
+                    "R": 1.0,
+                    "G": 0.9,
+                    "B": 0.7,
+                    "A": 1.0
+                },
+                "Description": "Base color for Light Timeline"
+            },
+            "DarkTimelineColor": {
+                "DefaultValue": {
+                    "R": 0.2,
+                    "G": 0.0,
+                    "B": 0.4,
+                    "A": 1.0
+                },
+                "Description": "Base color for Dark Timeline"
+            },
+            "LightEnergyColor": {
+                "DefaultValue": {
+                    "R": 0.9,
+                    "G": 0.95,
+                    "B": 1.0,
+                    "A": 1.0
+                },
+                "Description": "Energy effect color for Light Timeline"
+            },
+            "DarkEnergyColor": {
+                "DefaultValue": {
+                    "R": 0.4,
+                    "G": 0.0,
+                    "B": 0.8,
+                    "A": 1.0
+                },
+                "Description": "Energy effect color for Dark Timeline"
+            },
+            "TransitionOrigin": {
+                "DefaultValue": {
+                    "R": 0.0,
+                    "G": 0.0,
+                    "B": 0.0,
+                    "A": 1.0
+                },
+                "Description": "World space origin of transition effect"
+            }
+        },
+        "TextureParameters": {
+            "NoiseTexture": {
+                "DefaultPath": "/Game/Textures/Effects/T_TransitionNoise",
+                "Description": "Noise pattern for transition effects"
+            },
+            "DistortionMap": {
+                "DefaultPath": "/Game/Textures/Effects/T_TransitionDistortion",
+                "Description": "Distortion pattern for spatial warping"
+            },
+            "FlowMap": {
+                "DefaultPath": "/Game/Textures/Effects/T_EnergyFlow",
+                "Description": "Flow pattern for energy effects"
+            }
+        },
+        "StatePresets": {
+            "LightTimeline": {
+                "EmissiveIntensity": 2.5,
+                "NoiseScale": 1.2,
+                "DistortionStrength": 0.08,
+                "ParticleSpawnRate": 120.0,
+                "EnergyFlowSpeed": 2.2
+            },
+            "DarkTimeline": {
+                "EmissiveIntensity": 1.8,
+                "NoiseScale": 0.8,
+                "DistortionStrength": 0.15,
+                "ParticleSpawnRate": 80.0,
+                "EnergyFlowSpeed": 1.8
+            },
+            "Transition": {
+                "EmissiveIntensity": 3.0,
+                "NoiseScale": 1.5,
+                "DistortionStrength": 0.2,
+                "ParticleSpawnRate": 150.0,
+                "EnergyFlowSpeed": 3.0
+            }
+        },
+        "QualitySettings": {
+            "High": {
+                "ParticleCount": 1000,
+                "NoiseTextureSize": 512,
+                "DistortionQuality": 1.0,
+                "EmissiveQuality": 1.0
+            },
+            "Medium": {
+                "ParticleCount": 500,
+                "NoiseTextureSize": 256,
+                "DistortionQuality": 0.7,
+                "EmissiveQuality": 0.8
+            },
+            "Low": {
+                "ParticleCount": 250,
+                "NoiseTextureSize": 128,
+                "DistortionQuality": 0.5,
+                "EmissiveQuality": 0.6
+            }
+        },
+        "PerformanceSettings": {
+            "MaxParticleSystems": 4,
+            "MaxDistortionSamples": 16,
+            "MaxEmissiveSamples": 8,
+            "BatchSize": 64,
+            "UpdateFrequency": 0.016
+        },
+        "OptimizationRules": {
+            "ParticleDistanceCull": 2000.0,
+            "EffectLODLevels": [
+                {
+                    "Distance": 500.0,
+                    "QualityMultiplier": 1.0
+                },
+                {
+                    "Distance": 1000.0,
+                    "QualityMultiplier": 0.7
+                },
+                {
+                    "Distance": 2000.0,
+                    "QualityMultiplier": 0.4
+                }
+            ],
+            "DynamicResolutionScale": {
+                "Enabled": true,
+                "MinScale": 0.5,
+                "MaxScale": 1.0,
+                "TargetFPS": 60
+            }
+        }
+    }
+}
