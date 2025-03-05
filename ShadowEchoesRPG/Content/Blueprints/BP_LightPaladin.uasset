@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SECharacterBase",
+    "UniqueFeatures": [
+        "Light Blessing System",
+        "Protection Aura",
+        "Healing Abilities",
+        "Timeline Purification"
+    ]
+}
