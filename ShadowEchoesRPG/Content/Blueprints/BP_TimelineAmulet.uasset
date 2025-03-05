@@ -1,0 +1,16 @@
+{
+    "Parent": "BP_SEAmuletBase",
+    "Types": [
+        "Shadow Pendant",
+        "Void Crystal",
+        "Light Talisman",
+        "Time Medallion"
+    ],
+    "Properties": {
+    "TimelinePowerBoost": 5.0,
+    "SpecialAbilityBoost": 3.0,
+    "ResourceRegeneration": 1.0,
+    "PassiveEffects": []
+}
+
+}
