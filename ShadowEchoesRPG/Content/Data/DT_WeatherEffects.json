@@ -1,0 +1,256 @@
+{
+    "WeatherEffects": [
+        {
+            "Name": "Void Storm",
+            "WeatherType": "VoidStorm",
+            "Description": "A cataclysmic storm of void energy that warps reality itself.",
+            "Intensity": {
+                "Min": 0.4,
+                "Max": 1.0,
+                "DefaultValue": 0.7
+            },
+            "VisualEffects": {
+                "SkyColor": "#1A0A2E",
+                "FogDensity": 0.8,
+                "ParticleSystem": "VFX_VoidStorm",
+                "LightingIntensity": 0.3,
+                "PostProcess": {
+                    "Saturation": -0.3,
+                    "Contrast": 1.2,
+                    "VoidDistortion": 0.6
+                }
+            },
+            "GameplayEffects": {
+                "PlayerEffects": {
+                    "StaminaDrain": 20,
+                    "TimelineEnergyDrain": 15,
+                    "MovementSpeedReduction": 30,
+                    "VisibilityRange": -50
+                },
+                "CombatEffects": {
+                    "VoidDamageBonus": 50,
+                    "PhysicalDamageReduction": -20,
+                    "DodgeCostIncrease": 25
+                },
+                "EnvironmentalEffects": {
+                    "VoidHazardSpawnRate": 0.3,
+                    "RealityTearProbability": 0.2,
+                    "EnemyAggressionIncrease": 40
+                }
+            },
+            "TimelineSpecific": {
+                "DarkWorld": {
+                    "Intensity": 1.5,
+                    "AdditionalEffects": ["VoidEmpowerment", "RealityDistortion"]
+                },
+                "BrightWorld": {
+                    "Intensity": 0.7,
+                    "AdditionalEffects": ["LightSuppression"]
+                }
+            }
+        },
+        {
+            "Name": "Timeline Flux",
+            "WeatherType": "TimelineFlux",
+            "Description": "Reality becomes unstable as timelines blur together.",
+            "Intensity": {
+                "Min": 0.3,
+                "Max": 1.0,
+                "DefaultValue": 0.6
+            },
+            "VisualEffects": {
+                "SkyColor": "#4B0082",
+                "FogDensity": 0.5,
+                "ParticleSystem": "VFX_TimelineFlux",
+                "LightingIntensity": 0.7,
+                "PostProcess": {
+                    "ChromaticAberration": 0.8,
+                    "TimelineBlur": 0.4,
+                    "RealityRipples": 0.6
+                }
+            },
+            "GameplayEffects": {
+                "PlayerEffects": {
+                    "TimelineSwitchCost": -30,
+                    "DualTimelineEffects": true,
+                    "AbilityCooldownReduction": 20
+                },
+                "CombatEffects": {
+                    "TimelineDamageBonus": 30,
+                    "RandomTimelineShifts": true,
+                    "DualTimelineResistance": 40
+                },
+                "EnvironmentalEffects": {
+                    "TimelineRiftSpawnRate": 0.4,
+                    "EnemyTimelineShifting": true,
+                    "RealityDistortions": 0.3
+                }
+            },
+            "TimelineSpecific": {
+                "Any": {
+                    "Intensity": 1.0,
+                    "AdditionalEffects": ["TimelineMerge", "RealityBleed"]
+                }
+            }
+        },
+        {
+            "Name": "Shadow Mist",
+            "WeatherType": "ShadowMist",
+            "Description": "Dense mists of shadow energy that conceal deadly threats.",
+            "Intensity": {
+                "Min": 0.2,
+                "Max": 1.0,
+                "DefaultValue": 0.5
+            },
+            "VisualEffects": {
+                "SkyColor": "#1C1C1C",
+                "FogDensity": 0.9,
+                "ParticleSystem": "VFX_ShadowMist",
+                "LightingIntensity": 0.2,
+                "PostProcess": {
+                    "Contrast": 1.3,
+                    "ShadowIntensity": 1.4,
+                    "DepthOfField": 0.7
+                }
+            },
+            "GameplayEffects": {
+                "PlayerEffects": {
+                    "StealthBonus": 40,
+                    "VisibilityRange": -70,
+                    "ShadowResistance": 30
+                },
+                "CombatEffects": {
+                    "SneakAttackBonus": 50,
+                    "DetectionRange": -60,
+                    "AmbushProbability": 0.4
+                },
+                "EnvironmentalEffects": {
+                    "ShadowCreatureSpawnRate": 0.5,
+                    "AmbientDamage": 5,
+                    "StealthPredatorSpawns": 0.3
+                }
+            },
+            "TimelineSpecific": {
+                "DarkWorld": {
+                    "Intensity": 1.3,
+                    "AdditionalEffects": ["DeepShadow", "VoidEmpowerment"]
+                }
+            }
+        },
+        {
+            "Name": "Radiant Glow",
+            "WeatherType": "RadiantGlow",
+            "Description": "Intense light energy that purifies and empowers.",
+            "Intensity": {
+                "Min": 0.2,
+                "Max": 1.0,
+                "DefaultValue": 0.5
+            },
+            "VisualEffects": {
+                "SkyColor": "#FFD700",
+                "FogDensity": 0.3,
+                "ParticleSystem": "VFX_RadiantGlow",
+                "LightingIntensity": 1.5,
+                "PostProcess": {
+                    "Bloom": 2.0,
+                    "LightShafts": 1.0,
+                    "Saturation": 1.2
+                }
+            },
+            "GameplayEffects": {
+                "PlayerEffects": {
+                    "HealingReceived": 30,
+                    "LightEnergyRegen": 40,
+                    "PurificationAura": true
+                },
+                "CombatEffects": {
+                    "LightDamageBonus": 40,
+                    "DarkDamageReduction": 30,
+                    "PurificationDamage": true
+                },
+                "EnvironmentalEffects": {
+                    "LightCreatureSpawnRate": 0.4,
+                    "HealingZones": 0.3,
+                    "ShadowSuppression": true
+                }
+            },
+            "TimelineSpecific": {
+                "BrightWorld": {
+                    "Intensity": 1.3,
+                    "AdditionalEffects": ["DivineFavor", "LightEmpowerment"]
+                }
+            }
+        },
+        {
+            "Name": "Reality Storm",
+            "WeatherType": "RealityStorm",
+            "Description": "A catastrophic event where reality itself breaks down.",
+            "Intensity": {
+                "Min": 0.6,
+                "Max": 1.0,
+                "DefaultValue": 0.8
+            },
+            "VisualEffects": {
+                "SkyColor": "#800080",
+                "FogDensity": 0.7,
+                "ParticleSystem": "VFX_RealityStorm",
+                "LightingIntensity": 0.5,
+                "PostProcess": {
+                    "RealityDistortion": 1.0,
+                    "TimelineFractures": 0.8,
+                    "DimensionalRipples": 0.9
+                }
+            },
+            "GameplayEffects": {
+                "PlayerEffects": {
+                    "RandomTimelineShifts": true,
+                    "RealityDamage": 10,
+                    "TimelineInstability": 50
+                },
+                "CombatEffects": {
+                    "UnpredictableEffects": true,
+                    "RealityWarping": 0.5,
+                    "TimelineChaos": true
+                },
+                "EnvironmentalEffects": {
+                    "RealityTearSpawnRate": 0.6,
+                    "ChaoticEncounters": true,
+                    "DimensionalBreaches": 0.4
+                }
+            },
+            "TimelineSpecific": {
+                "Any": {
+                    "Intensity": 1.0,
+                    "AdditionalEffects": ["RealityCollapse", "TimelineChaos", "DimensionalInstability"]
+                }
+            }
+        }
+    ],
+    "GlobalSettings": {
+        "WeatherTransitions": {
+            "MinDuration": 30,
+            "MaxDuration": 300,
+            "TransitionSpeed": 0.1
+        },
+        "TimelineInfluence": {
+            "WeatherIntensityModifier": 0.2,
+            "EffectDurationModifier": 0.3,
+            "HazardSpawnRateModifier": 0.25
+        },
+        "SeasonalEffects": {
+            "Winter": {
+                "VoidStormFrequency": 1.5,
+                "ShadowMistDuration": 1.3
+            },
+            "Summer": {
+                "RadiantGlowFrequency": 1.5,
+                "RealityStormIntensity": 0.8
+            }
+        },
+        "DifficultyScaling": {
+            "WeatherIntensity": 0.1,
+            "HazardDamage": 0.15,
+            "EffectDuration": 0.2
+        }
+    }
+}
