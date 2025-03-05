@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SECharacterBase",
+    "UniqueFeatures": [
+        "Shadow Step Ability",
+        "Stealth Mechanics",
+        "Critical Strike System",
+        "Timeline Phase Shift"
+    ]
+}
