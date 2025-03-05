@@ -1,0 +1,217 @@
+{
+    "TimelineTransitions": {
+        "DarkToBright": {
+            "ParticleEffects": {
+                "Primary": {
+                    "EffectPath": "/Game/Effects/Particles/Timeline/PS_DarkToBrightTransition",
+                    "Duration": 2.0,
+                    "Scale": 1.0,
+                    "Color": {
+                        "R": 0.8,
+                        "G": 0.9,
+                        "B": 1.0,
+                        "A": 1.0
+                    },
+                    "Parameters": {
+                        "EmissionRate": 100.0,
+                        "StartSize": 5.0,
+                        "EndSize": 0.1,
+                        "Lifetime": 2.0
+                    }
+                },
+                "Secondary": {
+                    "EffectPath": "/Game/Effects/Particles/Timeline/PS_LightOrbs",
+                    "Duration": 1.5,
+                    "Scale": 0.8,
+                    "Color": {
+                        "R": 1.0,
+                        "G": 0.95,
+                        "B": 0.8,
+                        "A": 1.0
+                    },
+                    "Parameters": {
+                        "EmissionRate": 50.0,
+                        "StartSize": 2.0,
+                        "EndSize": 0.0,
+                        "Lifetime": 1.5
+                    }
+                }
+            },
+            "PostProcessEffects": {
+                "BlendOut": {
+                    "MaterialPath": "/Game/Effects/PostProcess/M_DarkFade",
+                    "Duration": 1.0,
+                    "BlendCurve": "EaseInOut",
+                    "Parameters": {
+                        "Intensity": {
+                            "Start": 1.0,
+                            "End": 0.0
+                        },
+                        "Color": {
+                            "R": 0.1,
+                            "G": 0.05,
+                            "B": 0.2,
+                            "A": 1.0
+                        }
+                    }
+                },
+                "BlendIn": {
+                    "MaterialPath": "/Game/Effects/PostProcess/M_LightBloom",
+                    "Duration": 1.5,
+                    "BlendCurve": "EaseIn",
+                    "Parameters": {
+                        "Intensity": {
+                            "Start": 0.0,
+                            "End": 1.0
+                        },
+                        "Color": {
+                            "R": 1.0,
+                            "G": 0.98,
+                            "B": 0.9,
+                            "A": 1.0
+                        }
+                    }
+                }
+            },
+            "CameraEffects": {
+                "Movement": {
+                    "Type": "Sway",
+                    "Duration": 2.0,
+                    "Intensity": 0.3,
+                    "Speed": 2.0
+                },
+                "FOV": {
+                    "Start": 90.0,
+                    "Peak": 100.0,
+                    "End": 90.0,
+                    "Duration": 2.0,
+                    "Curve": "EaseInOut"
+                }
+            }
+        },
+        "BrightToDark": {
+            "ParticleEffects": {
+                "Primary": {
+                    "EffectPath": "/Game/Effects/Particles/Timeline/PS_BrightToDarkTransition",
+                    "Duration": 2.0,
+                    "Scale": 1.0,
+                    "Color": {
+                        "R": 0.2,
+                        "G": 0.1,
+                        "B": 0.3,
+                        "A": 1.0
+                    },
+                    "Parameters": {
+                        "EmissionRate": 120.0,
+                        "StartSize": 4.0,
+                        "EndSize": 0.1,
+                        "Lifetime": 2.0
+                    }
+                },
+                "Secondary": {
+                    "EffectPath": "/Game/Effects/Particles/Timeline/PS_VoidWisps",
+                    "Duration": 1.5,
+                    "Scale": 0.8,
+                    "Color": {
+                        "R": 0.3,
+                        "G": 0.1,
+                        "B": 0.4,
+                        "A": 1.0
+                    },
+                    "Parameters": {
+                        "EmissionRate": 60.0,
+                        "StartSize": 2.5,
+                        "EndSize": 0.0,
+                        "Lifetime": 1.5
+                    }
+                }
+            },
+            "PostProcessEffects": {
+                "BlendOut": {
+                    "MaterialPath": "/Game/Effects/PostProcess/M_LightFade",
+                    "Duration": 1.0,
+                    "BlendCurve": "EaseInOut",
+                    "Parameters": {
+                        "Intensity": {
+                            "Start": 1.0,
+                            "End": 0.0
+                        },
+                        "Color": {
+                            "R": 1.0,
+                            "G": 0.95,
+                            "B": 0.9,
+                            "A": 1.0
+                        }
+                    }
+                },
+                "BlendIn": {
+                    "MaterialPath": "/Game/Effects/PostProcess/M_VoidMist",
+                    "Duration": 1.5,
+                    "BlendCurve": "EaseIn",
+                    "Parameters": {
+                        "Intensity": {
+                            "Start": 0.0,
+                            "End": 1.0
+                        },
+                        "Color": {
+                            "R": 0.15,
+                            "G": 0.05,
+                            "B": 0.25,
+                            "A": 1.0
+                        }
+                    }
+                }
+            },
+            "CameraEffects": {
+                "Movement": {
+                    "Type": "Pulse",
+                    "Duration": 2.0,
+                    "Intensity": 0.4,
+                    "Speed": 2.5
+                },
+                "FOV": {
+                    "Start": 90.0,
+                    "Peak": 95.0,
+                    "End": 90.0,
+                    "Duration": 2.0,
+                    "Curve": "EaseInOut"
+                }
+            }
+        },
+        "GlobalSettings": {
+            "MinTransitionDuration": 1.5,
+            "MaxTransitionDuration": 2.5,
+            "BlendSettings": {
+                "DefaultCurve": "EaseInOut",
+                "MinBlendTime": 0.3,
+                "MaxBlendTime": 1.0
+            },
+            "ParticleSettings": {
+                "MaxParticles": 1000,
+                "MaxSystemScale": 2.0,
+                "QualityScaling": {
+                    "Low": 0.5,
+                    "Medium": 0.75,
+                    "High": 1.0,
+                    "Ultra": 1.5
+                }
+            },
+            "PostProcessSettings": {
+                "MaxBlendWeight": 1.0,
+                "PriorityLevels": {
+                    "Base": 0,
+                    "Environment": 1,
+                    "Timeline": 2,
+                    "Combat": 3,
+                    "UI": 4
+                }
+            },
+            "CameraSettings": {
+                "MaxShakeIntensity": 0.5,
+                "MaxFOVChange": 15.0,
+                "InterpolationSpeed": 5.0,
+                "StabilizationTime": 0.5
+            }
+        }
+    }
+}
