@@ -1,0 +1,7 @@
+{
+    "Parent": "USEUserWidget",
+    "Features": [
+        "Display active and completed quests",
+        "Quest details and objectives"
+    ]
+}
