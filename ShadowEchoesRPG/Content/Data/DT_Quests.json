@@ -1,0 +1,63 @@
+{
+    "Rows": [
+        {
+            "Name": "Tutorial_01",
+            "QuestID": "Tutorial_01",
+            "Title": "Welcome to Shadow Echoes",
+            "Description": "Learn the basics of timeline switching and combat.",
+            "Type": "MainQuest",
+            "RequiredTimeline": "BrightWorld",
+            "RequiredLevel": 1,
+            "PrerequisiteQuests": [],
+            "ObjectiveIDs": [
+                "Tutorial_Move",
+                "Tutorial_Combat",
+                "Tutorial_Timeline"
+            ],
+            "RewardXP": 100,
+            "RewardCurrency": 50,
+            "RewardItems": [],
+            "bIsRepeatable": false,
+            "RepeatCooldown": 0.0
+        },
+        {
+            "Name": "Timeline_01",
+            "QuestID": "Timeline_01",
+            "Title": "Echoes of the Past",
+            "Description": "Investigate the mysterious echoes in both timelines.",
+            "Type": "TimelineQuest",
+            "RequiredTimeline": "BrightWorld",
+            "RequiredLevel": 2,
+            "PrerequisiteQuests": ["Tutorial_01"],
+            "ObjectiveIDs": [
+                "Timeline_Bright",
+                "Timeline_Dark"
+            ],
+            "RewardXP": 200,
+            "RewardCurrency": 100,
+            "RewardItems": ["Item_TimeShard"],
+            "bIsRepeatable": false,
+            "RepeatCooldown": 0.0
+        },
+        {
+            "Name": "DarkWorld_01",
+            "QuestID": "DarkWorld_01",
+            "Title": "Shadows of Truth",
+            "Description": "Uncover the dark timeline's secrets.",
+            "Type": "MainQuest",
+            "RequiredTimeline": "DarkWorld",
+            "RequiredLevel": 3,
+            "PrerequisiteQuests": ["Timeline_01"],
+            "ObjectiveIDs": [
+                "DarkWorld_Investigate",
+                "DarkWorld_Defeat",
+                "DarkWorld_Collect"
+            ],
+            "RewardXP": 300,
+            "RewardCurrency": 150,
+            "RewardItems": ["Item_DarkEssence"],
+            "bIsRepeatable": false,
+            "RepeatCooldown": 0.0
+        }
+    ]
+}
