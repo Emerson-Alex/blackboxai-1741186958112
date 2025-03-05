@@ -1,0 +1,250 @@
+{
+    "TimelineTransitions": {
+        "None_To_Light": {
+            "TransitionEffects": {
+                "Visual": {
+                    "ParticleSystem": "/Game/VFX/Timeline/Transitions/P_NoneToLight",
+                    "Material": "/Game/Materials/Timeline/M_NoneToLight",
+                    "Duration": 1.5,
+                    "Color": {
+                        "Start": {"R": 0.5, "G": 0.5, "B": 0.5, "A": 1.0},
+                        "End": {"R": 1.0, "G": 0.9, "B": 0.7, "A": 1.0}
+                    },
+                    "Scale": {
+                        "Start": 0.0,
+                        "End": 1.0,
+                        "Curve": "EaseInOut"
+                    }
+                },
+                "Audio": {
+                    "Sound": "/Game/Audio/Timeline/Transitions/S_NoneToLight",
+                    "Volume": {
+                        "Start": 0.0,
+                        "End": 1.0,
+                        "Curve": "Linear"
+                    },
+                    "Pitch": {
+                        "Start": 0.8,
+                        "End": 1.0,
+                        "Curve": "EaseIn"
+                    }
+                },
+                "Animation": {
+                    "Montage": "/Game/Animations/Timeline/Transitions/AM_NoneToLight",
+                    "BlendIn": 0.3,
+                    "BlendOut": 0.2,
+                    "PlayRate": 1.0
+                }
+            },
+            "GameplayEffects": {
+                "EnergyCost": 25.0,
+                "StatModifiers": {
+                    "Defense": 1.25,
+                    "HealingReceived": 1.5,
+                    "DamageDealt": 1.0
+                },
+                "StatusEffects": {
+                    "LightBlessing": {
+                        "Duration": 5.0,
+                        "TickRate": 1.0,
+                        "Effect": "RegenerateHealth",
+                        "Value": 5.0
+                    }
+                }
+            }
+        },
+        "None_To_Dark": {
+            "TransitionEffects": {
+                "Visual": {
+                    "ParticleSystem": "/Game/VFX/Timeline/Transitions/P_NoneToDark",
+                    "Material": "/Game/Materials/Timeline/M_NoneToDark",
+                    "Duration": 1.5,
+                    "Color": {
+                        "Start": {"R": 0.5, "G": 0.5, "B": 0.5, "A": 1.0},
+                        "End": {"R": 0.2, "G": 0.0, "B": 0.4, "A": 1.0}
+                    },
+                    "Scale": {
+                        "Start": 0.0,
+                        "End": 1.0,
+                        "Curve": "EaseInOut"
+                    }
+                },
+                "Audio": {
+                    "Sound": "/Game/Audio/Timeline/Transitions/S_NoneToDark",
+                    "Volume": {
+                        "Start": 0.0,
+                        "End": 1.0,
+                        "Curve": "Linear"
+                    },
+                    "Pitch": {
+                        "Start": 1.2,
+                        "End": 0.8,
+                        "Curve": "EaseOut"
+                    }
+                },
+                "Animation": {
+                    "Montage": "/Game/Animations/Timeline/Transitions/AM_NoneToDark",
+                    "BlendIn": 0.3,
+                    "BlendOut": 0.2,
+                    "PlayRate": 1.0
+                }
+            },
+            "GameplayEffects": {
+                "EnergyCost": 25.0,
+                "StatModifiers": {
+                    "Defense": 0.75,
+                    "DamageDealt": 1.5,
+                    "CriticalChance": 1.25
+                },
+                "StatusEffects": {
+                    "DarkEmpowerment": {
+                        "Duration": 5.0,
+                        "TickRate": 1.0,
+                        "Effect": "IncreaseCriticalDamage",
+                        "Value": 10.0
+                    }
+                }
+            }
+        },
+        "Light_To_Dark": {
+            "TransitionEffects": {
+                "Visual": {
+                    "ParticleSystem": "/Game/VFX/Timeline/Transitions/P_LightToDark",
+                    "Material": "/Game/Materials/Timeline/M_LightToDark",
+                    "Duration": 2.0,
+                    "Color": {
+                        "Start": {"R": 1.0, "G": 0.9, "B": 0.7, "A": 1.0},
+                        "End": {"R": 0.2, "G": 0.0, "B": 0.4, "A": 1.0}
+                    },
+                    "Scale": {
+                        "Start": 1.0,
+                        "End": 1.0,
+                        "Curve": "EaseInOut"
+                    }
+                },
+                "Audio": {
+                    "Sound": "/Game/Audio/Timeline/Transitions/S_LightToDark",
+                    "Volume": {
+                        "Start": 1.0,
+                        "End": 1.0,
+                        "Curve": "Linear"
+                    },
+                    "Pitch": {
+                        "Start": 1.0,
+                        "End": 0.8,
+                        "Curve": "EaseInOut"
+                    }
+                },
+                "Animation": {
+                    "Montage": "/Game/Animations/Timeline/Transitions/AM_LightToDark",
+                    "BlendIn": 0.4,
+                    "BlendOut": 0.3,
+                    "PlayRate": 1.0
+                }
+            },
+            "GameplayEffects": {
+                "EnergyCost": 35.0,
+                "StatModifiers": {
+                    "Defense": 0.75,
+                    "DamageDealt": 1.5,
+                    "CriticalChance": 1.25
+                },
+                "StatusEffects": {
+                    "TimelineShift": {
+                        "Duration": 3.0,
+                        "TickRate": 0.5,
+                        "Effect": "TemporaryInvulnerability",
+                        "Value": 1.0
+                    }
+                }
+            }
+        },
+        "Dark_To_Light": {
+            "TransitionEffects": {
+                "Visual": {
+                    "ParticleSystem": "/Game/VFX/Timeline/Transitions/P_DarkToLight",
+                    "Material": "/Game/Materials/Timeline/M_DarkToLight",
+                    "Duration": 2.0,
+                    "Color": {
+                        "Start": {"R": 0.2, "G": 0.0, "B": 0.4, "A": 1.0},
+                        "End": {"R": 1.0, "G": 0.9, "B": 0.7, "A": 1.0}
+                    },
+                    "Scale": {
+                        "Start": 1.0,
+                        "End": 1.0,
+                        "Curve": "EaseInOut"
+                    }
+                },
+                "Audio": {
+                    "Sound": "/Game/Audio/Timeline/Transitions/S_DarkToLight",
+                    "Volume": {
+                        "Start": 1.0,
+                        "End": 1.0,
+                        "Curve": "Linear"
+                    },
+                    "Pitch": {
+                        "Start": 0.8,
+                        "End": 1.0,
+                        "Curve": "EaseInOut"
+                    }
+                },
+                "Animation": {
+                    "Montage": "/Game/Animations/Timeline/Transitions/AM_DarkToLight",
+                    "BlendIn": 0.4,
+                    "BlendOut": 0.3,
+                    "PlayRate": 1.0
+                }
+            },
+            "GameplayEffects": {
+                "EnergyCost": 35.0,
+                "StatModifiers": {
+                    "Defense": 1.25,
+                    "HealingReceived": 1.5,
+                    "DamageDealt": 1.0
+                },
+                "StatusEffects": {
+                    "TimelineShift": {
+                        "Duration": 3.0,
+                        "TickRate": 0.5,
+                        "Effect": "TemporaryInvulnerability",
+                        "Value": 1.0
+                    }
+                }
+            }
+        }
+    },
+    "GlobalSettings": {
+        "MinTransitionDuration": 1.0,
+        "MaxTransitionDuration": 3.0,
+        "DefaultEnergyCost": 25.0,
+        "CooldownBetweenTransitions": 5.0,
+        "TransitionCancelPenalty": 0.5,
+        "Effects": {
+            "ScreenEffects": {
+                "EnablePostProcess": true,
+                "EnableCameraShake": true,
+                "EnableTimelineDistortion": true
+            },
+            "AudioEffects": {
+                "EnableEnvironmentalBlend": true,
+                "EnableReverbTransition": true,
+                "MasterVolumeDuringTransition": 0.8
+            },
+            "GameplayEffects": {
+                "EnableInvulnerabilityFrame": true,
+                "EnableComboPreservation": true,
+                "EnableResourceRefund": true
+            }
+        },
+        "Performance": {
+            "MaxParticleCount": 1000,
+            "MaxLightCount": 4,
+            "PreloadDistance": 1000.0,
+            "LODSettings": {
+                "HighDetail": 0.0,
+                "MediumDetail": 1000.0,
+                "LowDetail": 2000.0
+            }
+        }
+    }
+}
