@@ -1,0 +1,9 @@
+{
+    "Parent": "BP_SECharacterBase",
+    "UniqueFeatures": [
+        "Combat Stance System",
+        "Timeline Combat",
+        "Cross-Timeline Abilities",
+        "Defensive Mechanics"
+    ]
+}
