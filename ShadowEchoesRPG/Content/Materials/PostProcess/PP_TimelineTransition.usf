@@ -1,0 +1,193 @@
+// Post Process Material for Timeline Transitions
+// Handles screen-space effects during timeline state changes
+
+#include "/Engine/Private/Common.ush"
+#include "/Engine/Private/PostProcessCommon.ush"
+
+// Material parameters from MPC_TimelineTransition
+float TransitionProgress;
+float4 LightTimelineColor;
+float4 DarkTimelineColor;
+float DistortionStrength;
+float EmissiveIntensity;
+float NoiseScale;
+float EdgeSharpness;
+float TimeScale;
+
+// Texture samplers
+Texture2D NoiseTexture;
+Texture2D DistortionMap;
+Texture2D FlowMap;
+SamplerState NoiseTextureSampler;
+SamplerState DistortionMapSampler;
+SamplerState FlowMapSampler;
+
+// Screen dimensions
+float2 ScreenSize;
+float2 ScreenPosition;
+
+// Custom functions
+float3 TimelineDistortion(float2 UV)
+{
+    float2 DistortedUV = UV;
+    
+    // Sample distortion map
+    float2 DistortionOffset = (DistortionMap.SampleLevel(DistortionMapSampler, UV * NoiseScale + TimeScale * View.RealTime * 0.1f, 0).rg - 0.5f) * 2.0f;
+    
+    // Apply transition-based distortion
+    float TransitionEdge = abs(TransitionProgress - 0.5f) * 2.0f;
+    float DistortionMask = 1.0f - pow(TransitionEdge, EdgeSharpness);
+    
+    DistortedUV += DistortionOffset * DistortionStrength * DistortionMask;
+    
+    // Sample scene color with distorted UVs
+    float3 SceneColor = SceneTextureLookup(DistortedUV, 14, false).rgb; // 14 = PPI_PostProcessInput0
+    
+    return SceneColor;
+}
+
+float3 TimelineColorGrading(float3 Color)
+{
+    // Blend between timeline color schemes
+    float3 LightGrade = Color * LightTimelineColor.rgb;
+    float3 DarkGrade = Color * DarkTimelineColor.rgb;
+    
+    // Apply contrast and saturation adjustments
+    float3 BlendedColor = lerp(LightGrade, DarkGrade, TransitionProgress);
+    
+    // Enhance timeline-specific characteristics
+    if (TransitionProgress < 0.5f)
+    {
+        // Light timeline: Enhance brightness and warmth
+        BlendedColor = pow(BlendedColor, 0.8f); // Gamma adjustment
+        BlendedColor += float3(0.1f, 0.05f, 0.0f) * (1.0f - TransitionProgress * 2.0f);
+    }
+    else
+    {
+        // Dark timeline: Enhance contrast and cool tones
+        BlendedColor = pow(BlendedColor, 1.2f);
+        BlendedColor += float3(0.0f, 0.0f, 0.1f) * ((TransitionProgress - 0.5f) * 2.0f);
+    }
+    
+    return BlendedColor;
+}
+
+float3 TimelineEmissive(float2 UV)
+{
+    // Sample flow map for energy patterns
+    float2 FlowUV = UV * NoiseScale + TimeScale * View.RealTime * 0.2f;
+    float3 Flow = FlowMap.SampleLevel(FlowMapSampler, FlowUV, 0).rgb;
+    
+    // Create timeline-specific energy effects
+    float3 LightEnergy = Flow * LightTimelineColor.rgb * EmissiveIntensity;
+    float3 DarkEnergy = Flow * DarkTimelineColor.rgb * EmissiveIntensity;
+    
+    // Blend between energy types
+    float3 BlendedEnergy = lerp(LightEnergy, DarkEnergy, TransitionProgress);
+    
+    // Add transition-specific glow
+    float TransitionGlow = sin(TransitionProgress * PI);
+    BlendedEnergy *= 1.0f + TransitionGlow;
+    
+    return BlendedEnergy;
+}
+
+float3 TimelineParticles(float2 UV)
+{
+    // Generate particle effect based on noise
+    float2 NoiseUV = UV * NoiseScale + TimeScale * View.RealTime * 0.15f;
+    float3 Noise = NoiseTexture.SampleLevel(NoiseTextureSampler, NoiseUV, 0).rgb;
+    
+    // Create particle patterns
+    float Particles = pow(Noise.r, 8.0f); // Sharp particle falloff
+    
+    // Timeline-specific particle colors
+    float3 LightParticles = Particles * LightTimelineColor.rgb * 2.0f;
+    float3 DarkParticles = Particles * DarkTimelineColor.rgb * 2.0f;
+    
+    // Blend particles
+    float3 BlendedParticles = lerp(LightParticles, DarkParticles, TransitionProgress);
+    
+    // Add motion
+    float ParticleMotion = sin(UV.y * 10.0f + TimeScale * View.RealTime * 2.0f) * 0.5f + 0.5f;
+    BlendedParticles *= ParticleMotion;
+    
+    return BlendedParticles;
+}
+
+float3 TimelineBoundaryEffect(float2 UV)
+{
+    // Calculate distance from transition boundary
+    float DistFromCenter = abs(UV.x - 0.5f) * 2.0f;
+    float BoundaryMask = 1.0f - pow(DistFromCenter, EdgeSharpness);
+    
+    // Create boundary glow
+    float3 BoundaryGlow = lerp(LightTimelineColor.rgb, DarkTimelineColor.rgb, TransitionProgress);
+    BoundaryGlow *= BoundaryMask * EmissiveIntensity;
+    
+    // Add temporal variation
+    float TimeVar = sin(TimeScale * View.RealTime * 3.0f) * 0.5f + 0.5f;
+    BoundaryGlow *= TimeVar;
+    
+    return BoundaryGlow;
+}
+
+// Main post process function
+void MainPS(
+    in float4 Position : SV_POSITION,
+    in float2 UV : TEXCOORD0,
+    out float4 OutColor : SV_Target0
+)
+{
+    // Apply distortion to scene
+    float3 DistortedScene = TimelineDistortion(UV);
+    
+    // Apply color grading
+    float3 GradedColor = TimelineColorGrading(DistortedScene);
+    
+    // Add emissive effects
+    float3 EmissiveEffect = TimelineEmissive(UV);
+    
+    // Add particles
+    float3 ParticleEffect = TimelineParticles(UV);
+    
+    // Add boundary effects
+    float3 BoundaryEffect = TimelineBoundaryEffect(UV);
+    
+    // Combine all effects
+    float3 FinalColor = GradedColor;
+    FinalColor += EmissiveEffect * 0.2f;
+    FinalColor += ParticleEffect * 0.15f;
+    FinalColor += BoundaryEffect * 0.25f;
+    
+    // Apply transition fade
+    float TransitionFade = sin(TransitionProgress * PI);
+    FinalColor = lerp(DistortedScene, FinalColor, TransitionFade);
+    
+    // Ensure HDR range
+    FinalColor = saturate(FinalColor);
+    
+    OutColor = float4(FinalColor, 1.0f);
+}
+
+// Vertex shader passthrough
+void MainVS(
+    in float4 Position : POSITION,
+    in float2 UV : TEXCOORD0,
+    out float4 OutPosition : SV_POSITION,
+    out float2 OutUV : TEXCOORD0
+)
+{
+    OutPosition = Position;
+    OutUV = UV;
+}
+
+// Technique definition
+technique MainTechnique
+{
+    pass P0
+    {
+        VertexShader = compile vs_5_0 MainVS();
+        PixelShader = compile ps_5_0 MainPS();
+    }
+}
